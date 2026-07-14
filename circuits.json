@@ -1,0 +1,170 @@
+[
+  {
+    "race_name": "Formula 1 Qatar Airways Australian Grand Prix",
+    "circuit_id": "albert_park",
+    "country": "Australia",
+    "city": "Melbourne",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Heineken Chinese Grand Prix 2026",
+    "circuit_id": "shanghai",
+    "country": "China",
+    "city": "Shanghai",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Aramco Japanese Grand Prix 2026",
+    "circuit_id": "suzuka",
+    "country": "Japan",
+    "city": "Suzuka",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Gulf Air Bahrain Grand Prix 2026",
+    "circuit_id": "bahrain",
+    "country": "Bahrain",
+    "city": "Sakhir",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksakhirdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 STC Saudi Arabian Grand Prix 2026",
+    "circuit_id": "jeddah",
+    "country": "Saudi Arabia",
+    "city": "Jedda",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackjeddahdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Crypto.com Miami Grand Prix 2026",
+    "circuit_id": "miami",
+    "country": "United States",
+    "city": "Miami",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Lenovo Grand Prix Du Canada 2026",
+    "circuit_id": "gilles_villeneuve",
+    "country": "Canada",
+    "city": "Montreal",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Louis Vuitton Grand Prix de Monaco 2026",
+    "circuit_id": "monaco",
+    "country": "Monaco",
+    "city": "Monte Carlo",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 MSC Cruises Gran Premio de Barcelona-Catalunya 2026",
+    "circuit_id": "montmelo",
+    "country": "Spain",
+    "city": "Barcelona",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackcatalunyadetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Lenovo Austrian Grand Prix 2026",
+    "circuit_id": "red_bull_ring",
+    "country": "Austria",
+    "city": "Spielberg",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Pirelli British Grand Prix 2026",
+    "circuit_id": "silverstone",
+    "country": "Great Britain",
+    "city": "Silverstone",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Belgian Grand Prix 2026",
+    "circuit_id": "spa",
+    "country": "Belgium",
+    "city": "Stavelot",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspafrancorchampsdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 AWS Hungarian Grand Prix 2026",
+    "circuit_id": "hungaroring",
+    "country": "Hungary",
+    "city": "Mogyorod",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackhungaroringdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Heineken Dutch Grand Prix 2026",
+    "circuit_id": "zandvoort",
+    "country": "Netherlands",
+    "city": "Zandvoort",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Pirelli Gran D'Italia 2026",
+    "circuit_id": "monza",
+    "country": "Italy",
+    "city": "Monza",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Tag Heuer Gran Premio de España 2026",
+    "circuit_id": "madring",
+    "country": "Spain",
+    "city": "Madrid",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2026",
+    "circuit_id": "baku",
+    "country": "Azerbaijan",
+    "city": "Baku",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
+    "circuit_id": "marina_bay",
+    "country": "Singapore",
+    "city": "Singapore",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 MSC Cruises United States Grand Prix 2026",
+    "circuit_id": "austin",
+    "country": "United States",
+    "city": "Austin",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Gran Premio de La Ciudad de México 2026",
+    "circuit_id": "hermanos_rodriguez",
+    "country": "Mexico",
+    "city": "Mexico City",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 MSC Cruises Grande Premio de Sao Paulo 2026",
+    "circuit_id": "interlagos",
+    "country": "Brazil",
+    "city": "Sao Paulo",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Heineken Las Vegas Grand Prix 2026",
+    "circuit_id": "vegas",
+    "country": "United States",
+    "city": "Las Vegas",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Qatar Airways Qatar Grand Prix 2026",
+    "circuit_id": "lusail",
+    "country": "Qatar",
+    "city": "Lusail",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp"
+  },
+  {
+    "race_name": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026",
+    "circuit_id": "yas_marina",
+    "country": "United Arab Emirates",
+    "city": "Abu Dhabi",
+    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp"
+  }
+]
