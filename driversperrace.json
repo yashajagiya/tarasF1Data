@@ -4,14 +4,15 @@
   "entries": [
     {
       "rank": 1,
+      "driver_number": 12,
       "name": "Kimi Antonelli",
       "shortName": "K. Antonelli",
       "abbreviation": "ANT",
+      "team_name": "Mercedes",
       "nationality": "Italy",
       "championshipPts": {
         "value": 179,
-        "displayValue": "179",
-        "topFinish": 1.0
+        "displayValue": "179"
       },
       "races": [
         {
@@ -186,14 +187,15 @@
     },
     {
       "rank": 2,
+      "driver_number": 63,
       "name": "George Russell",
       "shortName": "G. Russell",
       "abbreviation": "RUS",
+      "team_name": "Mercedes",
       "nationality": "Britain",
       "championshipPts": {
         "value": 154,
-        "displayValue": "154",
-        "topFinish": 1.0
+        "displayValue": "154"
       },
       "races": [
         {
@@ -368,14 +370,15 @@
     },
     {
       "rank": 3,
+      "driver_number": 44,
       "name": "Lewis Hamilton",
       "shortName": "L. Hamilton",
       "abbreviation": "HAM",
+      "team_name": "Ferrari",
       "nationality": "Britain",
       "championshipPts": {
         "value": 147,
-        "displayValue": "147",
-        "topFinish": 1.0
+        "displayValue": "147"
       },
       "races": [
         {
@@ -550,14 +553,15 @@
     },
     {
       "rank": 4,
+      "driver_number": 16,
       "name": "Charles Leclerc",
       "shortName": "C. Leclerc",
       "abbreviation": "LEC",
+      "team_name": "Ferrari",
       "nationality": "Monaco",
       "championshipPts": {
         "value": 108,
-        "displayValue": "108",
-        "topFinish": 1.0
+        "displayValue": "108"
       },
       "races": [
         {
@@ -732,14 +736,15 @@
     },
     {
       "rank": 5,
+      "driver_number": 1,
       "name": "Lando Norris",
       "shortName": "L. Norris",
       "abbreviation": "NOR",
+      "team_name": "McLaren",
       "nationality": "Britain",
       "championshipPts": {
         "value": 97,
-        "displayValue": "97",
-        "topFinish": 2.0
+        "displayValue": "97"
       },
       "races": [
         {
@@ -914,14 +919,15 @@
     },
     {
       "rank": 6,
+      "driver_number": 81,
       "name": "Oscar Piastri",
       "shortName": "O. Piastri",
       "abbreviation": "PIA",
+      "team_name": "McLaren",
       "nationality": "Australia",
       "championshipPts": {
         "value": 82,
-        "displayValue": "82",
-        "topFinish": 2.0
+        "displayValue": "82"
       },
       "races": [
         {
@@ -1096,14 +1102,15 @@
     },
     {
       "rank": 7,
+      "driver_number": 3,
       "name": "Max Verstappen",
       "shortName": "M. Verstappen",
       "abbreviation": "VER",
+      "team_name": "Red Bull Racing",
       "nationality": "Netherlands",
       "championshipPts": {
         "value": 76,
-        "displayValue": "76",
-        "topFinish": 2.0
+        "displayValue": "76"
       },
       "races": [
         {
@@ -1278,14 +1285,15 @@
     },
     {
       "rank": 8,
+      "driver_number": 6,
       "name": "Isack Hadjar",
       "shortName": "I. Hadjar",
       "abbreviation": "HAD",
+      "team_name": "Red Bull Racing",
       "nationality": "France",
       "championshipPts": {
         "value": 52,
-        "displayValue": "52",
-        "topFinish": 4.0
+        "displayValue": "52"
       },
       "races": [
         {
@@ -1460,14 +1468,15 @@
     },
     {
       "rank": 9,
+      "driver_number": 10,
       "name": "Pierre Gasly",
       "shortName": "P. Gasly",
       "abbreviation": "GAS",
+      "team_name": "Alpine",
       "nationality": "France",
       "championshipPts": {
         "value": 42,
-        "displayValue": "42",
-        "topFinish": 3.0
+        "displayValue": "42"
       },
       "races": [
         {
@@ -1642,14 +1651,15 @@
     },
     {
       "rank": 10,
+      "driver_number": 30,
       "name": "Liam Lawson",
       "shortName": "L. Lawson",
       "abbreviation": "LAW",
+      "team_name": "Racing Bulls",
       "nationality": "New Zealand",
       "championshipPts": {
         "value": 39,
-        "displayValue": "39",
-        "topFinish": 6.0
+        "displayValue": "39"
       },
       "races": [
         {
@@ -1824,14 +1834,15 @@
     },
     {
       "rank": 11,
+      "driver_number": 41,
       "name": "Arvid Lindblad",
       "shortName": "A. Lindblad",
       "abbreviation": "LIN",
+      "team_name": "Racing Bulls",
       "nationality": "Britain",
       "championshipPts": {
         "value": 20,
-        "displayValue": "20",
-        "topFinish": 7.0
+        "displayValue": "20"
       },
       "races": [
         {
@@ -2006,14 +2017,15 @@
     },
     {
       "rank": 12,
+      "driver_number": 87,
       "name": "Oliver Bearman",
       "shortName": "O. Bearman",
       "abbreviation": "BEA",
+      "team_name": "Haas F1 Team",
       "nationality": "Britain",
       "championshipPts": {
         "value": 18,
-        "displayValue": "18",
-        "topFinish": 5.0
+        "displayValue": "18"
       },
       "races": [
         {
@@ -2188,14 +2200,15 @@
     },
     {
       "rank": 13,
+      "driver_number": 43,
       "name": "Franco Colapinto",
       "shortName": "F. Colapinto",
       "abbreviation": "COL",
+      "team_name": "Alpine",
       "nationality": "Argentina",
       "championshipPts": {
         "value": 18,
-        "displayValue": "18",
-        "topFinish": 6.0
+        "displayValue": "18"
       },
       "races": [
         {
@@ -2370,14 +2383,15 @@
     },
     {
       "rank": 14,
+      "driver_number": 5,
       "name": "Gabriel Bortoleto",
       "shortName": "G. Bortoleto",
       "abbreviation": "BOR",
+      "team_name": "Audi",
       "nationality": "Brazil",
       "championshipPts": {
         "value": 6,
-        "displayValue": "6",
-        "topFinish": 8.0
+        "displayValue": "6"
       },
       "races": [
         {
@@ -2552,14 +2566,15 @@
     },
     {
       "rank": 15,
+      "driver_number": 55,
       "name": "Carlos Sainz",
       "shortName": "C. Sainz",
       "abbreviation": "SAI",
+      "team_name": "Williams",
       "nationality": "Spain",
       "championshipPts": {
         "value": 6,
-        "displayValue": "6",
-        "topFinish": 9.0
+        "displayValue": "6"
       },
       "races": [
         {
@@ -2734,14 +2749,15 @@
     },
     {
       "rank": 16,
+      "driver_number": 23,
       "name": "Alexander Albon",
       "shortName": "A. Albon",
       "abbreviation": "ALB",
+      "team_name": "Williams",
       "nationality": "Thailand",
       "championshipPts": {
         "value": 5,
-        "displayValue": "5",
-        "topFinish": 8.0
+        "displayValue": "5"
       },
       "races": [
         {
@@ -2916,14 +2932,15 @@
     },
     {
       "rank": 17,
+      "driver_number": 31,
       "name": "Esteban Ocon",
       "shortName": "E. Ocon",
       "abbreviation": "OCO",
+      "team_name": "Haas F1 Team",
       "nationality": "France",
       "championshipPts": {
         "value": 3,
-        "displayValue": "3",
-        "topFinish": 9.0
+        "displayValue": "3"
       },
       "races": [
         {
@@ -3098,14 +3115,15 @@
     },
     {
       "rank": 18,
+      "driver_number": 14,
       "name": "Fernando Alonso",
       "shortName": "F. Alonso",
       "abbreviation": "ALO",
+      "team_name": "Aston Martin",
       "nationality": "Spain",
       "championshipPts": {
         "value": 1,
-        "displayValue": "1",
-        "topFinish": 10.0
+        "displayValue": "1"
       },
       "races": [
         {
@@ -3280,14 +3298,15 @@
     },
     {
       "rank": 19,
+      "driver_number": 27,
       "name": "Nico Hülkenberg",
       "shortName": "N. Hülkenberg",
       "abbreviation": "HUL",
+      "team_name": "Audi",
       "nationality": "Germany",
       "championshipPts": {
         "value": 0,
-        "displayValue": "0",
-        "topFinish": 11.0
+        "displayValue": "0"
       },
       "races": [
         {
@@ -3462,14 +3481,15 @@
     },
     {
       "rank": 20,
+      "driver_number": 77,
       "name": "Valtteri Bottas",
       "shortName": "V. Bottas",
       "abbreviation": "BOT",
+      "team_name": "Cadillac",
       "nationality": "Finland",
       "championshipPts": {
         "value": 0,
-        "displayValue": "0",
-        "topFinish": 13.0
+        "displayValue": "0"
       },
       "races": [
         {
@@ -3644,14 +3664,15 @@
     },
     {
       "rank": 21,
+      "driver_number": 11,
       "name": "Sergio Pérez",
       "shortName": "S. Pérez",
       "abbreviation": "PER",
+      "team_name": "Cadillac",
       "nationality": "Mexico",
       "championshipPts": {
         "value": 0,
-        "displayValue": "0",
-        "topFinish": 14.0
+        "displayValue": "0"
       },
       "races": [
         {
@@ -3826,14 +3847,15 @@
     },
     {
       "rank": 22,
+      "driver_number": 18,
       "name": "Lance Stroll",
       "shortName": "L. Stroll",
       "abbreviation": "STR",
+      "team_name": "Aston Martin",
       "nationality": "Canada",
       "championshipPts": {
         "value": 0,
-        "displayValue": "0",
-        "topFinish": 15.0
+        "displayValue": "0"
       },
       "races": [
         {
