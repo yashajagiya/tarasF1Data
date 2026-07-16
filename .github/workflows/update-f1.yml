@@ -1,0 +1,44 @@
+name: Update F1 Standings
+
+on:
+  schedule:
+    # Run at 00:00 every Monday
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allows manual trigger from the GitHub UI
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Required to be able to push back to the repo
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Driver Standings Script
+        run: python peerracepointdriver.py
+        
+      - name: Run Constructor Standings Script
+        run: python peerracepointcar.py
+        
+      # The python scripts now output to driversperrace.json and carperrace.json
+      # The python scripts also try to run git commit themselves, but we'll 
+      # ensure they just commit via the action natively or via their own subprocess.
+      # Wait, if they try to commit themselves in the github action, they need git config.
+      # Let's configure git first just in case.
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+      # Since the scripts commit and push themselves, they will handle it automatically!
