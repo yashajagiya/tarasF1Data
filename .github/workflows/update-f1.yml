@@ -24,21 +24,13 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Run Driver Standings Script
         run: python peerracepointdriver.py
         
       - name: Run Constructor Standings Script
         run: python peerracepointcar.py
-        
-      # The python scripts now output to driversperrace.json and carperrace.json
-      # The python scripts also try to run git commit themselves, but we'll 
-      # ensure they just commit via the action natively or via their own subprocess.
-      # Wait, if they try to commit themselves in the github action, they need git config.
-      # Let's configure git first just in case.
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-      # Since the scripts commit and push themselves, they will handle it automatically!
