@@ -18,10 +18,10 @@
     "team_car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp"
   },
   {
-    "team_name": "Red Bull Racing",
+    "team_name": "Red Bull",
     "team_color": "0xFF3671C6",
     "team_logo": "https://media.formula1.com/image/upload/c_lfill,w_64/q_auto/v1740000001/common/f1/2026/redbullracing/2026redbullracinglogowhite.webp",
-    "team_car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp"
+    "team_car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp"
   },
   {
     "team_name": "Alpine",
@@ -36,7 +36,7 @@
     "team_car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp"
   },
   {
-    "team_name": "Haas F1 Team",
+    "team_name": "Haas",
     "team_color": "0xFFDEE1E2",
     "team_logo": "https://media.formula1.com/image/upload/c_lfill,w_64/q_auto/v1740000001/common/f1/2026/haasf1team/2026haasf1teamlogowhite.webp",
     "team_car": "https://media.formula1.com/image/upload/c_lfill,h_224/q_auto/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.webp"
