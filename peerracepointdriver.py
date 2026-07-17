@@ -32,19 +32,50 @@ def _fetch_json(url):
 
 def fetch_driver_info():
     """
-    Fetch driver info from the OpenF1 API and return a dict keyed by
-    name_acronym (e.g. "NOR", "HAM") with driver_number and team_name.
+    Fetch driver info from the OpenF1 API. If it fails (e.g. during a live race session
+    due to paywall restrictions), fallback to a hardcoded dictionary.
     """
-    drivers = _fetch_json(OPENF1_DRIVERS_URL)
-    lookup = {}
-    for d in drivers:
-        acronym = d.get("name_acronym", "")
-        if acronym:
-            lookup[acronym] = {
-                "driver_number": d.get("driver_number"),
-                "team_name": d.get("team_name", ""),
-            }
-    return lookup
+    try:
+        drivers = _fetch_json(OPENF1_DRIVERS_URL)
+        if isinstance(drivers, dict) and "detail" in drivers:
+            # API returned an error message instead of list
+            raise ValueError(drivers["detail"])
+            
+        lookup = {}
+        for d in drivers:
+            acronym = d.get("name_acronym", "")
+            if acronym:
+                lookup[acronym] = {
+                    "driver_number": d.get("driver_number"),
+                    "team_name": d.get("team_name", ""),
+                }
+        return lookup
+    except Exception as e:
+        print(f"OpenF1 fetch failed ({e}). Falling back to hardcoded data.")
+        return {
+            "NOR": {"driver_number": 1,  "team_name": "McLaren"},
+            "VER": {"driver_number": 3,  "team_name": "Red Bull Racing"},
+            "BOR": {"driver_number": 5,  "team_name": "Audi"},
+            "HAD": {"driver_number": 6,  "team_name": "Red Bull Racing"},
+            "GAS": {"driver_number": 10, "team_name": "Alpine"},
+            "PER": {"driver_number": 11, "team_name": "Cadillac"},
+            "ANT": {"driver_number": 12, "team_name": "Mercedes"},
+            "ALO": {"driver_number": 14, "team_name": "Aston Martin"},
+            "LEC": {"driver_number": 16, "team_name": "Ferrari"},
+            "STR": {"driver_number": 18, "team_name": "Aston Martin"},
+            "ALB": {"driver_number": 23, "team_name": "Williams"},
+            "HUL": {"driver_number": 27, "team_name": "Audi"},
+            "LAW": {"driver_number": 30, "team_name": "Racing Bulls"},
+            "OCO": {"driver_number": 31, "team_name": "Haas F1 Team"},
+            "LIN": {"driver_number": 41, "team_name": "Racing Bulls"},
+            "COL": {"driver_number": 43, "team_name": "Alpine"},
+            "HAM": {"driver_number": 44, "team_name": "Ferrari"},
+            "SAI": {"driver_number": 55, "team_name": "Williams"},
+            "RUS": {"driver_number": 63, "team_name": "Mercedes"},
+            "BOT": {"driver_number": 77, "team_name": "Cadillac"},
+            "PIA": {"driver_number": 81, "team_name": "McLaren"},
+            "BEA": {"driver_number": 87, "team_name": "Haas F1 Team"},
+        }
 
 
 def fetch_standings():
