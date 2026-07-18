@@ -1,0 +1,535 @@
+[
+  {
+    "id": "1290/belgium",
+    "raceName": "Formula 1 Belgian Grand Prix 2026",
+    "f1siteracename": "Belgium",
+    "circuit": {
+      "circuitId": "spa",
+      "circuitName": "Circuit de Spa-Francorchamps"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-07-19"
+      },
+      "qualy": {
+        "date": "2026-07-18"
+      },
+      "fp1": {
+        "date": "2026-07-17"
+      },
+      "fp2": {
+        "date": "2026-07-17"
+      },
+      "fp3": {
+        "date": "2026-07-18"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-07-19"
+      },
+      "starting-grid": {
+        "date": "2026-07-19"
+      }
+    }
+  },
+  {
+    "id": "1291/hungary",
+    "raceName": "Formula 1 AWS Hungarian Grand Prix 2026",
+    "f1siteracename": "Hungary",
+    "circuit": {
+      "circuitId": "hungaroring",
+      "circuitName": "Hungaroring"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-07-26"
+      },
+      "qualy": {
+        "date": "2026-07-25"
+      },
+      "fp1": {
+        "date": "2026-07-24"
+      },
+      "fp2": {
+        "date": "2026-07-24"
+      },
+      "fp3": {
+        "date": "2026-07-25"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-07-26"
+      },
+      "starting-grid": {
+        "date": "2026-07-26"
+      }
+    }
+  },
+  {
+    "id": "1292/netherlands",
+    "raceName": "Formula 1 Heineken Dutch Grand Prix 2026",
+    "f1siteracename": "Netherlands",
+    "circuit": {
+      "circuitId": "zandvoort",
+      "circuitName": "Circuit Zandvoort"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-08-23"
+      },
+      "qualy": {
+        "date": "2026-08-22"
+      },
+      "fp1": {
+        "date": "2026-08-21"
+      },
+      "fp2": {
+        "date": null
+      },
+      "fp3": {
+        "date": null
+      },
+      "sprintQualy": {
+        "date": "2026-08-21"
+      },
+      "sprintRace": {
+        "date": "2026-08-22"
+      },
+      "sprint-grid": {
+        "date": "2026-08-22"
+      },
+      "fastest-laps": {
+        "date": "2026-08-23"
+      },
+      "starting-grid": {
+        "date": "2026-08-23"
+      }
+    }
+  },
+  {
+    "id": "1293/italy",
+    "raceName": "Formula 1 Pirelli Gran D'Italia 2026",
+    "f1siteracename": "Italy",
+    "circuit": {
+      "circuitId": "monza",
+      "circuitName": "Autodromo Nazionale Monza"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-09-06"
+      },
+      "qualy": {
+        "date": "2026-09-05"
+      },
+      "fp1": {
+        "date": "2026-09-04"
+      },
+      "fp2": {
+        "date": "2026-09-04"
+      },
+      "fp3": {
+        "date": "2026-09-05"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-09-06"
+      },
+      "starting-grid": {
+        "date": "2026-09-06"
+      }
+    }
+  },
+  {
+    "id": "1294/spain",
+    "raceName": "Formula 1 Tag Heuer Gran Premio de España 2026",
+    "f1siteracename": "Spain",
+    "circuit": {
+      "circuitId": "madring",
+      "circuitName": "Circuito de Madring"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-09-13"
+      },
+      "qualy": {
+        "date": "2026-09-12"
+      },
+      "fp1": {
+        "date": "2026-09-11"
+      },
+      "fp2": {
+        "date": "2026-09-11"
+      },
+      "fp3": {
+        "date": "2026-09-12"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-09-13"
+      },
+      "starting-grid": {
+        "date": "2026-09-13"
+      }
+    }
+  },
+  {
+    "id": "1295/azerbaijan",
+    "raceName": "Formula 1 Qatar Airways Azerbaijan Grand Prix 2026",
+    "f1siteracename": "Azerbaijan",
+    "circuit": {
+      "circuitId": "baku",
+      "circuitName": "Baku City Circuit"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-09-26"
+      },
+      "qualy": {
+        "date": "2026-09-25"
+      },
+      "fp1": {
+        "date": "2026-09-24"
+      },
+      "fp2": {
+        "date": "2026-09-24"
+      },
+      "fp3": {
+        "date": "2026-09-25"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-09-26"
+      },
+      "starting-grid": {
+        "date": "2026-09-26"
+      }
+    }
+  },
+  {
+    "id": "1296/singapore",
+    "raceName": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
+    "f1siteracename": "Singapore",
+    "circuit": {
+      "circuitId": "marina_bay",
+      "circuitName": "Marina Bay Street Circuit"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-10-11"
+      },
+      "qualy": {
+        "date": "2026-10-10"
+      },
+      "fp1": {
+        "date": "2026-10-09"
+      },
+      "fp2": {
+        "date": "2026-10-09"
+      },
+      "fp3": {
+        "date": "2026-10-10"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-10-11"
+      },
+      "starting-grid": {
+        "date": "2026-10-11"
+      }
+    }
+  },
+  {
+    "id": "1297/united-states",
+    "raceName": "Formula 1 MSC Cruises United States Grand Prix 2026",
+    "f1siteracename": "United States",
+    "circuit": {
+      "circuitId": "austin",
+      "circuitName": "Circuit of The Americas"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-10-25"
+      },
+      "qualy": {
+        "date": "2026-10-24"
+      },
+      "fp1": {
+        "date": "2026-10-23"
+      },
+      "fp2": {
+        "date": "2026-10-23"
+      },
+      "fp3": {
+        "date": "2026-10-24"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-10-25"
+      },
+      "starting-grid": {
+        "date": "2026-10-25"
+      }
+    }
+  },
+  {
+    "id": "1298/mexico",
+    "raceName": "Formula 1 Gran Premio de La Ciudad de México 2026",
+    "f1siteracename": "Mexico",
+    "circuit": {
+      "circuitId": "hermanos_rodriguez",
+      "circuitName": "Autódromo Hermanos Rodríguez"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-11-01"
+      },
+      "qualy": {
+        "date": "2026-10-31"
+      },
+      "fp1": {
+        "date": "2026-10-30"
+      },
+      "fp2": {
+        "date": "2026-10-30"
+      },
+      "fp3": {
+        "date": "2026-10-31"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-11-01"
+      },
+      "starting-grid": {
+        "date": "2026-11-01"
+      }
+    }
+  },
+  {
+    "id": "1299/brazil",
+    "raceName": "Formula 1 MSC Cruises Grande Premio de Sao Paulo 2026",
+    "f1siteracename": "Brazil",
+    "circuit": {
+      "circuitId": "interlagos",
+      "circuitName": "Autodromo José Carlos Pace | Interlagos"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-11-08"
+      },
+      "qualy": {
+        "date": "2026-11-07"
+      },
+      "fp1": {
+        "date": "2026-11-06"
+      },
+      "fp2": {
+        "date": "2026-11-06"
+      },
+      "fp3": {
+        "date": "2026-11-07"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-11-08"
+      },
+      "starting-grid": {
+        "date": "2026-11-08"
+      }
+    }
+  },
+  {
+    "id": "1300/las-vegas",
+    "raceName": "Formula 1 Heineken Las Vegas Grand Prix 2026",
+    "f1siteracename": "Las Vegas",
+    "circuit": {
+      "circuitId": "vegas",
+      "circuitName": "Las Vegas Strip Circuit"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-11-22"
+      },
+      "qualy": {
+        "date": "2026-11-21"
+      },
+      "fp1": {
+        "date": "2026-11-20"
+      },
+      "fp2": {
+        "date": "2026-11-20"
+      },
+      "fp3": {
+        "date": "2026-11-21"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-11-22"
+      },
+      "starting-grid": {
+        "date": "2026-11-22"
+      }
+    }
+  },
+  {
+    "id": "1301/qatar",
+    "raceName": "Formula 1 Qatar Airways Qatar Grand Prix 2026",
+    "f1siteracename": "Qatar",
+    "circuit": {
+      "circuitId": "lusail",
+      "circuitName": "Lusail International Circuit"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-11-29"
+      },
+      "qualy": {
+        "date": "2026-11-28"
+      },
+      "fp1": {
+        "date": "2026-11-27"
+      },
+      "fp2": {
+        "date": "2026-11-27"
+      },
+      "fp3": {
+        "date": "2026-11-28"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-11-29"
+      },
+      "starting-grid": {
+        "date": "2026-11-29"
+      }
+    }
+  },
+  {
+    "id": "1302/abu-dhabi",
+    "raceName": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026",
+    "f1siteracename": "Abu Dhabi",
+    "circuit": {
+      "circuitId": "yas_marina",
+      "circuitName": "Yas Marina Circuit"
+    },
+    "schedule": {
+      "race": {
+        "date": "2026-12-06"
+      },
+      "qualy": {
+        "date": "2026-12-05"
+      },
+      "fp1": {
+        "date": "2026-12-04"
+      },
+      "fp2": {
+        "date": "2026-12-04"
+      },
+      "fp3": {
+        "date": "2026-12-05"
+      },
+      "sprintQualy": {
+        "date": null
+      },
+      "sprintRace": {
+        "date": null
+      },
+      "sprint-grid": {
+        "date": null
+      },
+      "fastest-laps": {
+        "date": "2026-12-06"
+      },
+      "starting-grid": {
+        "date": "2026-12-06"
+      }
+    }
+  }
+]
