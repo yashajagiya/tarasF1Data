@@ -75,6 +75,8 @@ def extract_fp2_data(url, output_file='fp2_extracted.json'):
     print(f"Extracted data successfully saved to '{output_file}'!")
 
 import os
+import shutil
+import subprocess
 from datetime import date
 
 def get_dynamic_url(schedule_file='schedule.json', target_date=None):
@@ -103,6 +105,26 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         print(f"Error: {schedule_path} not found.")
         return None
 
+def push_to_git(practice_num):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    source_dir = os.path.dirname(script_dir) # e.g., m:\taras\practice2
+    target_repo = os.path.join(os.path.dirname(source_dir), 'tarasF1Data')
+    target_dir = os.path.join(target_repo, practice_num)
+    
+    print(f"Syncing to Git repository: {target_repo}")
+    
+    # 1. Copy the directory to tarasF1Data
+    shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
+    
+    # 2. Run git commands
+    try:
+        subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
+        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo)
+        subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, check=True)
+        print("Successfully pushed to GitHub!")
+    except subprocess.CalledProcessError as e:
+        print(f"Error during git push: {e}")
+
 if __name__ == "__main__":
     # You can change target_date to a specific date string like "2026-10-09" for Singapore
     target_date = "2026-07-17"  # Hardcoded for Belgium test as per your data, change to None for today
@@ -112,3 +134,5 @@ if __name__ == "__main__":
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'fp2_extracted.json')
         extract_fp2_data(url, output_file)
+        # Push to github automatically
+        push_to_git('practice2')
