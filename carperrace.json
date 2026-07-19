@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 333,
-        "displayValue": "333"
+        "value": 358,
+        "displayValue": "358"
       },
       "races": [
         {
@@ -184,8 +184,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 255,
-        "displayValue": "255"
+        "value": 285,
+        "displayValue": "285"
       },
       "races": [
         {
@@ -362,8 +362,8 @@
       "rank": 3,
       "team": "McLaren",
       "points": {
-        "value": 179,
-        "displayValue": "179"
+        "value": 195,
+        "displayValue": "195"
       },
       "races": [
         {
@@ -540,8 +540,8 @@
       "rank": 4,
       "team": "Red Bull",
       "points": {
-        "value": 128,
-        "displayValue": "128"
+        "value": 151,
+        "displayValue": "151"
       },
       "races": [
         {
@@ -718,8 +718,8 @@
       "rank": 5,
       "team": "Alpine",
       "points": {
-        "value": 60,
-        "displayValue": "60"
+        "value": 61,
+        "displayValue": "61"
       },
       "races": [
         {
@@ -896,8 +896,8 @@
       "rank": 6,
       "team": "Racing Bulls",
       "points": {
-        "value": 59,
-        "displayValue": "59"
+        "value": 61,
+        "displayValue": "61"
       },
       "races": [
         {
@@ -1430,8 +1430,8 @@
       "rank": 9,
       "team": "Audi",
       "points": {
-        "value": 6,
-        "displayValue": "6"
+        "value": 10,
+        "displayValue": "10"
       },
       "races": [
         {
