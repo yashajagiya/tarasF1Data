@@ -21,20 +21,6 @@
     "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp"
   },
   {
-    "race_name": "Formula 1 Gulf Air Bahrain Grand Prix 2026",
-    "circuit_id": "bahrain",
-    "country": "Bahrain",
-    "city": "Sakhir",
-    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksakhirdetailed.webp"
-  },
-  {
-    "race_name": "Formula 1 STC Saudi Arabian Grand Prix 2026",
-    "circuit_id": "jeddah",
-    "country": "Saudi Arabia",
-    "city": "Jedda",
-    "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackjeddahdetailed.webp"
-  },
-  {
     "race_name": "Formula 1 Crypto.com Miami Grand Prix 2026",
     "circuit_id": "miami",
     "country": "United States",
