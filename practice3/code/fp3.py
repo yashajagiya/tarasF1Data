@@ -89,16 +89,25 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     try:
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
-            
+        
+        # Find the most recent session that is on or before target_date
+        best_match = None
+        best_date = None
+        
         for event in schedule:
             fp3_date = event.get('schedule', {}).get('fp3', {}).get('date')
-            if fp3_date == target_date:
-                event_id = event.get('id')
-                url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/3"
-                print(f"Found event for {target_date}: {url}")
-                return url
+            if fp3_date and fp3_date <= target_date:
+                if best_date is None or fp3_date > best_date:
+                    best_date = fp3_date
+                    best_match = event
+        
+        if best_match:
+            event_id = best_match.get('id')
+            url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/3"
+            print(f"Found latest FP3 session ({best_date}): {url}")
+            return url
                 
-        print(f"No FP3 session found for date: {target_date}")
+        print(f"No FP3 session found on or before: {target_date}")
         return None
         
     except FileNotFoundError:
