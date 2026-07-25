@@ -113,13 +113,26 @@ def push_to_git(practice_num):
     
     print(f"Syncing to Git repository: {target_repo}")
     
+    # 0. Pull latest changes first
+    try:
+        subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=target_repo, check=True)
+    except subprocess.CalledProcessError:
+        pass # Ignore if it fails due to no remote or other issues, will catch push errors later
+
     # 1. Copy the directory to tarasF1Data
     shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
     
     # 2. Run git commands
     try:
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
-        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo)
+        
+        # Check if there are any changes staged for commit
+        status = subprocess.run(["git", "status", "--porcelain", practice_num], cwd=target_repo, capture_output=True, text=True)
+        if not status.stdout.strip():
+            print("No changes detected in the JSON data. Skipping Git push.")
+            return
+            
+        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo, check=True)
         subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, check=True)
         print("Successfully pushed to GitHub!")
     except subprocess.CalledProcessError as e:
