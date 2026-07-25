@@ -103,11 +103,9 @@ def scrape_f1_race_result(url, output_file='race_results.json', circuit_id=None)
         "raceName": race_name,
         "date": date_text,
         "circuitName": circuit_name,
+        "circuitId": circuit_id if circuit_id else "unknown",
         "results": results
     }
-    
-    if circuit_id:
-        scraped_data['circuitId'] = circuit_id
 
     # Save to JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
