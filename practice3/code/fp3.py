@@ -139,8 +139,7 @@ def push_to_git(practice_num):
         print(f"Error during git push: {e}")
 
 if __name__ == "__main__":
-    # You can change target_date to a specific date string like "2026-10-09" for Singapore
-    target_date = "2026-07-18"  # Hardcoded for Belgium FP3 test as per your data, change to None for today
+    target_date = None  # Uses today's date automatically to find the correct event
     url = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
