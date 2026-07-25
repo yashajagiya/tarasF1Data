@@ -2,6 +2,7 @@
     "raceName": "FORMULA 1 AWS HUNGARIAN GRAND PRIX 2026 - PRACTICE 3",
     "raceDate": "24 - 26 Jul 2026",
     "circuitName": "Authentics",
+    "circuitId": "hungaroring",
     "results": [
         {
             "position": "1",

@@ -2,7 +2,7 @@ import json
 import urllib.request
 from bs4 import BeautifulSoup
 
-def extract_fp3_data(url, output_file='fp3_extracted.json'):
+def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None):
     print(f"Fetching data from {url}...\n")
     
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -28,6 +28,9 @@ def extract_fp3_data(url, output_file='fp3_extracted.json'):
     
     circuit_p = soup.find('p', class_='typography-module_body-xs-semibold__Fyfwn')
     extracted_data['circuitName'] = circuit_p.text.strip() if circuit_p else 'Unknown Circuit'
+    
+    if circuit_id:
+        extracted_data['circuitId'] = circuit_id
     
     extracted_data['results'] = []
     
@@ -103,16 +106,17 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         
         if best_match:
             event_id = best_match.get('id')
+            circuit_id = best_match.get('circuit', {}).get('circuitId', 'unknown')
             url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/3"
             print(f"Found latest FP3 session ({best_date}): {url}")
-            return url
+            return url, circuit_id
                 
         print(f"No FP3 session found on or before: {target_date}")
-        return None
+        return None, None
         
     except FileNotFoundError:
         print(f"Error: {schedule_path} not found.")
-        return None
+        return None, None
 
 def push_to_git(practice_num):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -149,11 +153,11 @@ def push_to_git(practice_num):
 
 if __name__ == "__main__":
     target_date = None  # Uses today's date automatically to find the correct event
-    url = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
+    url, circuit_id = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'fp3_extracted.json')
-        extract_fp3_data(url, output_file)
+        extract_fp3_data(url, output_file, circuit_id=circuit_id)
         # Push to github automatically
         push_to_git('practice3')
