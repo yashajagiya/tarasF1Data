@@ -6,7 +6,7 @@ from datetime import date
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_f1_qualifying(url, output_file='qualifying_results.json'):
+def scrape_f1_qualifying(url, output_file='qualifying_results.json', circuit_id=None):
     print(f"Fetching data from {url}...")
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -99,7 +99,6 @@ def scrape_f1_qualifying(url, output_file='qualifying_results.json'):
                         "laps": laps
                     })
 
-    # Prepare final JSON structure
     scraped_data = {
         "country": country_name,
         "session": session,
@@ -108,6 +107,9 @@ def scrape_f1_qualifying(url, output_file='qualifying_results.json'):
         "circuitName": circuit_name,
         "results": results
     }
+    
+    if circuit_id:
+        scraped_data['circuitId'] = circuit_id
 
     # Save to JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -126,21 +128,31 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     try:
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
-            
+        
+        # Find the most recent session that is on or before target_date
+        best_match = None
+        best_date = None
+        
         for event in schedule:
             qualy_date = event.get('schedule', {}).get('qualy', {}).get('date')
-            if qualy_date == target_date:
-                event_id = event.get('id')
-                url = f"https://www.formula1.com/en/results/2026/races/{event_id}/qualifying"
-                print(f"Found event for {target_date}: {url}")
-                return url
+            if qualy_date and qualy_date <= target_date:
+                if best_date is None or qualy_date > best_date:
+                    best_date = qualy_date
+                    best_match = event
+        
+        if best_match:
+            event_id = best_match.get('id')
+            circuit_id = best_match.get('circuit', {}).get('circuitId', 'unknown')
+            url = f"https://www.formula1.com/en/results/2026/races/{event_id}/qualifying"
+            print(f"Found latest Qualifying session ({best_date}): {url}")
+            return url, circuit_id
                 
-        print(f"No Qualifying session found for date: {target_date}")
-        return None
+        print(f"No Qualifying session found on or before: {target_date}")
+        return None, None
         
     except FileNotFoundError:
         print(f"Error: {schedule_path} not found.")
-        return None
+        return None, None
 
 def push_to_git(practice_num):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -162,19 +174,26 @@ def push_to_git(practice_num):
     # 2. Run git commands
     try:
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
-        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo)
+        
+        # Check if there are any changes staged for commit
+        status = subprocess.run(["git", "status", "--porcelain", practice_num], cwd=target_repo, capture_output=True, text=True)
+        if not status.stdout.strip():
+            print("No changes detected in the JSON data. Skipping Git push.")
+            return
+            
+        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo, check=True)
         subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, check=True)
         print("Successfully pushed to GitHub!")
     except subprocess.CalledProcessError as e:
         print(f"Error during git push: {e}")
 
 if __name__ == "__main__":
-    target_date = "2026-07-18"  # Hardcoded for Belgium Qualifying test as per your data, change to None for today
-    url = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
+    target_date = None  # Uses today's date automatically to find the correct event
+    url, circuit_id = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'qualifying_results.json')
-        scrape_f1_qualifying(url, output_file)
+        scrape_f1_qualifying(url, output_file, circuit_id=circuit_id)
         # Push to github automatically
         push_to_git('qualifying')
