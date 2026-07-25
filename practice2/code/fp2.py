@@ -89,16 +89,25 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     try:
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
-            
+        
+        # Find the most recent session that is on or before target_date
+        best_match = None
+        best_date = None
+        
         for event in schedule:
             fp2_date = event.get('schedule', {}).get('fp2', {}).get('date')
-            if fp2_date == target_date:
-                event_id = event.get('id')
-                url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/2"
-                print(f"Found event for {target_date}: {url}")
-                return url
+            if fp2_date and fp2_date <= target_date:
+                if best_date is None or fp2_date > best_date:
+                    best_date = fp2_date
+                    best_match = event
+        
+        if best_match:
+            event_id = best_match.get('id')
+            url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/2"
+            print(f"Found latest FP2 session ({best_date}): {url}")
+            return url
                 
-        print(f"No FP2 session found for date: {target_date}")
+        print(f"No FP2 session found on or before: {target_date}")
         return None
         
     except FileNotFoundError:
@@ -139,8 +148,7 @@ def push_to_git(practice_num):
         print(f"Error during git push: {e}")
 
 if __name__ == "__main__":
-    # You can change target_date to a specific date string like "2026-10-09" for Singapore
-    target_date = "2026-07-17"  # Hardcoded for Belgium test as per your data, change to None for today
+    target_date = None  # Uses today's date automatically to find the correct event
     url = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
