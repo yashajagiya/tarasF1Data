@@ -6,7 +6,7 @@ from datetime import date
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_f1_race_result(url, output_file='race_results.json'):
+def scrape_f1_race_result(url, output_file='race_results.json', circuit_id=None):
     print(f"Fetching data from {url}...")
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -97,7 +97,6 @@ def scrape_f1_race_result(url, output_file='race_results.json'):
                         "points": pts
                     })
 
-    # Prepare final JSON structure
     scraped_data = {
         "country": country_name,
         "session": session,
@@ -106,6 +105,9 @@ def scrape_f1_race_result(url, output_file='race_results.json'):
         "circuitName": circuit_name,
         "results": results
     }
+    
+    if circuit_id:
+        scraped_data['circuitId'] = circuit_id
 
     # Save to JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -124,21 +126,31 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     try:
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
-            
+        
+        # Find the most recent session that is on or before target_date
+        best_match = None
+        best_date = None
+        
         for event in schedule:
             race_date = event.get('schedule', {}).get('race', {}).get('date')
-            if race_date == target_date:
-                event_id = event.get('id')
-                url = f"https://www.formula1.com/en/results/2026/races/{event_id}/race-result"
-                print(f"Found event for {target_date}: {url}")
-                return url
+            if race_date and race_date <= target_date:
+                if best_date is None or race_date > best_date:
+                    best_date = race_date
+                    best_match = event
+        
+        if best_match:
+            event_id = best_match.get('id')
+            circuit_id = best_match.get('circuit', {}).get('circuitId', 'unknown')
+            url = f"https://www.formula1.com/en/results/2026/races/{event_id}/race-result"
+            print(f"Found latest Race session ({best_date}): {url}")
+            return url, circuit_id
                 
-        print(f"No Race session found for date: {target_date}")
-        return None
+        print(f"No Race session found on or before: {target_date}")
+        return None, None
         
     except FileNotFoundError:
         print(f"Error: {schedule_path} not found.")
-        return None
+        return None, None
 
 def push_to_git(practice_num):
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -174,12 +186,12 @@ def push_to_git(practice_num):
         print(f"Error during git push: {e}")
 
 if __name__ == "__main__":
-    target_date = "2026-07-19"  # Hardcoded for Belgium Race test as per your data, change to None for today
-    url = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
+    target_date = None  # Uses today's date automatically to find the correct event
+    url, circuit_id = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'race_results.json')
-        scrape_f1_race_result(url, output_file)
+        scrape_f1_race_result(url, output_file, circuit_id=circuit_id)
         # Push to github automatically
         push_to_git('race-result')
