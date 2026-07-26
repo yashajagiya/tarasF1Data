@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 358,
-        "displayValue": "358"
+        "value": 379,
+        "displayValue": "379"
       },
       "races": [
         {
@@ -97,9 +97,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 21,
+          "displayValue": "21"
         },
         {
           "name": "NED",
@@ -184,8 +184,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 285,
-        "displayValue": "285"
+        "value": 307,
+        "displayValue": "307"
       },
       "races": [
         {
@@ -275,9 +275,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 22,
+          "displayValue": "22"
         },
         {
           "name": "NED",
@@ -362,8 +362,8 @@
       "rank": 3,
       "team": "McLaren",
       "points": {
-        "value": 195,
-        "displayValue": "195"
+        "value": 220,
+        "displayValue": "220"
       },
       "races": [
         {
@@ -453,9 +453,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 25,
+          "displayValue": "25"
         },
         {
           "name": "NED",
@@ -540,8 +540,8 @@
       "rank": 4,
       "team": "Red Bull",
       "points": {
-        "value": 151,
-        "displayValue": "151"
+        "value": 177,
+        "displayValue": "177"
       },
       "races": [
         {
@@ -631,9 +631,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 26,
+          "displayValue": "26"
         },
         {
           "name": "NED",
@@ -716,6 +716,184 @@
     },
     {
       "rank": 5,
+      "team": "Racing Bulls",
+      "points": {
+        "value": 66,
+        "displayValue": "66"
+      },
+      "races": [
+        {
+          "name": "AUS",
+          "displayName": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
+        },
+        {
+          "name": "CHN",
+          "displayName": "Heineken Chinese Grand Prix",
+          "played": true,
+          "value": 8,
+          "displayValue": "8"
+        },
+        {
+          "name": "JPN",
+          "displayName": "Aramco Japanese Grand Prix",
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
+        },
+        {
+          "name": "BRN",
+          "displayName": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SAU",
+          "displayName": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MIA",
+          "displayName": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "CAN",
+          "displayName": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "value": 7,
+          "displayValue": "7"
+        },
+        {
+          "name": "MON",
+          "displayName": "Monaco Grand Prix",
+          "played": true,
+          "value": 14,
+          "displayValue": "14"
+        },
+        {
+          "name": "BAR",
+          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
+        },
+        {
+          "name": "AUT",
+          "displayName": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "value": 3,
+          "displayValue": "3"
+        },
+        {
+          "name": "GBR",
+          "displayName": "Pirelli British Grand Prix",
+          "played": true,
+          "value": 15,
+          "displayValue": "15"
+        },
+        {
+          "name": "BEL",
+          "displayName": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
+        },
+        {
+          "name": "HUN",
+          "displayName": "AWS Hungarian Grand Prix",
+          "played": true,
+          "value": 5,
+          "displayValue": "5"
+        },
+        {
+          "name": "NED",
+          "displayName": "Heineken Dutch Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ITA2",
+          "displayName": "Pirelli Italian Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ESP",
+          "displayName": "Tag Heuer Spanish Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "AZB",
+          "displayName": "Qatar Airways Azerbaijan Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SIN",
+          "displayName": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "USA",
+          "displayName": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MEX",
+          "displayName": "Mexico City Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "BRA",
+          "displayName": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "LAS",
+          "displayName": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "QAT",
+          "displayName": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ARE",
+          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        }
+      ]
+    },
+    {
+      "rank": 6,
       "team": "Alpine",
       "points": {
         "value": 61,
@@ -805,184 +983,6 @@
           "played": true,
           "value": 1,
           "displayValue": "1"
-        },
-        {
-          "name": "HUN",
-          "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "NED",
-          "displayName": "Heineken Dutch Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ITA2",
-          "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ESP",
-          "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "AZB",
-          "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SIN",
-          "displayName": "Singapore Airlines Singapore Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "USA",
-          "displayName": "MSC Cruises United States Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MEX",
-          "displayName": "Mexico City Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "BRA",
-          "displayName": "MSC Cruises São Paulo Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "LAS",
-          "displayName": "Heineken Las Vegas Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "QAT",
-          "displayName": "Qatar Airways Qatar Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ARE",
-          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        }
-      ]
-    },
-    {
-      "rank": 6,
-      "team": "Racing Bulls",
-      "points": {
-        "value": 61,
-        "displayValue": "61"
-      },
-      "races": [
-        {
-          "name": "AUS",
-          "displayName": "Qatar Airways Australian Grand Prix",
-          "played": true,
-          "value": 4,
-          "displayValue": "4"
-        },
-        {
-          "name": "CHN",
-          "displayName": "Heineken Chinese Grand Prix",
-          "played": true,
-          "value": 8,
-          "displayValue": "8"
-        },
-        {
-          "name": "JPN",
-          "displayName": "Aramco Japanese Grand Prix",
-          "played": true,
-          "value": 2,
-          "displayValue": "2"
-        },
-        {
-          "name": "BRN",
-          "displayName": "Gulf Air Bahrain Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SAU",
-          "displayName": "STC Saudi Arabian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MIA",
-          "displayName": "Crypto.com Miami Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "CAN",
-          "displayName": "Lenovo Canadian Grand Prix",
-          "played": true,
-          "value": 7,
-          "displayValue": "7"
-        },
-        {
-          "name": "MON",
-          "displayName": "Monaco Grand Prix",
-          "played": true,
-          "value": 14,
-          "displayValue": "14"
-        },
-        {
-          "name": "BAR",
-          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
-          "played": true,
-          "value": 6,
-          "displayValue": "6"
-        },
-        {
-          "name": "AUT",
-          "displayName": "Lenovo Austrian Grand Prix",
-          "played": true,
-          "value": 3,
-          "displayValue": "3"
-        },
-        {
-          "name": "GBR",
-          "displayName": "Pirelli British Grand Prix",
-          "played": true,
-          "value": 15,
-          "displayValue": "15"
-        },
-        {
-          "name": "BEL",
-          "displayName": "Moët & Chandon Belgian Grand Prix",
-          "played": true,
-          "value": 2,
-          "displayValue": "2"
         },
         {
           "name": "HUN",
@@ -1165,9 +1165,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "NED",
@@ -1250,6 +1250,184 @@
     },
     {
       "rank": 8,
+      "team": "Audi",
+      "points": {
+        "value": 12,
+        "displayValue": "12"
+      },
+      "races": [
+        {
+          "name": "AUS",
+          "displayName": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
+        },
+        {
+          "name": "CHN",
+          "displayName": "Heineken Chinese Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "JPN",
+          "displayName": "Aramco Japanese Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "BRN",
+          "displayName": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SAU",
+          "displayName": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MIA",
+          "displayName": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "CAN",
+          "displayName": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "MON",
+          "displayName": "Monaco Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "BAR",
+          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "AUT",
+          "displayName": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "GBR",
+          "displayName": "Pirelli British Grand Prix",
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
+        },
+        {
+          "name": "BEL",
+          "displayName": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
+        },
+        {
+          "name": "HUN",
+          "displayName": "AWS Hungarian Grand Prix",
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
+        },
+        {
+          "name": "NED",
+          "displayName": "Heineken Dutch Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ITA2",
+          "displayName": "Pirelli Italian Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ESP",
+          "displayName": "Tag Heuer Spanish Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "AZB",
+          "displayName": "Qatar Airways Azerbaijan Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SIN",
+          "displayName": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "USA",
+          "displayName": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MEX",
+          "displayName": "Mexico City Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "BRA",
+          "displayName": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "LAS",
+          "displayName": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "QAT",
+          "displayName": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "ARE",
+          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        }
+      ]
+    },
+    {
+      "rank": 9,
       "team": "Williams",
       "points": {
         "value": 11,
@@ -1343,187 +1521,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "NED",
-          "displayName": "Heineken Dutch Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ITA2",
-          "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ESP",
-          "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "AZB",
-          "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SIN",
-          "displayName": "Singapore Airlines Singapore Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "USA",
-          "displayName": "MSC Cruises United States Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MEX",
-          "displayName": "Mexico City Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "BRA",
-          "displayName": "MSC Cruises São Paulo Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "LAS",
-          "displayName": "Heineken Las Vegas Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "QAT",
-          "displayName": "Qatar Airways Qatar Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "ARE",
-          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        }
-      ]
-    },
-    {
-      "rank": 9,
-      "team": "Audi",
-      "points": {
-        "value": 10,
-        "displayValue": "10"
-      },
-      "races": [
-        {
-          "name": "AUS",
-          "displayName": "Qatar Airways Australian Grand Prix",
-          "played": true,
-          "value": 2,
-          "displayValue": "2"
-        },
-        {
-          "name": "CHN",
-          "displayName": "Heineken Chinese Grand Prix",
           "played": true,
           "value": 0,
           "displayValue": "-"
-        },
-        {
-          "name": "JPN",
-          "displayName": "Aramco Japanese Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "BRN",
-          "displayName": "Gulf Air Bahrain Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SAU",
-          "displayName": "STC Saudi Arabian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MIA",
-          "displayName": "Crypto.com Miami Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "CAN",
-          "displayName": "Lenovo Canadian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "MON",
-          "displayName": "Monaco Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "BAR",
-          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "AUT",
-          "displayName": "Lenovo Austrian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "GBR",
-          "displayName": "Pirelli British Grand Prix",
-          "played": true,
-          "value": 4,
-          "displayValue": "4"
-        },
-        {
-          "name": "BEL",
-          "displayName": "Moët & Chandon Belgian Grand Prix",
-          "played": true,
-          "value": 4,
-          "displayValue": "4"
-        },
-        {
-          "name": "HUN",
-          "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
         },
         {
           "name": "NED",
@@ -1699,9 +1699,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "NED",
@@ -1877,9 +1877,9 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "NED",
