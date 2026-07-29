@@ -279,22 +279,29 @@ def main():
         import subprocess
         
         file_name = os.path.basename(out_path)
-        dest_path = os.path.join(repo_path, file_name)
+        # Target the f1Info folder inside the repo
+        target_dir = os.path.join(repo_path, 'f1Info')
+        os.makedirs(target_dir, exist_ok=True)
+        dest_path = os.path.join(target_dir, file_name)
+        
         shutil.copy2(out_path, dest_path)
+        
+        # The path relative to the git repo root
+        git_file_path = f"f1Info/{file_name}"
         
         try:
             # Sync with remote first to avoid push conflicts
             subprocess.run(["git", "pull", "--rebase"], cwd=repo_path, check=True)
             
-            status = subprocess.check_output(["git", "status", "--porcelain", file_name], cwd=repo_path).decode("utf-8").strip()
+            status = subprocess.check_output(["git", "status", "--porcelain", git_file_path], cwd=repo_path).decode("utf-8").strip()
             if status:
-                print(f"Changes detected in {file_name}. Uploading to GitHub...")
-                subprocess.run(["git", "add", file_name], cwd=repo_path, check=True)
-                subprocess.run(["git", "commit", "-m", f"Automated update for {file_name}"], cwd=repo_path, check=True)
+                print(f"Changes detected in {git_file_path}. Uploading to GitHub...")
+                subprocess.run(["git", "add", git_file_path], cwd=repo_path, check=True)
+                subprocess.run(["git", "commit", "-m", f"Automated update for {git_file_path}"], cwd=repo_path, check=True)
                 subprocess.run(["git", "push"], cwd=repo_path, check=True)
-                print(f"Uploaded {file_name} to GitHub successfully.")
+                print(f"Uploaded {git_file_path} to GitHub successfully.")
             else:
-                print(f"No changes in {file_name}. Skipped GitHub upload.")
+                print(f"No changes in {git_file_path}. Skipped GitHub upload.")
         except Exception as e:
             print(f"Error during GitHub upload: {e}")
     else:
