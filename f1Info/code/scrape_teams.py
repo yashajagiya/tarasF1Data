@@ -54,6 +54,7 @@ def parse_team_page(html: str, slug: str) -> dict:
         "slug": slug,
         "url": BASE_URL + slug,
         "hero": {},
+        "biography": "",
         "season_2026": {},
         "team_summary": {},
         "team_profile": {},
@@ -78,6 +79,14 @@ def parse_team_page(html: str, slug: str) -> dict:
             data["hero"]["accessible_color"] = ac_match.group(1)
         if tc_match or ac_match:
             break
+
+    # ── Biography ─────────────────────────────────────────────────
+    bio_span = soup.find(
+        "span",
+        class_=lambda c: c and "typography-module_body-s-bold" in c and "typography-module_md_body-m-bold" in c
+    )
+    if bio_span:
+        data["biography"] = bio_span.get_text(strip=True)
 
     # ── Statistics – parse all <dl> data grids ────────────────────
     all_sections = soup.find_all(["h2", "h3"])
@@ -205,20 +214,20 @@ def main():
         import shutil
         import subprocess
         
-        file_name = os.path.basename(out_path)
-        # Target the f1Info folder inside the repo
-        target_dir = os.path.join(repo_path, 'f1Info')
-        os.makedirs(target_dir, exist_ok=True)
-        dest_path = os.path.join(target_dir, file_name)
-        
-        shutil.copy2(out_path, dest_path)
-        
-        # The path relative to the git repo root
-        git_file_path = f"f1Info/{file_name}"
-        
         try:
             # Sync with remote first to avoid push conflicts
             subprocess.run(["git", "pull", "--rebase"], cwd=repo_path, check=True)
+            
+            file_name = os.path.basename(out_path)
+            # Target the f1Info folder inside the repo
+            target_dir = os.path.join(repo_path, 'f1Info')
+            os.makedirs(target_dir, exist_ok=True)
+            dest_path = os.path.join(target_dir, file_name)
+            
+            shutil.copy2(out_path, dest_path)
+            
+            # The path relative to the git repo root
+            git_file_path = f"f1Info/{file_name}"
             
             status = subprocess.check_output(["git", "status", "--porcelain", git_file_path], cwd=repo_path).decode("utf-8").strip()
             if status:
@@ -230,9 +239,30 @@ def main():
             else:
                 print(f"No changes in {git_file_path}. Skipped GitHub upload.")
         except Exception as e:
-            print(f"Error during GitHub upload: {e}")
+            print(f"Error during tarasF1Data GitHub upload: {e}")
     else:
-        print(f"Repo path {repo_path} not found. Skipped GitHub upload.")
+        print(f"Repo path {repo_path} not found. Skipped tarasF1Data GitHub upload.")
+
+    # Main Workspace GitHub Upload (m:\taras)
+    workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    try:
+        file_name = os.path.basename(out_path)
+        git_file_path = f"f1Info/{file_name}"
+        
+        # Sync with remote first
+        subprocess.run(["git", "pull", "--rebase"], cwd=workspace_path, check=True)
+        
+        status = subprocess.check_output(["git", "status", "--porcelain", git_file_path], cwd=workspace_path).decode("utf-8").strip()
+        if status:
+            print(f"Changes detected in {git_file_path} (workspace). Uploading to GitHub...")
+            subprocess.run(["git", "add", git_file_path], cwd=workspace_path, check=True)
+            subprocess.run(["git", "commit", "-m", f"Automated update for {git_file_path}"], cwd=workspace_path, check=True)
+            subprocess.run(["git", "push"], cwd=workspace_path, check=True)
+            print(f"Uploaded {git_file_path} to workspace GitHub successfully.")
+        else:
+            print(f"No changes in {git_file_path} (workspace). Skipped GitHub upload.")
+    except Exception as e:
+        print(f"Error during workspace GitHub upload: {e}")
 
     # Quick summary
     print()
