@@ -331,7 +331,49 @@
   {
     "slug": "audi",
     "url": "https://www.formula1.com/en/teams/audi",
-    "error": "HTTPSConnectionPool(host='www.formula1.com', port=443): Read timed out."
+    "hero": {
+      "name": "Audi",
+      "team_color": "#ff2d00",
+      "accessible_color": "#751500"
+    },
+    "biography": "Given Audi’s decades of success in global motorsport, it’s hard to believe that 2026 marks the famous German marque’s first foray into Formula 1. Having announced plans to become a power unit supplier back in 2022, their hunger to compete quickly grew – resulting in the acquisition of the Sauber team, now the first-ever Audi works squad.",
+    "season_2026": {
+      "Season Position": "8th",
+      "Season Points": "12",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "12",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "4",
+      "DHL Fastest Laps": "0",
+      "DNFs": "3",
+      "Sprint Races": "4",
+      "Sprint Points": "0",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "0"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "11",
+      "Team Points": "12",
+      "Highest Race Finish": "8 (x2)",
+      "Podiums": "0",
+      "Highest Grid Position": "8 (x1)",
+      "Pole Positions": "0",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "Audi Revolut F1 Team",
+      "Base": "Hinwil, Switzerland",
+      "Team Chief": "Mattia Binotto",
+      "Technical Chief": "James Key",
+      "Chassis": "R26",
+      "Power Unit": "Audi",
+      "Reserve Driver": "",
+      "First Team Entry": "2026"
+    }
   },
   {
     "slug": "williams",
