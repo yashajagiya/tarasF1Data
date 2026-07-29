@@ -1,0 +1,467 @@
+[
+  {
+    "slug": "mercedes",
+    "url": "https://www.formula1.com/en/teams/mercedes",
+    "hero": {
+      "name": "Mercedes",
+      "team_color": "#27f4d2",
+      "accessible_color": "#067e6a"
+    },
+    "season_2026": {
+      "Season Position": "1st",
+      "Season Points": "379",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "332",
+      "Grand Prix Wins": "8",
+      "Grand Prix Podiums": "14",
+      "Grand Prix Poles": "10",
+      "Grand Prix Top 10s": "17",
+      "DHL Fastest Laps": "0",
+      "DNFs": "3",
+      "Sprint Races": "4",
+      "Sprint Points": "47",
+      "Sprint Wins": "3",
+      "Sprint Podiums": "4",
+      "Sprint Poles": "2",
+      "Sprint Top 10s": "8"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "340",
+      "Team Points": "8538.5",
+      "Highest Race Finish": "1 (x130)",
+      "Podiums": "212",
+      "Highest Grid Position": "1 (x146)",
+      "Pole Positions": "146",
+      "World Championships": "8"
+    },
+    "team_profile": {
+      "Full Team Name": "Mercedes-AMG PETRONAS Formula One Team",
+      "Base": "Brackley, United Kingdom",
+      "Team Chief": "Toto Wolff",
+      "Technical Chief": "James Allison",
+      "Chassis": "W17",
+      "Power Unit": "Mercedes",
+      "Reserve Driver": "Fred Vesti",
+      "First Team Entry": "1970"
+    }
+  },
+  {
+    "slug": "ferrari",
+    "url": "https://www.formula1.com/en/teams/ferrari",
+    "hero": {
+      "name": "Ferrari",
+      "team_color": "#e8002d",
+      "accessible_color": "#5c0012"
+    },
+    "season_2026": {
+      "Season Position": "2nd",
+      "Season Points": "307",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "268",
+      "Grand Prix Wins": "2",
+      "Grand Prix Podiums": "9",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "20",
+      "DHL Fastest Laps": "2",
+      "DNFs": "2",
+      "Sprint Races": "4",
+      "Sprint Points": "39",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "4",
+      "Sprint Poles": "1",
+      "Sprint Top 10s": "8"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "1134",
+      "Team Points": "10982",
+      "Highest Race Finish": "1 (x251)",
+      "Podiums": "647",
+      "Highest Grid Position": "1 (x254)",
+      "Pole Positions": "254",
+      "World Championships": "16"
+    },
+    "team_profile": {
+      "Full Team Name": "Scuderia Ferrari HP",
+      "Base": "Maranello, Italy",
+      "Team Chief": "Frédéric Vasseur",
+      "Technical Chief": "Loic Serra / Enrico Gualtieri",
+      "Chassis": "SF-26",
+      "Power Unit": "Ferrari",
+      "Reserve Driver": "Antonio Giovinazzi",
+      "First Team Entry": "1950"
+    }
+  },
+  {
+    "slug": "mclaren",
+    "url": "https://www.formula1.com/en/teams/mclaren",
+    "hero": {
+      "name": "McLaren",
+      "team_color": "#ff8000",
+      "accessible_color": "#804000"
+    },
+    "season_2026": {
+      "Season Position": "3rd",
+      "Season Points": "220",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "177",
+      "Grand Prix Wins": "1",
+      "Grand Prix Podiums": "5",
+      "Grand Prix Poles": "1",
+      "Grand Prix Top 10s": "14",
+      "DHL Fastest Laps": "2",
+      "DNFs": "3",
+      "Sprint Races": "4",
+      "Sprint Points": "43",
+      "Sprint Wins": "1",
+      "Sprint Podiums": "4",
+      "Sprint Poles": "1",
+      "Sprint Top 10s": "8"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "1005",
+      "Team Points": "8003.5",
+      "Highest Race Finish": "1 (x204)",
+      "Podiums": "449",
+      "Highest Grid Position": "1 (x178)",
+      "Pole Positions": "178",
+      "World Championships": "10"
+    },
+    "team_profile": {
+      "Full Team Name": "McLaren Mastercard F1 Team",
+      "Base": "Woking, United Kingdom",
+      "Team Chief": "Andrea Stella",
+      "Technical Chief": "Peter Prodromou / Neil Houldey",
+      "Chassis": "MCL40",
+      "Power Unit": "Mercedes",
+      "Reserve Driver": "Leonardo Fornaroli, Pato O’Ward",
+      "First Team Entry": "1966"
+    }
+  },
+  {
+    "slug": "red-bull-racing",
+    "url": "https://www.formula1.com/en/teams/red-bull-racing",
+    "hero": {
+      "name": "Red Bull Racing",
+      "team_color": "#3671c6",
+      "accessible_color": "#142948"
+    },
+    "season_2026": {
+      "Season Position": "4th",
+      "Season Points": "177",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "168",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "4",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "16",
+      "DHL Fastest Laps": "1",
+      "DNFs": "5",
+      "Sprint Races": "4",
+      "Sprint Points": "9",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "6"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "429",
+      "Team Points": "8465",
+      "Highest Race Finish": "1 (x130)",
+      "Podiums": "237",
+      "Highest Grid Position": "1 (x111)",
+      "Pole Positions": "111",
+      "World Championships": "6"
+    },
+    "team_profile": {
+      "Full Team Name": "Oracle Red Bull Racing",
+      "Base": "Milton Keynes, United Kingdom",
+      "Team Chief": "Laurent Mekies",
+      "Technical Chief": "Pierre Waché",
+      "Chassis": "RB22",
+      "Power Unit": "Red Bull Ford",
+      "Reserve Driver": "Yuki Tsunoda",
+      "First Team Entry": "1997"
+    }
+  },
+  {
+    "slug": "racing-bulls",
+    "url": "https://www.formula1.com/en/teams/racing-bulls",
+    "hero": {
+      "name": "Racing Bulls",
+      "team_color": "#6692ff",
+      "accessible_color": "#0038c2"
+    },
+    "season_2026": {
+      "Season Position": "5th",
+      "Season Points": "66",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "62",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "15",
+      "DHL Fastest Laps": "0",
+      "DNFs": "1",
+      "Sprint Races": "4",
+      "Sprint Points": "4",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "4"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "410",
+      "Team Points": "1013",
+      "Highest Race Finish": "1 (x2)",
+      "Podiums": "6",
+      "Highest Grid Position": "1 (x1)",
+      "Pole Positions": "1",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "Visa Cash App Racing Bulls Formula One Team",
+      "Base": "Faenza, Italy",
+      "Team Chief": "Alan Permane",
+      "Technical Chief": "Tim Goss",
+      "Chassis": "VCARB 03",
+      "Power Unit": "Red Bull Ford",
+      "Reserve Driver": "Yuki Tsunoda",
+      "First Team Entry": "1985"
+    }
+  },
+  {
+    "slug": "alpine",
+    "url": "https://www.formula1.com/en/teams/alpine",
+    "hero": {
+      "name": "Alpine",
+      "team_color": "#00a1e8",
+      "accessible_color": "#004e70"
+    },
+    "season_2026": {
+      "Season Position": "6th",
+      "Season Points": "61",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "60",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "1",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "13",
+      "DHL Fastest Laps": "0",
+      "DNFs": "1",
+      "Sprint Races": "4",
+      "Sprint Points": "1",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "3"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "403",
+      "Team Points": "2061",
+      "Highest Race Finish": "1 (x21)",
+      "Podiums": "61",
+      "Highest Grid Position": "1 (x20)",
+      "Pole Positions": "20",
+      "World Championships": "2"
+    },
+    "team_profile": {
+      "Full Team Name": "BWT Alpine Formula One Team",
+      "Base": "Enstone, United Kingdom",
+      "Team Chief": "Flavio Briatore (Executive Advisor), Steve Nielsen (Managing Director)",
+      "Technical Chief": "David Sanchez",
+      "Chassis": "A526",
+      "Power Unit": "Mercedes",
+      "Reserve Driver": "Paul Aron, Kush Maini",
+      "First Team Entry": "1986"
+    }
+  },
+  {
+    "slug": "haas",
+    "url": "https://www.formula1.com/en/teams/haas",
+    "hero": {
+      "name": "Haas F1 Team",
+      "team_color": "#dee1e2",
+      "accessible_color": "#667175"
+    },
+    "season_2026": {
+      "Season Position": "7th",
+      "Season Points": "21",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "20",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "5",
+      "DHL Fastest Laps": "0",
+      "DNFs": "3",
+      "Sprint Races": "4",
+      "Sprint Points": "1",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "2"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "225",
+      "Team Points": "407",
+      "Highest Race Finish": "4 (x2)",
+      "Podiums": "0",
+      "Highest Grid Position": "4 (x1)",
+      "Pole Positions": "0",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "TGR Haas F1 Team",
+      "Base": "Kannapolis, United States",
+      "Team Chief": "Ayao Komatsu",
+      "Technical Chief": "Andrea De Zordo",
+      "Chassis": "VF-26",
+      "Power Unit": "Ferrari",
+      "Reserve Driver": "Jack Doohan, Ryo Hirakawa",
+      "First Team Entry": "2016"
+    }
+  },
+  {
+    "slug": "audi",
+    "url": "https://www.formula1.com/en/teams/audi",
+    "hero": {
+      "name": "Audi",
+      "team_color": "#ff2d00",
+      "accessible_color": "#751500"
+    },
+    "season_2026": {
+      "Season Position": "8th",
+      "Season Points": "12",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "12",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "4",
+      "DHL Fastest Laps": "0",
+      "DNFs": "3",
+      "Sprint Races": "4",
+      "Sprint Points": "0",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "0"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "11",
+      "Team Points": "12",
+      "Highest Race Finish": "8 (x2)",
+      "Podiums": "0",
+      "Highest Grid Position": "8 (x1)",
+      "Pole Positions": "0",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "Audi Revolut F1 Team",
+      "Base": "Hinwil, Switzerland",
+      "Team Chief": "Mattia Binotto",
+      "Technical Chief": "James Key",
+      "Chassis": "R26",
+      "Power Unit": "Audi",
+      "Reserve Driver": "",
+      "First Team Entry": "2026"
+    }
+  },
+  {
+    "slug": "williams",
+    "url": "https://www.formula1.com/en/teams/williams",
+    "error": "HTTPSConnectionPool(host='www.formula1.com', port=443): Read timed out. (read timeout=30)"
+  },
+  {
+    "slug": "aston-martin",
+    "url": "https://www.formula1.com/en/teams/aston-martin",
+    "hero": {
+      "name": "Aston Martin",
+      "team_color": "#229971",
+      "accessible_color": "#0f4331"
+    },
+    "season_2026": {
+      "Season Position": "10th",
+      "Season Points": "1",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "1",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "1",
+      "DHL Fastest Laps": "0",
+      "DNFs": "10",
+      "Sprint Races": "4",
+      "Sprint Points": "0",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "0"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "163",
+      "Team Points": "864",
+      "Highest Race Finish": "1 (x1)",
+      "Podiums": "12",
+      "Highest Grid Position": "1 (x1)",
+      "Pole Positions": "1",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "Aston Martin Aramco Formula One Team",
+      "Base": "Silverstone, United Kingdom",
+      "Team Chief": "Adrian Newey",
+      "Technical Chief": "Enrico Cardile",
+      "Chassis": "AMR26",
+      "Power Unit": "Honda",
+      "Reserve Driver": "Jak Crawford",
+      "First Team Entry": "2018"
+    }
+  },
+  {
+    "slug": "cadillac",
+    "url": "https://www.formula1.com/en/teams/cadillac",
+    "hero": {
+      "name": "Cadillac",
+      "team_color": "#aaaaad",
+      "accessible_color": "#58585b"
+    },
+    "season_2026": {
+      "Season Position": "11th",
+      "Season Points": "0",
+      "Grand Prix Races": "11",
+      "Grand Prix Points": "0",
+      "Grand Prix Wins": "0",
+      "Grand Prix Podiums": "0",
+      "Grand Prix Poles": "0",
+      "Grand Prix Top 10s": "0",
+      "DHL Fastest Laps": "0",
+      "DNFs": "9",
+      "Sprint Races": "4",
+      "Sprint Points": "0",
+      "Sprint Wins": "0",
+      "Sprint Podiums": "0",
+      "Sprint Poles": "0",
+      "Sprint Top 10s": "0"
+    },
+    "team_summary": {
+      "Grands Prix Entered": "11",
+      "Team Points": "0",
+      "Highest Race Finish": "13 (x1)",
+      "Podiums": "0",
+      "Highest Grid Position": "17 (x1)",
+      "Pole Positions": "0",
+      "World Championships": "0"
+    },
+    "team_profile": {
+      "Full Team Name": "Cadillac Formula 1 Team",
+      "Base": "Silverstone, United Kingdom",
+      "Team Chief": "Graeme Lowdon",
+      "Technical Chief": "Nick Chester",
+      "Chassis": "MAC-26",
+      "Power Unit": "Ferrari",
+      "Reserve Driver": "Zhou Guanyu",
+      "First Team Entry": "2026"
+    }
+  }
+]
