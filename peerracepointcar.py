@@ -13,6 +13,14 @@ from datetime import datetime
 
 API_URL = "https://site.api.espn.com/apis/v2/sports/racing/f1/standings"
 
+# Map ESPN display names → official F1.com team names.
+# Only teams whose ESPN name differs from the F1.com name need an entry;
+# all others pass through unchanged via the dict.get() fallback.
+OFFICIAL_TEAM_NAMES = {
+    "Red Bull":      "Red Bull Racing",
+    "Haas":          "Haas F1 Team",
+}
+
 # Path to the cloned GitHub repo (assuming script is in the repo root)
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -99,9 +107,10 @@ def extract_standings(data):
                     "displayValue": stat.get("displayValue", "").strip(),
                 })
 
+        espn_name = team.get("displayName", "")
         constructor = {
             "rank": rank,
-            "team": team.get("displayName", ""),
+            "team": OFFICIAL_TEAM_NAMES.get(espn_name, espn_name),
             "points": {
                 "value": pts_value,
                 "displayValue": pts_display,
