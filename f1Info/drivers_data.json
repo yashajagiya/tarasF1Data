@@ -8,8 +8,10 @@
       "country": "Great Britain",
       "team": "Mercedes",
       "number": "63",
-      "team_color": "#27f4d2",
-      "accessible_color": "#067e6a"
+      "team_color": "0xFF27F4D2",
+      "accessible_color": "#067e6a",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/mercedes/georus01/2026mercedesgeorus01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "15/02/1998",
@@ -68,8 +70,10 @@
       "country": "Italy",
       "team": "Mercedes",
       "number": "12",
-      "team_color": "#27f4d2",
-      "accessible_color": "#067e6a"
+      "team_color": "0xFF27F4D2",
+      "accessible_color": "#067e6a",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "25/08/2006",
@@ -129,8 +133,10 @@
       "country": "Monaco",
       "team": "Ferrari",
       "number": "16",
-      "team_color": "#e8002d",
-      "accessible_color": "#5c0012"
+      "team_color": "0xFFE8002D",
+      "accessible_color": "#5c0012",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/ferrari/chalec01/2026ferrarichalec01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "16/10/1997",
@@ -187,8 +193,10 @@
       "country": "Great Britain",
       "team": "Ferrari",
       "number": "44",
-      "team_color": "#e8002d",
-      "accessible_color": "#5c0012"
+      "team_color": "0xFFE8002D",
+      "accessible_color": "#5c0012",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/ferrari/lewham01/2026ferrarilewham01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "07/01/1985",
@@ -243,8 +251,10 @@
       "country": "Great Britain",
       "team": "McLaren",
       "number": "1",
-      "team_color": "#ff8000",
-      "accessible_color": "#804000"
+      "team_color": "0xFFFF8000",
+      "accessible_color": "#804000",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/mclaren/lannor01/2026mclarenlannor01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "13/11/1999",
@@ -302,8 +312,10 @@
       "country": "Australia",
       "team": "McLaren",
       "number": "81",
-      "team_color": "#ff8000",
-      "accessible_color": "#804000"
+      "team_color": "0xFFFF8000",
+      "accessible_color": "#804000",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mclaren/oscpia01/2026mclarenoscpia01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/mclaren/oscpia01/2026mclarenoscpia01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "06/04/2001",
@@ -361,8 +373,10 @@
       "country": "Netherlands",
       "team": "Red Bull Racing",
       "number": "3",
-      "team_color": "#3671c6",
-      "accessible_color": "#142948"
+      "team_color": "0xFF3671C6",
+      "accessible_color": "#142948",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/redbullracing/maxver01/2026redbullracingmaxver01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "30/09/1997",
@@ -419,8 +433,10 @@
       "country": "France",
       "team": "Red Bull Racing",
       "number": "6",
-      "team_color": "#3671c6",
-      "accessible_color": "#142948"
+      "team_color": "0xFF3671C6",
+      "accessible_color": "#142948",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/redbullracing/isahad01/2026redbullracingisahad01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/redbullracing/isahad01/2026redbullracingisahad01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "28/09/2004",
@@ -479,8 +495,10 @@
       "country": "New Zealand",
       "team": "Racing Bulls",
       "number": "30",
-      "team_color": "#6692ff",
-      "accessible_color": "#0038c2"
+      "team_color": "0xFF6692FF",
+      "accessible_color": "#0038c2",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/racingbulls/lialaw01/2026racingbullslialaw01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/racingbulls/lialaw01/2026racingbullslialaw01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "11/02/2002",
@@ -539,8 +557,10 @@
       "country": "Great Britain",
       "team": "Racing Bulls",
       "number": "41",
-      "team_color": "#6692ff",
-      "accessible_color": "#0038c2"
+      "team_color": "0xFF6692FF",
+      "accessible_color": "#0038c2",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/racingbulls/arvlin01/2026racingbullsarvlin01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/racingbulls/arvlin01/2026racingbullsarvlin01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "08/08/2007",
@@ -594,8 +614,10 @@
       "country": "France",
       "team": "Alpine",
       "number": "10",
-      "team_color": "#00a1e8",
-      "accessible_color": "#004e70"
+      "team_color": "0xFF00A1E8",
+      "accessible_color": "#004e70",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/piegas01/2026alpinepiegas01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/alpine/piegas01/2026alpinepiegas01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "07/02/1996",
@@ -651,8 +673,10 @@
       "country": "Argentina",
       "team": "Alpine",
       "number": "43",
-      "team_color": "#00a1e8",
-      "accessible_color": "#004e70"
+      "team_color": "0xFF00A1E8",
+      "accessible_color": "#004e70",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/alpine/fracol01/2026alpinefracol01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/alpine/fracol01/2026alpinefracol01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "27/05/2003",
@@ -707,8 +731,10 @@
       "country": "France",
       "team": "Haas F1 Team",
       "number": "31",
-      "team_color": "#dee1e2",
-      "accessible_color": "#667175"
+      "team_color": "0xFFDEE1E2",
+      "accessible_color": "#667175",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/haas/estoco01/2026haasestoco01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/haasf1team/estoco01/2026haasf1teamestoco01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "17/09/1996",
@@ -764,8 +790,10 @@
       "country": "Great Britain",
       "team": "Haas F1 Team",
       "number": "87",
-      "team_color": "#dee1e2",
-      "accessible_color": "#667175"
+      "team_color": "0xFFDEE1E2",
+      "accessible_color": "#667175",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/haas/olibea01/2026haasolibea01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/haasf1team/olibea01/2026haasf1teamolibea01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "08/05/2005",
@@ -822,8 +850,10 @@
       "country": "Germany",
       "team": "Audi",
       "number": "27",
-      "team_color": "#ff2d00",
-      "accessible_color": "#751500"
+      "team_color": "0xFFFF2D00",
+      "accessible_color": "#751500",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/nichul01/2026audinichul01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/audi/nichul01/2026audinichul01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "19/08/1987",
@@ -878,8 +908,10 @@
       "country": "Brazil",
       "team": "Audi",
       "number": "5",
-      "team_color": "#ff2d00",
-      "accessible_color": "#751500"
+      "team_color": "0xFFFF2D00",
+      "accessible_color": "#751500",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/audi/gabbor01/2026audigabbor01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/audi/gabbor01/2026audigabbor01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "14/10/2004",
@@ -935,8 +967,9 @@
       "country": "Spain",
       "team": "Williams",
       "number": "55",
-      "team_color": "#1868db",
-      "accessible_color": "#082145"
+      "team_color": "0xFF1868DB",
+      "accessible_color": "#082145",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/williams/carsai01/2026williamscarsai01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "01/09/1994",
@@ -992,8 +1025,10 @@
       "country": "Thailand",
       "team": "Williams",
       "number": "23",
-      "team_color": "#1868db",
-      "accessible_color": "#082145"
+      "team_color": "0xFF1868DB",
+      "accessible_color": "#082145",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/williams/alealb01/2026williamsalealb01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/williams/alealb01/2026williamsalealb01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "23/03/1996",
@@ -1049,8 +1084,10 @@
       "country": "Spain",
       "team": "Aston Martin",
       "number": "14",
-      "team_color": "#229971",
-      "accessible_color": "#0f4331"
+      "team_color": "0xFF229971",
+      "accessible_color": "#0f4331",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/astonmartin/feralo01/2026astonmartinferalo01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/astonmartin/feralo01/2026astonmartinferalo01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "29/07/1981",
@@ -1105,8 +1142,10 @@
       "country": "Canada",
       "team": "Aston Martin",
       "number": "18",
-      "team_color": "#229971",
-      "accessible_color": "#0f4331"
+      "team_color": "0xFF229971",
+      "accessible_color": "#0f4331",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/astonmartin/lanstr01/2026astonmartinlanstr01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/astonmartin/lanstr01/2026astonmartinlanstr01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "29/10/1998",
@@ -1160,8 +1199,10 @@
       "country": "Mexico",
       "team": "Cadillac",
       "number": "11",
-      "team_color": "#aaaaad",
-      "accessible_color": "#58585b"
+      "team_color": "0xFFAAAAAD",
+      "accessible_color": "#58585b",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/cadillac/serper01/2026cadillacserper01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/cadillac/serper01/2026cadillacserper01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "26/01/1990",
@@ -1212,8 +1253,10 @@
       "country": "Finland",
       "team": "Cadillac",
       "number": "77",
-      "team_color": "#aaaaad",
-      "accessible_color": "#58585b"
+      "team_color": "0xFFAAAAAD",
+      "accessible_color": "#58585b",
+      "driver_image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/cadillac/valbot01/2026cadillacvalbot01right.webp",
+      "driver_number_logo": "https://media.formula1.com/image/upload/e_trim/c_fit,h_742/q_auto/v1740000001/common/f1/2026/cadillac/valbot01/2026cadillacvalbot01numberwhite.webp"
     },
     "biography": {
       "Date of Birth": "28/08/1989",
