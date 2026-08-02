@@ -51,7 +51,9 @@
         "number": 63,
         "fullName": "George Russell"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
+      "gpName": "Qatar Airways Australian GP"
     },
     {
       "raceId": "chinese_2026",
@@ -96,7 +98,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
+      "gpName": "Heineken Chinese GP"
     },
     {
       "raceId": "japanese_2026",
@@ -141,7 +145,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
+      "gpName": "Aramco Japanese GP"
     },
     {
       "raceId": "miami_2026",
@@ -186,7 +192,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
+      "gpName": "Crypto.com Miami GP"
     },
     {
       "raceId": "canadian_2026",
@@ -231,7 +239,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
+      "gpName": "Lenovo Canadian GP"
     },
     {
       "raceId": "monaco_2026",
@@ -276,7 +286,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
+      "gpName": "Monaco GP"
     },
     {
       "raceId": "catalunya_2026",
@@ -321,7 +333,9 @@
         "number": 44,
         "fullName": "Lewis Hamilton"
       },
-      "teamWinner": "Scuderia Ferrari"
+      "teamWinner": "Scuderia Ferrari",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackcatalunyadetailed.webp",
+      "gpName": "MSC Cruises Barcelona-Catalunya GP"
     },
     {
       "raceId": "austrian_2026",
@@ -366,7 +380,9 @@
         "number": 63,
         "fullName": "George Russell"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp",
+      "gpName": "Lenovo Austrian GP"
     },
     {
       "raceId": "british_2026",
@@ -411,7 +427,9 @@
         "number": 16,
         "fullName": "Charles Leclerc"
       },
-      "teamWinner": "Scuderia Ferrari"
+      "teamWinner": "Scuderia Ferrari",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp",
+      "gpName": "Pirelli British GP"
     },
     {
       "raceId": "belgian_2026",
@@ -456,7 +474,9 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team"
+      "teamWinner": "Mercedes Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspafrancorchampsdetailed.webp",
+      "gpName": "Moët & Chandon Belgian GP"
     },
     {
       "raceId": "hungarian_2026",
@@ -501,7 +521,9 @@
         "number": 4,
         "fullName": "Lando Norris"
       },
-      "teamWinner": "McLaren Formula 1 Team"
+      "teamWinner": "McLaren Formula 1 Team",
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackhungaroringdetailed.webp",
+      "gpName": "AWS Hungarian GP"
     },
     {
       "raceId": "dutch_2026",
@@ -543,7 +565,9 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
+      "gpName": "Heineken Dutch GP"
     },
     {
       "raceId": "italian_2026",
@@ -585,7 +609,9 @@
         "url": "https://en.wikipedia.org/wiki/Monza_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
+      "gpName": "Pirelli Italian GP"
     },
     {
       "raceId": "spanish_2026",
@@ -627,7 +653,9 @@
         "url": "https://en.wikipedia.org/wiki/Madring"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp",
+      "gpName": "Tag Heuer Spanish GP"
     },
     {
       "raceId": "azerbaijan_2026",
@@ -669,7 +697,9 @@
         "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp",
+      "gpName": "Qatar Airways Azerbaijan GP"
     },
     {
       "raceId": "singapore_2026",
@@ -711,7 +741,9 @@
         "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp",
+      "gpName": "Singapore Airlines Singapore GP"
     },
     {
       "raceId": "united_states_2026",
@@ -753,7 +785,9 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp",
+      "gpName": "MSC Cruises United States GP"
     },
     {
       "raceId": "mexican_2026",
@@ -795,7 +829,9 @@
         "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
+      "gpName": "Mexico City GP"
     },
     {
       "raceId": "brazilian_2026",
@@ -837,7 +873,9 @@
         "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
+      "gpName": "MSC Cruises São Paulo GP"
     },
     {
       "raceId": "las_vegas_2026",
@@ -879,7 +917,9 @@
         "url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
+      "gpName": "Heineken Las Vegas GP"
     },
     {
       "raceId": "qatar_2026",
@@ -921,7 +961,9 @@
         "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
+      "gpName": "Qatar Airways Qatar GP"
     },
     {
       "raceId": "abu_dhabi_2026",
@@ -963,7 +1005,9 @@
         "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
       },
       "winner": null,
-      "teamWinner": null
+      "teamWinner": null,
+      "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp",
+      "gpName": "Etihad Airways Abu Dhabi GP"
     }
   ]
 }

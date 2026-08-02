@@ -24,6 +24,7 @@ if sys.platform == "win32":
 
 API_URL = "https://f1api.dev/api/current"
 RACE_RESULTS_URL = "https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json"
+RACES_IMG_URL = "https://yashajagiya.github.io/tarasF1Data/racesimg.json"
 
 HEADERS = {
     "User-Agent": (
@@ -131,6 +132,30 @@ def fetch_latest_result() -> dict | None:
         return None
 
 
+def fetch_race_images() -> dict:
+    """Fetch track images and GP names from GitHub-hosted JSON.
+    Returns a dict mapping circuitId to {'trackImage': ..., 'gpName': ...}."""
+    print(f"Fetching race images from GitHub...", end=" ", flush=True)
+    try:
+        resp = requests.get(RACES_IMG_URL, headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+        
+        mapping = {}
+        for item in data:
+            cid = item.get("circuit_id")
+            if cid:
+                mapping[cid] = {
+                    "trackImage": item.get("track_image"),
+                    "gpName": item.get("gp_name")
+                }
+        print(f"OK  ({len(mapping)} images found)")
+        return mapping
+    except Exception as e:
+        print(f"FAIL  ({e})")
+        return {}
+
+
 def fetch_races() -> dict:
     """Fetch the current season race data from the F1 API."""
     print(f"Fetching race data from {API_URL}...", end=" ", flush=True)
@@ -144,10 +169,20 @@ def fetch_races() -> dict:
     races_raw = api_data.get("races", [])
 
     print(f"OK  ({len(races_raw)} races found)")
+    
+    # ── Fetch race images/names mapping ──────────────────────────
+    images_mapping = fetch_race_images()
 
     races = []
     for race in races_raw:
         extracted = extract_race(race)
+        
+        # Patch in track image and GP name
+        circuit_id = extracted.get("circuit", {}).get("circuitId")
+        img_data = images_mapping.get(circuit_id, {})
+        extracted["trackImage"] = img_data.get("trackImage")
+        extracted["gpName"] = img_data.get("gpName")
+        
         races.append(extracted)
 
     # ── Patch missing winners from GitHub race result ────────────
