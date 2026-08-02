@@ -51,12 +51,7 @@
         "number": 63,
         "fullName": "George Russell"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:22.091",
-        "driverId": "max_verstappen",
-        "teamId": "red_bull"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "chinese_2026",
@@ -101,12 +96,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:35.275",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "japanese_2026",
@@ -151,12 +141,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:32.432",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "miami_2026",
@@ -201,12 +186,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:31.869",
-        "driverId": "norris",
-        "teamId": "mclaren"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "canadian_2026",
@@ -251,12 +231,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:14.210",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "monaco_2026",
@@ -301,12 +276,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:13.481",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "catalunya_2026",
@@ -351,12 +321,7 @@
         "number": 44,
         "fullName": "Lewis Hamilton"
       },
-      "teamWinner": "Scuderia Ferrari",
-      "fastLap": {
-        "lapTime": "1:20.122",
-        "driverId": "hamilton",
-        "teamId": "ferrari"
-      }
+      "teamWinner": "Scuderia Ferrari"
     },
     {
       "raceId": "austrian_2026",
@@ -401,12 +366,7 @@
         "number": 63,
         "fullName": "George Russell"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:10.374",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "british_2026",
@@ -451,12 +411,7 @@
         "number": 16,
         "fullName": "Charles Leclerc"
       },
-      "teamWinner": "Scuderia Ferrari",
-      "fastLap": {
-        "lapTime": "1:31.777",
-        "driverId": "antonelli",
-        "teamId": "mercedes"
-      }
+      "teamWinner": "Scuderia Ferrari"
     },
     {
       "raceId": "belgian_2026",
@@ -501,12 +456,7 @@
         "number": 12,
         "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": "Mercedes Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:48.890",
-        "driverId": "norris",
-        "teamId": "mclaren"
-      }
+      "teamWinner": "Mercedes Formula 1 Team"
     },
     {
       "raceId": "hungarian_2026",
@@ -551,12 +501,7 @@
         "number": 4,
         "fullName": "Lando Norris"
       },
-      "teamWinner": "McLaren Formula 1 Team",
-      "fastLap": {
-        "lapTime": "1:22.000",
-        "driverId": "leclerc",
-        "teamId": "ferrari"
-      }
+      "teamWinner": "McLaren Formula 1 Team"
     },
     {
       "raceId": "dutch_2026",
@@ -598,8 +543,7 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "italian_2026",
@@ -641,8 +585,7 @@
         "url": "https://en.wikipedia.org/wiki/Monza_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "spanish_2026",
@@ -684,8 +627,7 @@
         "url": "https://en.wikipedia.org/wiki/Madring"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "azerbaijan_2026",
@@ -727,8 +669,7 @@
         "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "singapore_2026",
@@ -770,8 +711,7 @@
         "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "united_states_2026",
@@ -813,8 +753,7 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "mexican_2026",
@@ -856,8 +795,7 @@
         "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "brazilian_2026",
@@ -899,8 +837,7 @@
         "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "las_vegas_2026",
@@ -942,8 +879,7 @@
         "url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "qatar_2026",
@@ -985,8 +921,7 @@
         "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     },
     {
       "raceId": "abu_dhabi_2026",
@@ -1028,8 +963,7 @@
         "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
       },
       "winner": null,
-      "teamWinner": null,
-      "fastLap": null
+      "teamWinner": null
     }
   ]
 }
