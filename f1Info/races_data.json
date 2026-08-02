@@ -48,22 +48,10 @@
         "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit"
       },
       "winner": {
-        "driverId": "russell",
-        "fullName": "George Russell",
         "number": 63,
-        "displayName": "#63 George Russell",
-        "shortName": "RUS",
-        "country": "Great Britain",
-        "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)"
+        "fullName": "George Russell"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:22.091",
         "driverId": "max_verstappen",
@@ -110,22 +98,10 @@
         "url": "http://en.wikipedia.org/wiki/Shanghai_International_Circuit"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:35.275",
         "driverId": "antonelli",
@@ -172,22 +148,10 @@
         "url": "https://en.wikipedia.org/wiki/Suzuka_International_Racing_Course"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:32.432",
         "driverId": "antonelli",
@@ -234,22 +198,10 @@
         "url": "https://en.wikipedia.org/wiki/Miami_International_Autodrome"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:31.869",
         "driverId": "norris",
@@ -296,22 +248,10 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:14.210",
         "driverId": "antonelli",
@@ -358,22 +298,10 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:13.481",
         "driverId": "antonelli",
@@ -420,22 +348,10 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya"
       },
       "winner": {
-        "driverId": "hamilton",
-        "fullName": "Lewis Hamilton",
         "number": 44,
-        "displayName": "#44 Lewis Hamilton",
-        "shortName": "HAM",
-        "country": "Great Britain",
-        "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton"
+        "fullName": "Lewis Hamilton"
       },
-      "teamWinner": {
-        "teamId": "ferrari",
-        "teamName": "Scuderia Ferrari",
-        "country": "Italy",
-        "constructorsChampionships": 16,
-        "driversChampionships": 15,
-        "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
-      },
+      "teamWinner": "Scuderia Ferrari",
       "fastLap": {
         "lapTime": "1:20.122",
         "driverId": "hamilton",
@@ -482,22 +398,10 @@
         "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring"
       },
       "winner": {
-        "driverId": "russell",
-        "fullName": "George Russell",
         "number": 63,
-        "displayName": "#63 George Russell",
-        "shortName": "RUS",
-        "country": "Great Britain",
-        "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)"
+        "fullName": "George Russell"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:10.374",
         "driverId": "antonelli",
@@ -544,22 +448,10 @@
         "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit"
       },
       "winner": {
-        "driverId": "leclerc",
-        "fullName": "Charles Leclerc",
         "number": 16,
-        "displayName": "#16 Charles Leclerc",
-        "shortName": "LEC",
-        "country": "Monaco",
-        "url": "https://en.wikipedia.org/wiki/Charles_Leclerc"
+        "fullName": "Charles Leclerc"
       },
-      "teamWinner": {
-        "teamId": "ferrari",
-        "teamName": "Scuderia Ferrari",
-        "country": "Italy",
-        "constructorsChampionships": 16,
-        "driversChampionships": 15,
-        "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
-      },
+      "teamWinner": "Scuderia Ferrari",
       "fastLap": {
         "lapTime": "1:31.777",
         "driverId": "antonelli",
@@ -606,22 +498,10 @@
         "url": "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps"
       },
       "winner": {
-        "driverId": "antonelli",
-        "fullName": "Andrea Kimi Antonelli",
         "number": 12,
-        "displayName": "#12 Andrea Kimi Antonelli",
-        "shortName": "ANT",
-        "country": "Italy",
-        "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli"
+        "fullName": "Andrea Kimi Antonelli"
       },
-      "teamWinner": {
-        "teamId": "mercedes",
-        "teamName": "Mercedes Formula 1 Team",
-        "country": "Germany",
-        "constructorsChampionships": 8,
-        "driversChampionships": 9,
-        "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
-      },
+      "teamWinner": "Mercedes Formula 1 Team",
       "fastLap": {
         "lapTime": "1:48.890",
         "driverId": "norris",
@@ -668,22 +548,10 @@
         "url": "https://en.wikipedia.org/wiki/Hungaroring"
       },
       "winner": {
-        "driverId": "norris",
-        "fullName": "Lando Norris",
         "number": 4,
-        "displayName": "#4 Lando Norris",
-        "shortName": "NOR",
-        "country": "Great Britain",
-        "url": "https://en.wikipedia.org/wiki/Lando_Norris"
+        "fullName": "Lando Norris"
       },
-      "teamWinner": {
-        "teamId": "mclaren",
-        "teamName": "McLaren Formula 1 Team",
-        "country": "Great Britain",
-        "constructorsChampionships": 10,
-        "driversChampionships": 13,
-        "url": "https://en.wikipedia.org/wiki/McLaren"
-      },
+      "teamWinner": "McLaren Formula 1 Team",
       "fastLap": {
         "lapTime": "1:22.000",
         "driverId": "leclerc",
