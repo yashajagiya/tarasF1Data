@@ -63,11 +63,11 @@ def extract_race(race: dict) -> dict:
         "lapRecord": circuit_raw.get("lapRecord"),
         "firstParticipationYear": circuit_raw.get("firstParticipationYear"),
         "corners": circuit_raw.get("corners"),
-        "url": circuit_raw.get("url"),
     }
 
-    # ── Winner (driver number + full name only) ─────────────────
+    # ── Winner ───────────────────────────────────────────────────
     winner_raw = race.get("winner")
+    team_raw = race.get("teamWinner")
     winner = None
     if winner_raw:
         number = winner_raw.get("number", "")
@@ -75,24 +75,19 @@ def extract_race(race: dict) -> dict:
         surname = winner_raw.get("surname", "")
         full_name = f"{name} {surname}".strip()
         winner = {
-            "number": number,
+            "drivernumber": number,
             "fullName": full_name,
+            "teamWinner": team_raw.get("teamName") if team_raw else None
         }
-
-    # ── Team Winner (name only) ──────────────────────────────────
-    team_raw = race.get("teamWinner")
-    team_winner = team_raw.get("teamName") if team_raw else None
 
     return {
         "raceId": race.get("raceId"),
         "raceName": race.get("raceName"),
         "round": race.get("round"),
         "laps": race.get("laps"),
-        "url": race.get("url"),
         "schedule": schedule,
         "circuit": circuit,
         "winner": winner,
-        "teamWinner": team_winner,
     }
 
 
@@ -120,12 +115,12 @@ def fetch_latest_result() -> dict | None:
         result = {
             "circuitId": circuit_id,
             "winner": {
-                "number": int(p1.get("driverNumber", 0)),
+                "drivernumber": int(p1.get("driverNumber", 0)),
                 "fullName": p1.get("driverName", ""),
+                "teamWinner": p1.get("team", ""),
             },
-            "teamWinner": p1.get("team", ""),
         }
-        print(f"OK  ({data.get('raceName', circuit_id)} -> #{result['winner']['number']} {result['winner']['fullName']})")
+        print(f"OK  ({data.get('raceName', circuit_id)} -> #{result['winner']['drivernumber']} {result['winner']['fullName']})")
         return result
     except Exception as e:
         print(f"FAIL  ({e})")
@@ -177,11 +172,11 @@ def fetch_races() -> dict:
     for race in races_raw:
         extracted = extract_race(race)
         
-        # Patch in track image and GP name
+        # Patch in track image and GP name inside circuit
         circuit_id = extracted.get("circuit", {}).get("circuitId")
         img_data = images_mapping.get(circuit_id, {})
-        extracted["trackImage"] = img_data.get("trackImage")
-        extracted["gpName"] = img_data.get("gpName")
+        extracted["circuit"]["trackImage"] = img_data.get("trackImage")
+        extracted["circuit"]["gpName"] = img_data.get("gpName")
         
         races.append(extracted)
 
@@ -193,7 +188,6 @@ def fetch_races() -> dict:
             circuit_id = race.get("circuit", {}).get("circuitId")
             if circuit_id == latest["circuitId"] and race["winner"] is None:
                 race["winner"] = latest["winner"]
-                race["teamWinner"] = latest["teamWinner"]
                 patched_circuit = circuit_id
                 print(f"  >> Patched R{race['round']} ({race['raceName']}) with GitHub result")
 
@@ -203,9 +197,9 @@ def fetch_races() -> dict:
         winner_info = ""
         if extracted["winner"]:
             w = extracted["winner"]
-            tw = extracted.get("teamWinner") or "TBD"
+            tw = w.get("teamWinner") or "TBD"
             src = " [GitHub]" if extracted.get("circuit", {}).get("circuitId") == patched_circuit else ""
-            winner_info = f" | Winner: #{w['number']} {w['fullName']} ({tw}){src}"
+            winner_info = f" | Winner: #{w.get('drivernumber', '')} {w.get('fullName', '')} ({tw}){src}"
         else:
             winner_info = " | TBD"
 
@@ -216,8 +210,7 @@ def fetch_races() -> dict:
         "championship": {
             "championshipId": championship.get("championshipId"),
             "championshipName": championship.get("championshipName"),
-            "year": championship.get("year"),
-            "url": championship.get("url"),
+            "year": championship.get("year")
         },
         "totalRaces": len(races),
         "races": races,
@@ -286,7 +279,7 @@ def main():
         rnd = f"R{r['round']}"
         name = r["raceName"][:48]
         if r["winner"]:
-            w = f"#{r['winner']['number']} {r['winner']['fullName']}"
+            w = f"#{r['winner'].get('drivernumber', '')} {r['winner'].get('fullName', '')}"
         else:
             w = "TBD"
         print(f"{rnd:<4} {name:<50} {w:<25}")
