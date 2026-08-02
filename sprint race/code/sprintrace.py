@@ -41,7 +41,7 @@ def scrape_f1_race_result(url, output_file='race_results.json', circuit_id=None)
         try:
             races_index = url_parts.index('races')
             # The country name is usually 2 positions after 'races' in the URL 
-            country_name = url_parts[races_index + 2].capitalize()
+            country_name = url_parts[races_index + 2].replace('-', ' ').title()
         except Exception:
             pass
 
