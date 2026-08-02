@@ -135,10 +135,34 @@ def parse_driver_page(html: str, slug: str) -> dict:
         tc_match = re.search(r"--f1-team-colour:\s*(#[0-9a-fA-F]{3,8})", style)
         ac_match = re.search(r"--f1-accessible-colour:\s*(#[0-9a-fA-F]{3,8})", style)
         if tc_match:
-            data["hero"]["team_color"] = tc_match.group(1)
+            hex_color = tc_match.group(1).lstrip("#")
+            if len(hex_color) == 3:
+                hex_color = "".join(c * 2 for c in hex_color)
+            data["hero"]["team_color"] = f"0xFF{hex_color.upper()}"
         if ac_match:
             data["hero"]["accessible_color"] = ac_match.group(1)
         if tc_match or ac_match:
+            break
+
+    # ── Driver Image ──────────────────────────────────────────────
+    # Look for <img> whose src contains the driver's slug identifier + "right.webp"
+    # e.g. "2026mercedesgeorus01right.webp" for george-russell
+    driver_img = None
+    for img in soup.find_all("img", src=True):
+        src = img.get("src", "").lower()
+        if "right.webp" in src and "/common/f1/" in src and "carright" not in src and "logo" not in src:
+            driver_img = img
+            break
+    if driver_img:
+        data["hero"]["driver_image"] = driver_img.get("src", "")
+
+    # ── Driver Number Logo ────────────────────────────────────────
+    # The number logo is set via mask-image CSS on a <div> with "numberwhite" in the URL
+    for div in soup.find_all("div", style=True):
+        style = div.get("style", "")
+        num_match = re.search(r'mask-image:\s*url\(["\']?(.*?numberwhite[^"\')\s]*)["\']?\)', style)
+        if num_match:
+            data["hero"]["driver_number_logo"] = num_match.group(1)
             break
 
     # ── Biography (Date of Birth, Place of Birth, Text, Quote) ────

@@ -74,11 +74,35 @@ def parse_team_page(html: str, slug: str) -> dict:
         tc_match = re.search(r"--f1-team-colour:\s*(#[0-9a-fA-F]{3,8})", style)
         ac_match = re.search(r"--f1-accessible-colour:\s*(#[0-9a-fA-F]{3,8})", style)
         if tc_match:
-            data["hero"]["team_color"] = tc_match.group(1)
+            hex_color = tc_match.group(1).lstrip("#")
+            # Pad to 6 chars if short-form (e.g. #abc -> aabbcc)
+            if len(hex_color) == 3:
+                hex_color = "".join(c * 2 for c in hex_color)
+            data["hero"]["team_color"] = f"0xFF{hex_color.upper()}"
         if ac_match:
             data["hero"]["accessible_color"] = ac_match.group(1)
         if tc_match or ac_match:
             break
+
+    # ── Team Car Image ────────────────────────────────────────────
+    # Look for <img> whose src contains "carright"
+    car_img = soup.find("img", src=lambda s: s and "carright" in s.lower())
+    if car_img:
+        data["hero"]["team_car"] = car_img.get("src", "")
+    else:
+        # Fallback: look for img with alt matching team name
+        team_name = data["hero"].get("name", "")
+        car_img = soup.find("img", alt=lambda a: a and team_name.lower() in a.lower() and "logo" not in a.lower())
+        if car_img and "formula1.com" in car_img.get("src", ""):
+            data["hero"]["team_car"] = car_img.get("src", "")
+
+    # ── Team Logo Image ───────────────────────────────────────────
+    # Look for <img> whose src or alt contains "logowhite" or "logolight"
+    logo_img = soup.find("img", src=lambda s: s and ("logowhite" in s.lower() or "logolight" in s.lower()))
+    if not logo_img:
+        logo_img = soup.find("img", alt=lambda a: a and ("logowhite" in a.lower() or "logolight" in a.lower()))
+    if logo_img:
+        data["hero"]["team_logo"] = logo_img.get("src", "")
 
     # ── Biography ─────────────────────────────────────────────────
     bio_span = soup.find(
