@@ -43,6 +43,9 @@
         "lapRecord": "1:19:813",
         "firstParticipationYear": 1996,
         "corners": 14,
+        "fastestLapDriverId": "leclerc",
+        "fastestLapTeamId": "ferrari",
+        "fastestLapYear": 2024,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp",
         "gpName": "Qatar Airways Australian GP"
       },
@@ -88,6 +91,9 @@
         "lapRecord": "1:32:238",
         "firstParticipationYear": 2004,
         "corners": 16,
+        "fastestLapDriverId": "michael_schumacher",
+        "fastestLapTeamId": "ferrari",
+        "fastestLapYear": 2004,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackshanghaidetailed.webp",
         "gpName": "Heineken Chinese GP"
       },
@@ -133,6 +139,9 @@
         "lapRecord": "1:30:983",
         "firstParticipationYear": 1987,
         "corners": 18,
+        "fastestLapDriverId": "hamilton",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2019,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksuzukadetailed.webp",
         "gpName": "Aramco Japanese GP"
       },
@@ -178,6 +187,9 @@
         "lapRecord": "1:29:708",
         "firstParticipationYear": 2022,
         "corners": 19,
+        "fastestLapDriverId": "max_verstappen",
+        "fastestLapTeamId": "red_bull",
+        "fastestLapYear": 2023,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmiamidetailed.webp",
         "gpName": "Crypto.com Miami GP"
       },
@@ -223,6 +235,9 @@
         "lapRecord": "1:13:078",
         "firstParticipationYear": 1978,
         "corners": 14,
+        "fastestLapDriverId": "bottas",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2019,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontrealdetailed.webp",
         "gpName": "Lenovo Canadian GP"
       },
@@ -268,6 +283,9 @@
         "lapRecord": "1:12:909",
         "firstParticipationYear": 1950,
         "corners": 19,
+        "fastestLapDriverId": "hamilton",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2021,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmontecarlodetailed.webp",
         "gpName": "Monaco GP"
       },
@@ -313,6 +331,9 @@
         "lapRecord": "1:16:330",
         "firstParticipationYear": 1991,
         "corners": 14,
+        "fastestLapDriverId": "max_verstappen",
+        "fastestLapTeamId": "red_bull",
+        "fastestLapYear": 2023,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackcatalunyadetailed.webp",
         "gpName": "MSC Cruises Barcelona-Catalunya GP"
       },
@@ -358,6 +379,9 @@
         "lapRecord": "1:05:619",
         "firstParticipationYear": 1970,
         "corners": 10,
+        "fastestLapDriverId": "sainz",
+        "fastestLapTeamId": "mclaren",
+        "fastestLapYear": 2020,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspielbergdetailed.webp",
         "gpName": "Lenovo Austrian GP"
       },
@@ -403,6 +427,9 @@
         "lapRecord": "1:27:097",
         "firstParticipationYear": 1950,
         "corners": 18,
+        "fastestLapDriverId": "max_verstappen",
+        "fastestLapTeamId": "red_bull",
+        "fastestLapYear": 2020,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksilverstonedetailed.webp",
         "gpName": "Pirelli British GP"
       },
@@ -448,6 +475,9 @@
         "lapRecord": "1:46:286",
         "firstParticipationYear": 1950,
         "corners": 20,
+        "fastestLapDriverId": "bottas",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2018,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackspafrancorchampsdetailed.webp",
         "gpName": "Moët & Chandon Belgian GP"
       },
@@ -493,6 +523,9 @@
         "lapRecord": "1:16:627",
         "firstParticipationYear": 1986,
         "corners": 14,
+        "fastestLapDriverId": "hamilton",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2020,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackhungaroringdetailed.webp",
         "gpName": "AWS Hungarian GP"
       },
@@ -538,6 +571,9 @@
         "lapRecord": "1:11:097",
         "firstParticipationYear": 1950,
         "corners": 14,
+        "fastestLapDriverId": "hamilton",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2021,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
         "gpName": "Heineken Dutch GP"
       },
@@ -579,6 +615,9 @@
         "lapRecord": "1:21:046",
         "firstParticipationYear": 1950,
         "corners": 11,
+        "fastestLapDriverId": "barrichelo",
+        "fastestLapTeamId": "ferrari",
+        "fastestLapYear": 2004,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
         "gpName": "Pirelli Italian GP"
       },
@@ -620,6 +659,9 @@
         "lapRecord": null,
         "firstParticipationYear": 2026,
         "corners": 22,
+        "fastestLapDriverId": null,
+        "fastestLapTeamId": null,
+        "fastestLapYear": null,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp",
         "gpName": "Tag Heuer Spanish GP"
       },
@@ -661,6 +703,9 @@
         "lapRecord": "1:43:009",
         "firstParticipationYear": 2017,
         "corners": 20,
+        "fastestLapDriverId": "leclerc",
+        "fastestLapTeamId": "ferrari",
+        "fastestLapYear": 2019,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp",
         "gpName": "Qatar Airways Azerbaijan GP"
       },
@@ -702,6 +747,9 @@
         "lapRecord": "1:35:867",
         "firstParticipationYear": 2008,
         "corners": 19,
+        "fastestLapDriverId": "hamilton",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2023,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp",
         "gpName": "Singapore Airlines Singapore GP"
       },
@@ -743,6 +791,9 @@
         "lapRecord": "1:36:169",
         "firstParticipationYear": 2012,
         "corners": 20,
+        "fastestLapDriverId": "leclerc",
+        "fastestLapTeamId": "ferrari",
+        "fastestLapYear": 2019,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackaustindetailed.webp",
         "gpName": "MSC Cruises United States GP"
       },
@@ -784,6 +835,9 @@
         "lapRecord": "1:17:774",
         "firstParticipationYear": 1962,
         "corners": 17,
+        "fastestLapDriverId": "bottas",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2021,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmexicocitydetailed.webp",
         "gpName": "Mexico City GP"
       },
@@ -825,6 +879,9 @@
         "lapRecord": "1:10:540",
         "firstParticipationYear": 1972,
         "corners": 15,
+        "fastestLapDriverId": "bottas",
+        "fastestLapTeamId": "mercedes",
+        "fastestLapYear": 2018,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackinterlagosdetailed.webp",
         "gpName": "MSC Cruises São Paulo GP"
       },
@@ -866,6 +923,9 @@
         "lapRecord": "1:35:490",
         "firstParticipationYear": 2023,
         "corners": 17,
+        "fastestLapDriverId": "piastri",
+        "fastestLapTeamId": "mclaren",
+        "fastestLapYear": 2023,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklasvegasdetailed.webp",
         "gpName": "Heineken Las Vegas GP"
       },
@@ -907,6 +967,9 @@
         "lapRecord": "1:24:319",
         "firstParticipationYear": 2021,
         "corners": 16,
+        "fastestLapDriverId": "max_verstappen",
+        "fastestLapTeamId": "red_bull",
+        "fastestLapYear": 2023,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracklusaildetailed.webp",
         "gpName": "Qatar Airways Qatar GP"
       },
@@ -948,6 +1011,9 @@
         "lapRecord": "1:26:103",
         "firstParticipationYear": 2009,
         "corners": 16,
+        "fastestLapDriverId": "max_verstappen",
+        "fastestLapTeamId": "red_bull",
+        "fastestLapYear": 2021,
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackyasmarinacircuitdetailed.webp",
         "gpName": "Etihad Airways Abu Dhabi GP"
       },

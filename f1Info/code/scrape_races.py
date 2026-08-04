@@ -63,6 +63,9 @@ def extract_race(race: dict) -> dict:
         "lapRecord": circuit_raw.get("lapRecord"),
         "firstParticipationYear": circuit_raw.get("firstParticipationYear"),
         "corners": circuit_raw.get("corners"),
+        "fastestLapDriverId": circuit_raw.get("fastestLapDriverId"),
+        "fastestLapTeamId": circuit_raw.get("fastestLapTeamId"),
+        "fastestLapYear": circuit_raw.get("fastestLapYear"),
     }
 
     # ── Winner ───────────────────────────────────────────────────
