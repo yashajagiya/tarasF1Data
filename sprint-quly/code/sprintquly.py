@@ -209,6 +209,6 @@ if __name__ == "__main__":
         output_file = os.path.join(os.path.dirname(script_dir), 'sprint_quly_result.json')
         scrape_f1_sprint_qualifying(url, output_file, circuit_id=circuit_id)
         # Push to github automatically
-        push_to_git('sprint quly')
+        push_to_git('sprint-quly')
     else:
         print("No sprint qualifying data to scrape for the current race weekend.")
