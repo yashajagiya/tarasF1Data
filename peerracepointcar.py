@@ -32,8 +32,8 @@ def fetch_standings():
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
 
-    req = urllib.request.Request(API_URL, headers={"User-Agent": "F1StandingsBot/1.0"})
-    with urllib.request.urlopen(req, context=ctx) as resp:
+    req = urllib.request.Request(API_URL, headers={"User-Agent": "curl/8.4.0"})
+    with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -155,7 +155,7 @@ def save_standings(standings, filename="carperrace.json"):
 
 
 def git_commit_and_push(filepath, message=None):
-    """Auto-commit and push the file to GitHub."""
+    """Auto-commit and push the file to GitHub reliably."""
     if message is None:
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         message = f"Auto-update constructor standings — {now}"
@@ -167,29 +167,39 @@ def git_commit_and_push(filepath, message=None):
         subprocess.run(["git", "add", filename], cwd=REPO_DIR,
                         capture_output=True, text=True, check=True)
 
-        # Check if there are changes to commit
+        # Check if there are staged changes to commit
         result = subprocess.run(["git", "diff", "--cached", "--quiet"],
                                  cwd=REPO_DIR, capture_output=True)
-        if result.returncode == 0:
-            print("No changes to commit — standings are already up to date.")
-            return
+        if result.returncode != 0:
+            # Commit locally
+            subprocess.run(["git", "commit", "-m", message], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=True)
+            print(f"Committed: {message}")
+        else:
+            print("No new local file changes to commit.")
 
-        # Commit locally
-        subprocess.run(["git", "commit", "-m", message], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
-        print(f"Committed: {message}")
+        # Pull latest with autostash to avoid merge/unstaged conflicts
+        subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+                        capture_output=True, text=True, check=False)
 
-        # Pull latest (rebase on top) to avoid merge conflicts
-        subprocess.run(["git", "pull", "--rebase"], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
+        # Push any local commits
+        push_res = subprocess.run(["git", "push"], cwd=REPO_DIR,
+                                   capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print("Pushed to GitHub successfully!")
+        else:
+            # Retry push after rebase
+            subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=False)
+            retry = subprocess.run(["git", "push"], cwd=REPO_DIR,
+                                    capture_output=True, text=True)
+            if retry.returncode == 0:
+                print("Pushed to GitHub successfully on retry!")
+            else:
+                print(f"Git push error: {retry.stderr or retry.stdout}")
 
-        # Push
-        subprocess.run(["git", "push"], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
-        print("Pushed to GitHub successfully!")
-
-    except subprocess.CalledProcessError as e:
-        print(f"Git error: {e.stderr or e.stdout or e}")
+    except Exception as e:
+        print(f"Git error: {e}")
 
 
 def main():

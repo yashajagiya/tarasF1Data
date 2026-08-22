@@ -9,73 +9,179 @@ import json
 import ssl
 import subprocess
 import os
+import unicodedata
+import re
 from datetime import datetime
 
 API_URL = "https://site.api.espn.com/apis/v2/sports/racing/f1/standings"
-OPENF1_DRIVERS_URL = "https://api.openf1.org/v1/drivers"
+OPENF1_DRIVERS_URL = "https://yashajagiya.github.io/tarasF1Data/f1Info/drivers_data.json"
+DRIVERS_IMG_FALLBACK_URL = "https://yashajagiya.github.io/tarasF1Data/driversimg.json"
+
+# Known 2026 driver acronyms mapping for abbreviation lookup
+KNOWN_ACRONYMS = {
+    "NOR": "lando norris", "VER": "max verstappen", "BOR": "gabriel bortoleto",
+    "HAD": "isack hadjar", "GAS": "pierre gasly", "PER": "sergio perez",
+    "ANT": "kimi antonelli", "ALO": "fernando alonso", "LEC": "charles leclerc",
+    "STR": "lance stroll", "ALB": "alexander albon", "HUL": "nico hulkenberg",
+    "LAW": "liam lawson", "OCO": "esteban ocon", "LIN": "arvid lindblad",
+    "COL": "franco colapinto", "HAM": "lewis hamilton", "SAI": "carlos sainz",
+    "RUS": "george russell", "BOT": "valtteri bottas", "PIA": "oscar piastri",
+    "BEA": "oliver bearman",
+}
 
 # Path to the cloned GitHub repo (assuming script is in the repo root)
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
+def _normalize(s):
+    """Normalize string: remove accents, spaces, and punctuation for fuzzy matching."""
+    if not s:
+        return ""
+    s = unicodedata.normalize('NFKD', str(s)).encode('ascii', 'ignore').decode('utf-8')
+    return re.sub(r'[^a-z0-9]', '', s.lower())
+
 
 def _fetch_json(url):
-    """Fetch JSON from a URL (shared helper)."""
+    """Fetch JSON from a URL with no-cache headers."""
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
 
-    req = urllib.request.Request(url, headers={"User-Agent": "F1StandingsBot/1.0"})
-    with urllib.request.urlopen(req, context=ctx) as resp:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "curl/8.4.0",
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+        }
+    )
+    with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
 def fetch_driver_info():
     """
-    Fetch driver info from the OpenF1 API. If it fails (e.g. during a live race session
-    due to paywall restrictions), fallback to a hardcoded dictionary.
+    Fetch driver info dynamically from local files (f1Info/drivers_data.json)
+    or remote URLs. Automatically parses both drivers_data.json (hero format)
+    and driversimg.json (flat format).
     """
-    try:
-        drivers = _fetch_json(OPENF1_DRIVERS_URL)
-        if isinstance(drivers, dict) and "detail" in drivers:
-            # API returned an error message instead of list
-            raise ValueError(drivers["detail"])
-            
-        lookup = {}
-        for d in drivers:
+    # 1. Try local candidate files first for instantaneous updates
+    local_candidates = [
+        os.path.join(REPO_DIR, "..", "f1Info", "drivers_data.json"),
+        os.path.join(REPO_DIR, "f1Info", "drivers_data.json"),
+        os.path.join(REPO_DIR, "..", "drivers_data.json"),
+        os.path.join(REPO_DIR, "drivers_data.json"),
+        os.path.join(REPO_DIR, "..", "driversimg.json"),
+        os.path.join(REPO_DIR, "driversimg.json"),
+    ]
+
+    raw_drivers = None
+    for path in local_candidates:
+        abs_path = os.path.abspath(path)
+        if os.path.exists(abs_path):
+            try:
+                with open(abs_path, "r", encoding="utf-8") as f:
+                    raw_drivers = json.load(f)
+                    print(f"Loaded driver details from local file: {abs_path}")
+                    break
+            except Exception as e:
+                print(f"Could not read local file {abs_path}: {e}")
+
+    # 2. If not found locally, fetch from OPENF1_DRIVERS_URL
+    if not raw_drivers:
+        try:
+            print(f"Fetching driver info from {OPENF1_DRIVERS_URL}...")
+            raw_drivers = _fetch_json(OPENF1_DRIVERS_URL)
+        except Exception as e:
+            print(f"Remote fetch from {OPENF1_DRIVERS_URL} failed ({e}). Trying fallback URL...")
+            try:
+                raw_drivers = _fetch_json(DRIVERS_IMG_FALLBACK_URL)
+            except Exception as e2:
+                print(f"Fallback URL also failed ({e2}).")
+
+    lookup = {}
+    if isinstance(raw_drivers, list):
+        for d in raw_drivers:
+            if not isinstance(d, dict):
+                continue
+            hero = d.get("hero", {})
+
+            # Extract driver details dynamically (supports both hero and flat schemas)
+            first_name = hero.get("first_name", d.get("first_name", ""))
+            last_name = hero.get("last_name", d.get("last_name", ""))
+            full_name = f"{first_name} {last_name}".strip() if (first_name or last_name) else d.get("full_name", "")
+
+            num_val = hero.get("number", d.get("driver_number"))
+            try:
+                driver_number = int(num_val) if num_val is not None and str(num_val).strip() != "" else None
+            except (ValueError, TypeError):
+                driver_number = None
+
+            team_name = hero.get("team", d.get("team_name", ""))
+            country = hero.get("country", d.get("country", ""))
+            team_color = hero.get("team_color", d.get("team_colour", ""))
+            driver_image = hero.get("driver_image", d.get("headshot_url", ""))
+            driver_number_logo = hero.get("driver_number_logo", d.get("racing_number_mask", ""))
+            slug = d.get("slug", "")
             acronym = d.get("name_acronym", "")
+
+            driver_info = {
+                "driver_number": driver_number,
+                "team_name": team_name,
+                "first_name": first_name,
+                "last_name": last_name,
+                "nationality": country,
+                "team_color": team_color,
+                "driver_image": driver_image,
+                "driver_number_logo": driver_number_logo,
+            }
+
+            # Map into multi-key lookup
             if acronym:
-                lookup[acronym] = {
-                    "driver_number": d.get("driver_number"),
-                    "team_name": d.get("team_name", ""),
-                }
+                lookup[acronym.upper()] = driver_info
+            if full_name:
+                lookup[_normalize(full_name)] = driver_info
+            if last_name:
+                lookup[_normalize(last_name)] = driver_info
+            if slug:
+                lookup[_normalize(slug)] = driver_info
+
+        # Populate acronym keys if missing
+        for tla, name_key in KNOWN_ACRONYMS.items():
+            if tla not in lookup:
+                norm_key = _normalize(name_key)
+                if norm_key in lookup:
+                    lookup[tla] = lookup[norm_key]
+
+    if lookup:
         return lookup
-    except Exception as e:
-        print(f"OpenF1 fetch failed ({e}). Falling back to hardcoded data.")
-        return {
-            "NOR": {"driver_number": 1,  "team_name": "McLaren"},
-            "VER": {"driver_number": 3,  "team_name": "Red Bull Racing"},
-            "BOR": {"driver_number": 5,  "team_name": "Audi"},
-            "HAD": {"driver_number": 6,  "team_name": "Red Bull Racing"},
-            "GAS": {"driver_number": 10, "team_name": "Alpine"},
-            "PER": {"driver_number": 11, "team_name": "Cadillac"},
-            "ANT": {"driver_number": 12, "team_name": "Mercedes"},
-            "ALO": {"driver_number": 14, "team_name": "Aston Martin"},
-            "LEC": {"driver_number": 16, "team_name": "Ferrari"},
-            "STR": {"driver_number": 18, "team_name": "Aston Martin"},
-            "ALB": {"driver_number": 23, "team_name": "Williams"},
-            "HUL": {"driver_number": 27, "team_name": "Audi"},
-            "LAW": {"driver_number": 30, "team_name": "Racing Bulls"},
-            "OCO": {"driver_number": 31, "team_name": "Haas F1 Team"},
-            "LIN": {"driver_number": 41, "team_name": "Racing Bulls"},
-            "COL": {"driver_number": 43, "team_name": "Alpine"},
-            "HAM": {"driver_number": 44, "team_name": "Ferrari"},
-            "SAI": {"driver_number": 55, "team_name": "Williams"},
-            "RUS": {"driver_number": 63, "team_name": "Mercedes"},
-            "BOT": {"driver_number": 77, "team_name": "Cadillac"},
-            "PIA": {"driver_number": 81, "team_name": "McLaren"},
-            "BEA": {"driver_number": 87, "team_name": "Haas F1 Team"},
-        }
+
+    # 3. Fallback hardcoded data if all sources fail
+    print("All driver sources failed. Using hardcoded fallback.")
+    return {
+        "NOR": {"driver_number": 1,  "team_name": "McLaren"},
+        "VER": {"driver_number": 3,  "team_name": "Red Bull Racing"},
+        "BOR": {"driver_number": 5,  "team_name": "Audi"},
+        "HAD": {"driver_number": 6,  "team_name": "Red Bull Racing"},
+        "GAS": {"driver_number": 10, "team_name": "Alpine"},
+        "PER": {"driver_number": 11, "team_name": "Cadillac"},
+        "ANT": {"driver_number": 12, "team_name": "Mercedes"},
+        "ALO": {"driver_number": 14, "team_name": "Aston Martin"},
+        "LEC": {"driver_number": 16, "team_name": "Ferrari"},
+        "STR": {"driver_number": 18, "team_name": "Aston Martin"},
+        "ALB": {"driver_number": 23, "team_name": "Williams"},
+        "HUL": {"driver_number": 27, "team_name": "Audi"},
+        "LAW": {"driver_number": 30, "team_name": "Racing Bulls"},
+        "OCO": {"driver_number": 31, "team_name": "Haas F1 Team"},
+        "LIN": {"driver_number": 41, "team_name": "Racing Bulls"},
+        "COL": {"driver_number": 43, "team_name": "Alpine"},
+        "HAM": {"driver_number": 44, "team_name": "Ferrari"},
+        "SAI": {"driver_number": 55, "team_name": "Williams"},
+        "RUS": {"driver_number": 63, "team_name": "Mercedes"},
+        "BOT": {"driver_number": 77, "team_name": "Cadillac"},
+        "PIA": {"driver_number": 81, "team_name": "McLaren"},
+        "BEA": {"driver_number": 87, "team_name": "Haas F1 Team"},
+    }
 
 
 def fetch_standings():
@@ -155,7 +261,15 @@ def extract_standings(data, driver_info):
 
         flag = athlete.get("flag", {})
         abbr = athlete.get("abbreviation", "")
-        info = driver_info.get(abbr, {})
+        display_name = athlete.get("displayName", "")
+        last_word = display_name.split()[-1] if display_name.split() else ""
+
+        # Match driver info by abbreviation, full name, or last name
+        info = driver_info.get(abbr.upper())
+        if not info:
+            info = driver_info.get(_normalize(display_name))
+        if not info:
+            info = driver_info.get(_normalize(last_word), {})
 
         driver = {
             "rank": rank,
@@ -164,7 +278,7 @@ def extract_standings(data, driver_info):
             "shortName": athlete.get("shortName", ""),
             "abbreviation": abbr,
             "team_name": info.get("team_name", ""),
-            "nationality": flag.get("alt", ""),
+            "nationality": flag.get("alt", info.get("nationality", "")),
             "championshipPts": {
                 "value": pts_value,
                 "displayValue": pts_display,
@@ -212,7 +326,7 @@ def save_standings(standings, filename="driversperrace.json"):
 
 
 def git_commit_and_push(filepath, message=None):
-    """Auto-commit and push the file to GitHub."""
+    """Auto-commit and push the file to GitHub reliably."""
     if message is None:
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         message = f"Auto-update driver standings — {now}"
@@ -224,29 +338,39 @@ def git_commit_and_push(filepath, message=None):
         subprocess.run(["git", "add", filename], cwd=REPO_DIR,
                         capture_output=True, text=True, check=True)
 
-        # Check if there are changes to commit
+        # Check if there are staged changes to commit
         result = subprocess.run(["git", "diff", "--cached", "--quiet"],
                                  cwd=REPO_DIR, capture_output=True)
-        if result.returncode == 0:
-            print("No changes to commit — standings are already up to date.")
-            return
+        if result.returncode != 0:
+            # Commit locally
+            subprocess.run(["git", "commit", "-m", message], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=True)
+            print(f"Committed: {message}")
+        else:
+            print("No new local file changes to commit.")
 
-        # Commit locally
-        subprocess.run(["git", "commit", "-m", message], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
-        print(f"Committed: {message}")
+        # Pull latest with autostash to avoid merge/unstaged conflicts
+        subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+                        capture_output=True, text=True, check=False)
 
-        # Pull latest (rebase on top) to avoid merge conflicts
-        subprocess.run(["git", "pull", "--rebase"], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
+        # Push any local commits
+        push_res = subprocess.run(["git", "push"], cwd=REPO_DIR,
+                                   capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print("Pushed to GitHub successfully!")
+        else:
+            # Retry push after rebase
+            subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=False)
+            retry = subprocess.run(["git", "push"], cwd=REPO_DIR,
+                                    capture_output=True, text=True)
+            if retry.returncode == 0:
+                print("Pushed to GitHub successfully on retry!")
+            else:
+                print(f"Git push error: {retry.stderr or retry.stdout}")
 
-        # Push
-        subprocess.run(["git", "push"], cwd=REPO_DIR,
-                        capture_output=True, text=True, check=True)
-        print("Pushed to GitHub successfully!")
-
-    except subprocess.CalledProcessError as e:
-        print(f"Git error: {e.stderr or e.stdout or e}")
+    except Exception as e:
+        print(f"Git error: {e}")
 
 
 def main():
