@@ -206,6 +206,6 @@ if __name__ == "__main__":
         output_file = os.path.join(os.path.dirname(script_dir), 'sprint_race_result.json')
         scrape_f1_race_result(url, output_file, circuit_id=circuit_id)
         # Push to github automatically
-        push_to_git('sprint race')
+        push_to_git('sprint-race')
     else:
         print("No sprint race data to scrape for the current race weekend.")
