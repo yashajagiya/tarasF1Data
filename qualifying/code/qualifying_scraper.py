@@ -2,7 +2,7 @@ import json
 import os
 import shutil
 import subprocess
-from datetime import date
+from datetime import date, datetime
 import requests
 from bs4 import BeautifulSoup
 
@@ -167,14 +167,14 @@ def find_target_repo(script_path):
         nested = os.path.join(current, 'tarasF1Data')
         if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, '.git')):
             candidates.append(nested)
-        if os.path.basename(current).lower() == 'tarasf1data' and os.path.isdir(os.path.join(current, '.git')):
+        if os.path.isdir(os.path.join(current, '.git')):
             candidates.append(current)
         current = parent
     
     for cand in candidates:
         try:
             out = subprocess.check_output(['git', 'remote', '-v'], cwd=cand, text=True)
-            if 'tarasF1Data' in out:
+            if 'tarasf1data' in out.lower():
                 return cand
         except Exception:
             pass
@@ -186,6 +186,7 @@ def push_to_git(practice_num):
         print("Error: Target git repository 'tarasF1Data' not found.")
         return
 
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     script_dir = os.path.dirname(os.path.abspath(__file__))
     source_dir = os.path.dirname(script_dir) # e.g., .../qualifying
     target_dir = os.path.join(target_repo, practice_num)
@@ -207,14 +208,26 @@ def push_to_git(practice_num):
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
         
         # Check if there are any changes staged for commit
-        status = subprocess.run(["git", "status", "--porcelain", practice_num], cwd=target_repo, capture_output=True, text=True)
-        if not status.stdout.strip():
-            print("No changes detected in the JSON data. Skipping Git push.")
-            return
+        result = subprocess.run(["git", "diff", "--cached", "--quiet", practice_num], cwd=target_repo, capture_output=True)
+        if result.returncode != 0:
+            commit_msg = f"Auto-update {practice_num} JSON data — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed changes: {commit_msg}")
+        else:
+            commit_msg = f"Auto-update {practice_num} JSON data (verified) — {now}"
+            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed (no data changes): {commit_msg}")
             
-        subprocess.run(["git", "commit", "-m", f"Auto-update {practice_num} JSON data"], cwd=target_repo, check=True)
-        subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, check=True)
-        print("Successfully pushed to GitHub!")
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print("Successfully pushed to GitHub!")
+        else:
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+            retry = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+            if retry.returncode == 0:
+                print("Successfully pushed to GitHub on retry!")
+            else:
+                print(f"Error during git push: {retry.stderr or retry.stdout}")
     except subprocess.CalledProcessError as e:
         print(f"Error during git push: {e}")
 

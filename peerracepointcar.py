@@ -155,11 +155,8 @@ def save_standings(standings, filename="carperrace.json"):
 
 
 def git_commit_and_push(filepath, message=None):
-    """Auto-commit and push the file to GitHub reliably."""
-    if message is None:
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        message = f"Auto-update constructor standings — {now}"
-
+    """Auto-commit and push the file to GitHub reliably every time it runs."""
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     filename = os.path.basename(filepath)
 
     try:
@@ -171,27 +168,30 @@ def git_commit_and_push(filepath, message=None):
         result = subprocess.run(["git", "diff", "--cached", "--quiet"],
                                  cwd=REPO_DIR, capture_output=True)
         if result.returncode != 0:
-            # Commit locally
-            subprocess.run(["git", "commit", "-m", message], cwd=REPO_DIR,
+            commit_msg = message or f"Auto-update constructor standings — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=REPO_DIR,
                             capture_output=True, text=True, check=True)
-            print(f"Committed: {message}")
+            print(f"Committed changes: {commit_msg}")
         else:
-            print("No new local file changes to commit.")
+            commit_msg = message or f"Auto-update constructor standings (verified) — {now}"
+            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=True)
+            print(f"Committed (no data changes): {commit_msg}")
 
         # Pull latest with autostash to avoid merge/unstaged conflicts
-        subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=REPO_DIR,
                         capture_output=True, text=True, check=False)
 
-        # Push any local commits
-        push_res = subprocess.run(["git", "push"], cwd=REPO_DIR,
+        # Push commit
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR,
                                    capture_output=True, text=True)
         if push_res.returncode == 0:
             print("Pushed to GitHub successfully!")
         else:
             # Retry push after rebase
-            subprocess.run(["git", "pull", "--rebase", "--autostash"], cwd=REPO_DIR,
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=REPO_DIR,
                             capture_output=True, text=True, check=False)
-            retry = subprocess.run(["git", "push"], cwd=REPO_DIR,
+            retry = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR,
                                     capture_output=True, text=True)
             if retry.returncode == 0:
                 print("Pushed to GitHub successfully on retry!")
