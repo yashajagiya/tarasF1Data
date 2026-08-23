@@ -20,7 +20,7 @@ def scrape_f1_sprint_qualifying(url, output_file='sprint_quly_result.json', circ
     except Exception as e:
         print(f"Error fetching the URL: {e}")
         print("Please ensure the URL is accessible or provide a local HTML file.")
-        return
+        return False
 
     soup = BeautifulSoup(html_content, 'html.parser')
     
@@ -100,6 +100,10 @@ def scrape_f1_sprint_qualifying(url, output_file='sprint_quly_result.json', circ
                         "laps": laps
                     })
 
+    if len(results) == 0:
+        print(f"No sprint qualifying results available yet at {url} (session may not have concluded or results are not yet published). Preserving existing data.")
+        return False
+
     scraped_data = {
         "country": country_name,
         "session": session,
@@ -116,6 +120,7 @@ def scrape_f1_sprint_qualifying(url, output_file='sprint_quly_result.json', circ
         
     print(f"Successfully scraped {len(results)} drivers!")
     print(f"Data saved to {output_file}")
+    return True
 
 def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     """
@@ -167,22 +172,41 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         print(f"Error: {schedule_path} not found.")
         return None, None
 
+def find_target_repo(script_path):
+    current = os.path.abspath(script_path)
+    while True:
+        parent = os.path.dirname(current)
+        if parent == current:
+            break
+        if os.path.basename(current) == 'tarasF1Data' and os.path.isdir(os.path.join(current, '.git')):
+            return current
+        nested = os.path.join(current, 'tarasF1Data')
+        if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, '.git')):
+            return nested
+        current = parent
+    return None
+
 def push_to_git(practice_num):
+    target_repo = find_target_repo(__file__)
+    if not target_repo or not os.path.isdir(target_repo):
+        print("Error: Target git repository 'tarasF1Data' not found.")
+        return
+
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    source_dir = os.path.dirname(script_dir) # e.g., m:\taras\sprint quly
-    target_repo = os.path.join(os.path.dirname(source_dir), 'tarasF1Data')
+    source_dir = os.path.dirname(script_dir) # e.g., .../sprint-quly
     target_dir = os.path.join(target_repo, practice_num)
     
     print(f"Syncing to Git repository: {target_repo}")
     
     # 0. Pull latest changes first
     try:
-        subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=target_repo, check=True)
-    except subprocess.CalledProcessError:
-        pass # Ignore if it fails due to no remote or other issues, will catch push errors later
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+    except Exception:
+        pass
 
-    # 1. Copy the directory to tarasF1Data
-    shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
+    # 1. Copy the directory to tarasF1Data if not already in target_repo
+    if os.path.abspath(source_dir) != os.path.abspath(target_dir):
+        shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
     
     # 2. Run git commands
     try:
@@ -207,8 +231,9 @@ if __name__ == "__main__":
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'sprint_quly_result.json')
-        scrape_f1_sprint_qualifying(url, output_file, circuit_id=circuit_id)
-        # Push to github automatically
-        push_to_git('sprint-quly')
+        success = scrape_f1_sprint_qualifying(url, output_file, circuit_id=circuit_id)
+        # Push to github automatically if scraping succeeded
+        if success:
+            push_to_git('sprint-quly')
     else:
         print("No sprint qualifying data to scrape for the current race weekend.")
