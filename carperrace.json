@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 392,
-        "displayValue": "392"
+        "value": 425,
+        "displayValue": "425"
       },
       "races": [
         {
@@ -105,8 +105,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 13,
-          "displayValue": "13"
+          "value": 46,
+          "displayValue": "46"
         },
         {
           "name": "ITA",
@@ -191,8 +191,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 316,
-        "displayValue": "316"
+        "value": 338,
+        "displayValue": "338"
       },
       "races": [
         {
@@ -290,8 +290,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 9,
-          "displayValue": "9"
+          "value": 31,
+          "displayValue": "31"
         },
         {
           "name": "ITA",
@@ -376,8 +376,8 @@
       "rank": 3,
       "team": "McLaren",
       "points": {
-        "value": 230,
-        "displayValue": "230"
+        "value": 263,
+        "displayValue": "263"
       },
       "races": [
         {
@@ -475,8 +475,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 10,
-          "displayValue": "10"
+          "value": 43,
+          "displayValue": "43"
         },
         {
           "name": "ITA",
@@ -561,8 +561,8 @@
       "rank": 4,
       "team": "Red Bull Racing",
       "points": {
-        "value": 180,
-        "displayValue": "180"
+        "value": 186,
+        "displayValue": "186"
       },
       "races": [
         {
@@ -660,8 +660,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 3,
-          "displayValue": "3"
+          "value": 9,
+          "displayValue": "9"
         },
         {
           "name": "ITA",
@@ -931,8 +931,8 @@
       "rank": 6,
       "team": "Alpine",
       "points": {
-        "value": 62,
-        "displayValue": "62"
+        "value": 63,
+        "displayValue": "63"
       },
       "races": [
         {
@@ -1030,8 +1030,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 1,
-          "displayValue": "1"
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "ITA",
@@ -1301,8 +1301,8 @@
       "rank": 8,
       "team": "Audi",
       "points": {
-        "value": 12,
-        "displayValue": "12"
+        "value": 16,
+        "displayValue": "16"
       },
       "races": [
         {
@@ -1400,8 +1400,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 0,
-          "displayValue": "-"
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "ITA",
@@ -1671,8 +1671,8 @@
       "rank": 10,
       "team": "Aston Martin",
       "points": {
-        "value": 1,
-        "displayValue": "1"
+        "value": 3,
+        "displayValue": "3"
       },
       "races": [
         {
@@ -1770,8 +1770,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 0,
-          "displayValue": "-"
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "ITA",
