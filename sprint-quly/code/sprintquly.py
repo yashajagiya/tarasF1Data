@@ -174,17 +174,26 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
 
 def find_target_repo(script_path):
     current = os.path.abspath(script_path)
+    candidates = []
     while True:
         parent = os.path.dirname(current)
         if parent == current:
             break
-        if os.path.basename(current) == 'tarasF1Data' and os.path.isdir(os.path.join(current, '.git')):
-            return current
         nested = os.path.join(current, 'tarasF1Data')
         if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, '.git')):
-            return nested
+            candidates.append(nested)
+        if os.path.basename(current).lower() == 'tarasf1data' and os.path.isdir(os.path.join(current, '.git')):
+            candidates.append(current)
         current = parent
-    return None
+    
+    for cand in candidates:
+        try:
+            out = subprocess.check_output(['git', 'remote', '-v'], cwd=cand, text=True)
+            if 'tarasF1Data' in out:
+                return cand
+        except Exception:
+            pass
+    return candidates[0] if candidates else None
 
 def push_to_git(practice_num):
     target_repo = find_target_repo(__file__)
