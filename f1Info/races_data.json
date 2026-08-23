@@ -577,7 +577,11 @@
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackzandvoortdetailed.webp",
         "gpName": "Heineken Dutch GP"
       },
-      "winner": null
+      "winner": {
+        "drivernumber": 1,
+        "fullName": "Lando Norris",
+        "teamWinner": "McLaren"
+      }
     },
     {
       "raceId": "italian_2026",

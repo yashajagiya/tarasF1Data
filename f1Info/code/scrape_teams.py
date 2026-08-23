@@ -15,6 +15,9 @@ import time
 import re
 import sys
 import os
+import shutil
+import subprocess
+from datetime import datetime
 
 # Fix Windows console encoding
 if sys.platform == "win32":
@@ -232,61 +235,98 @@ def main():
     print()
     print(f"Done! Saved {len(teams)} teams to {out_path}")
 
-    # GitHub Upload
-    repo_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'tarasF1Data'))
-    if os.path.exists(repo_path):
-        import shutil
-        import subprocess
-        
+def find_target_repo(script_path):
+    current = os.path.abspath(script_path)
+    candidates = []
+    while True:
+        parent = os.path.dirname(current)
+        if parent == current:
+            break
+        nested = os.path.join(current, 'tarasF1Data')
+        if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, '.git')):
+            candidates.append(nested)
+        if os.path.isdir(os.path.join(current, '.git')):
+            candidates.append(current)
+        current = parent
+    
+    for cand in candidates:
         try:
-            # Sync with remote first to avoid push conflicts
-            subprocess.run(["git", "pull", "--rebase"], cwd=repo_path, check=True)
-            
-            file_name = os.path.basename(out_path)
-            # Target the f1Info folder inside the repo
-            target_dir = os.path.join(repo_path, 'f1Info')
-            os.makedirs(target_dir, exist_ok=True)
-            dest_path = os.path.join(target_dir, file_name)
-            
-            shutil.copy2(out_path, dest_path)
-            
-            # The path relative to the git repo root
-            git_file_path = f"f1Info/{file_name}"
-            
-            status = subprocess.check_output(["git", "status", "--porcelain", git_file_path], cwd=repo_path).decode("utf-8").strip()
-            if status:
-                print(f"Changes detected in {git_file_path}. Uploading to GitHub...")
-                subprocess.run(["git", "add", git_file_path], cwd=repo_path, check=True)
-                subprocess.run(["git", "commit", "-m", f"Automated update for {git_file_path}"], cwd=repo_path, check=True)
-                subprocess.run(["git", "push"], cwd=repo_path, check=True)
-                print(f"Uploaded {git_file_path} to GitHub successfully.")
-            else:
-                print(f"No changes in {git_file_path}. Skipped GitHub upload.")
-        except Exception as e:
-            print(f"Error during tarasF1Data GitHub upload: {e}")
-    else:
-        print(f"Repo path {repo_path} not found. Skipped tarasF1Data GitHub upload.")
+            out = subprocess.check_output(['git', 'remote', '-v'], cwd=cand, text=True)
+            if 'tarasf1data' in out.lower():
+                return cand
+        except Exception:
+            pass
+    return candidates[0] if candidates else None
 
-    # Main Workspace GitHub Upload (m:\taras)
-    workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
+def push_f1info_to_git(out_path, info_type="teams"):
+    target_repo = find_target_repo(__file__)
+    if not target_repo or not os.path.isdir(target_repo):
+        print(f"Error: Target git repository not found for {out_path}.")
+        return
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    file_name = os.path.basename(out_path)
+    target_dir = os.path.join(target_repo, 'f1Info')
+    os.makedirs(target_dir, exist_ok=True)
+    dest_path = os.path.join(target_dir, file_name)
+
+    if os.path.abspath(out_path) != os.path.abspath(dest_path):
+        shutil.copy2(out_path, dest_path)
+
+    git_file_path = f"f1Info/{file_name}"
+    print(f"Syncing {git_file_path} to Git repository: {target_repo}")
+
     try:
-        file_name = os.path.basename(out_path)
-        git_file_path = f"f1Info/{file_name}"
-        
-        # Sync with remote first
-        subprocess.run(["git", "pull", "--rebase"], cwd=workspace_path, check=True)
-        
-        status = subprocess.check_output(["git", "status", "--porcelain", git_file_path], cwd=workspace_path).decode("utf-8").strip()
-        if status:
-            print(f"Changes detected in {git_file_path} (workspace). Uploading to GitHub...")
-            subprocess.run(["git", "add", git_file_path], cwd=workspace_path, check=True)
-            subprocess.run(["git", "commit", "-m", f"Automated update for {git_file_path}"], cwd=workspace_path, check=True)
-            subprocess.run(["git", "push"], cwd=workspace_path, check=True)
-            print(f"Uploaded {git_file_path} to workspace GitHub successfully.")
+        # Pull latest changes first
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+
+        # Stage the file and folder
+        subprocess.run(["git", "add", "f1Info"], cwd=target_repo, check=True)
+
+        # Check for staged changes
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=target_repo, capture_output=True)
+        if result.returncode != 0:
+            commit_msg = f"Auto-update {info_type} data — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed changes: {commit_msg}")
         else:
-            print(f"No changes in {git_file_path} (workspace). Skipped GitHub upload.")
+            commit_msg = f"Auto-update {info_type} data (verified) — {now}"
+            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed (no data changes): {commit_msg}")
+
+        # Push to origin main
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print(f"Uploaded {git_file_path} to GitHub successfully.")
+        else:
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+            retry = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+            if retry.returncode == 0:
+                print(f"Uploaded {git_file_path} to GitHub successfully on retry.")
+            else:
+                print(f"Git push error: {retry.stderr or retry.stdout}")
     except Exception as e:
-        print(f"Error during workspace GitHub upload: {e}")
+        print(f"Error during GitHub upload: {e}")
+
+
+def main():
+    print("=" * 60)
+    print("  F1 2026 Team Data Scraper")
+    print("=" * 60)
+    print()
+
+    teams = scrape_all_teams()
+
+    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'teams_data.json'))
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(teams, f, indent=2, ensure_ascii=False)
+
+    print()
+    print(f"Done! Saved {len(teams)} teams to {out_path}")
+
+    # GitHub Upload
+    push_f1info_to_git(out_path, info_type="teams")
 
     # Quick summary
     print()
