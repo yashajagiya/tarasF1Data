@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🏎️ tarasF1Data
-### Zero-Latency, Edge-Cached Formula 1 Headless REST API & Dataset
+### The Free, Zero-Latency, Edge-Cached Formula 1 Headless REST API & Dataset
 
 [![Update F1 Standings](https://github.com/yashajagiya/tarasF1Data/actions/workflows/update-f1.yml/badge.svg)](https://github.com/yashajagiya/tarasF1Data/actions/workflows/update-f1.yml)
 [![Hosted on GitHub Pages](https://img.shields.io/badge/CDN-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://yashajagiya.github.io/tarasF1Data/)
@@ -11,10 +11,10 @@
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <b>A static REST API delivering Formula 1 championship standings, driver dossiers, team specifications, weekend session telemetry, and high-resolution media assets.</b>
+  <b>A 100% free, ready-to-use static JSON API delivering Formula 1 championship standings, driver dossiers, team specifications, weekend session telemetry, transparent track maps, and official race results.</b>
 </p>
 
-[🌐 API Endpoints Directory](#-api-endpoints-directory) • [🏗️ How It Works](#-how-it-works-honest-technical-architecture) • [⚡ GitHub Action Pipeline](#-automated-github-action-pipeline) • [📖 Detailed Data Points & Expandable Schemas](#-detailed-data-points--expandable-schemas)
+[🏁 Newcomer's Guide](#-newcomers-guide-understanding-f1--this-api-in-2-minutes) • [🏗️ System Architecture](#-how-it-works-honest-technical-architecture) • [⚡ Monday Update Robot](#-automated-github-action-pipeline) • [🌐 All 14 API Endpoints](#-all-14-api-endpoints-at-a-glance) • [📖 Detailed Endpoint Guides](#-detailed-guides-for-all-14-endpoints) • [💻 Code Samples](#-client-integration--code-samples)
 
 ---
 
@@ -27,9 +27,9 @@
     <td width="50%">
       <h3>⚡ Edge-Delivered & Serverless</h3>
       <ul>
-        <li><b>Zero Latency:</b> Globally replicated across GitHub's worldwide CDN edge servers.</li>
+        <li><b>Zero Latency:</b> Globally cached across GitHub's worldwide CDN edge servers.</li>
         <li><b>100% Free & Open:</b> No API keys required, no rate limits, and no monthly quotas.</li>
-        <li><b>High Availability:</b> Pure static JSON files with zero database downtimes or cold starts.</li>
+        <li><b>High Reliability:</b> Static JSON files with zero database downtime or server cold starts.</li>
       </ul>
     </td>
     <td width="50%">
@@ -37,7 +37,7 @@
       <ul>
         <li><b>Monday Automation:</b> Standings recalculate automatically every Monday at 00:00 UTC post-race.</li>
         <li><b>Full Weekend Telemetry:</b> Dedicated classifications for FP1, FP2, FP3, Qualy, Sprint, and Race.</li>
-        <li><b>High-Res Assets:</b> Official transparent track outlines, 2026 car renders, and vector logos.</li>
+        <li><b>Rich Media Assets:</b> Official transparent track outlines, 2026 car renders, and vector logos.</li>
       </ul>
     </td>
   </tr>
@@ -45,9 +45,24 @@
 
 ---
 
+## 🏁 Newcomer's Guide: Understanding F1 & This API in 2 Minutes
+
+> [!TIP]
+> **In Simple Words:** If you are creating a phone app, website, dashboard, or fantasy league about Formula 1, you normally need a expensive commercial API subscription. **`tarasF1Data` gives you all this data for free through direct web links that return pure JSON.**
+
+### 🏎️ How Formula 1 Works (Quick Primer):
+- **Drivers vs Constructors:** Formula 1 has **22 drivers** competing for the **World Drivers' Championship (WDC)** and **11 teams (constructors)** competing for the **World Constructors' Championship (WCC)**. Each team has two drivers.
+- **A Grand Prix Weekend:**
+  1. **Practice (FP1, FP2, FP3):** 60-minute test sessions where teams test car setups and tires.
+  2. **Qualifying (Q1, Q2, Q3):** A knockout session on Saturday determining the starting grid positions for Sunday. The fastest driver starts in 1st place (**Pole Position**).
+  3. **Sprint Weekends:** Select weekends feature a shorter 100km **Sprint Race** on Saturday with bonus championship points (8 points for 1st down to 1 point for 8th).
+  4. **The Grand Prix (Sunday Race):** The main 300km race. The top 10 finishers score championship points (`25, 18, 15, 12, 10, 8, 6, 4, 2, 1`), plus 1 bonus point for the fastest lap.
+
+---
+
 ## 🏗️ How It Works: Honest Technical Architecture
 
-This project does **not** rely on costly database servers (like PostgreSQL or MongoDB) or complex backend microservices. Instead, it operates on a **GitOps headless API pattern**:
+This project does **not** maintain expensive cloud databases or backend servers. Instead, it operates on a **GitOps headless API model**:
 
 ```mermaid
 flowchart TD
@@ -72,7 +87,7 @@ flowchart TD
         P3["Scraper Engine\n(Telemetry, Profiles & Calendars)"]:::actionStyle
     end
 
-    subgraph Storage ["3. Git Repository & JSON Datasets"]
+    subgraph Storage ["3. Git Storage & Datasets"]
         J1[("driversperrace.json\ncarperrace.json")]:::storageStyle
         J2[("f1Info/drivers_data.json\nf1Info/teams_data.json")]:::storageStyle
         J3[("f1Info/races_data.json\nracesimg.json / teamsimgdata.json")]:::storageStyle
@@ -264,7 +279,7 @@ erDiagram
 
 ---
 
-## 🌐 API Endpoints Directory
+## 🌐 All 14 API Endpoints at a Glance
 
 All datasets are accessible through the base URL:
 ```text
@@ -272,54 +287,49 @@ https://yashajagiya.github.io/tarasF1Data/
 ```
 
 ### 🏆 1. Championship & Standings
-
-| Method | Dataset | Endpoint Path | Direct URL Link |
+| Method | Dataset | What It Gives in Plain English | Direct URL Link |
 |:---:|:---|:---|:---:|
-| `GET` | **Driver Standings & Per-Race Points** | `driversperrace.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/driversperrace.json) |
-| `GET` | **Constructor Standings & Per-Race Points** | `carperrace.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/carperrace.json) |
+| `GET` | **Driver Standings** | Individual leaderboard with round-by-round point breakdown | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/driversperrace.json) |
+| `GET` | **Constructor Standings** | Team leaderboard with round-by-round constructor points | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/carperrace.json) |
 
-### 🏎️ 2. Drivers, Teams & Media Assets
-
-| Method | Dataset | Endpoint Path | Direct URL Link |
+### 🏎️ 2. Drivers, Teams & Visual Media Assets
+| Method | Dataset | What It Gives in Plain English | Direct URL Link |
 |:---:|:---|:---|:---:|
-| `GET` | **Full Driver Profiles & Career Dossiers** | `f1Info/drivers_data.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/drivers_data.json) |
-| `GET` | **Constructor Profiles & Technical Specs** | `f1Info/teams_data.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/teams_data.json) |
-| `GET` | **Team Branding, Colors & 2026 Cars** | `teamsimgdata.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/teamsimgdata.json) |
-| `GET` | **Track Map Layout Outlines** | `racesimg.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/racesimg.json) |
+| `GET` | **Driver Profiles** | Cutout portraits, permanent numbers, career stories, and 2026 stats | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/drivers_data.json) |
+| `GET` | **Constructor Profiles** | Technical car specs, team principals, engine suppliers, and factory base | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/teams_data.json) |
+| `GET` | **Team Branding Assets** | 32-bit ARGB hex colors, transparent white logos, and 2026 car renders | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/teamsimgdata.json) |
+| `GET` | **Circuit Track Maps** | High-resolution transparent track map outlines for all circuits | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/racesimg.json) |
 
 ### 📅 3. Calendar & Circuits
-
-| Method | Dataset | Endpoint Path | Direct URL Link |
+| Method | Dataset | What It Gives in Plain English | Direct URL Link |
 |:---:|:---|:---|:---:|
-| `GET` | **2026 Calendar, Sessions & Circuit Records** | `f1Info/races_data.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/races_data.json) |
+| `GET` | **2026 Race Calendar** | All 22 Grand Prix rounds, exact UTC start times, track records, and winners | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/f1Info/races_data.json) |
 
 ### ⏱️ 4. Live Race Weekend Telemetry & Results
-
-| Method | Session | Endpoint Path | Direct URL Link |
+| Method | Session | What It Gives in Plain English | Direct URL Link |
 |:---:|:---|:---|:---:|
-| `GET` | **Practice 1 (FP1)** | `practice1/fp1_extracted.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice1/fp1_extracted.json) |
-| `GET` | **Practice 2 (FP2)** | `practice2/fp2_extracted.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice2/fp2_extracted.json) |
-| `GET` | **Practice 3 (FP3)** | `practice3/fp3_extracted.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice3/fp3_extracted.json) |
-| `GET` | **Grand Prix Qualifying (Q1-Q3)** | `qualifying/qualifying_results.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/qualifying/qualifying_results.json) |
-| `GET` | **Sprint Qualifying (SQ1-SQ3)** | `sprint-quly/sprint_quly_result.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/sprint-quly/sprint_quly_result.json) |
-| `GET` | **Sprint Race Results & Points** | `sprint-race/sprint_race_result.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/sprint-race/sprint_race_result.json) |
-| `GET` | **Grand Prix Main Race Results** | `race-result/race_results.json` | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json) |
+| `GET` | **Practice 1 (FP1)** | Friday practice session 1 lap times, time delta gaps, and lap counts | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice1/fp1_extracted.json) |
+| `GET` | **Practice 2 (FP2)** | Friday practice session 2 lap times, time delta gaps, and lap counts | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice2/fp2_extracted.json) |
+| `GET` | **Practice 3 (FP3)** | Saturday practice session 3 lap times, time delta gaps, and lap counts | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/practice3/fp3_extracted.json) |
+| `GET` | **Qualifying** | Starting grid order (P1 Pole to P22) with Q1, Q2, and Q3 shootout times | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/qualifying/qualifying_results.json) |
+| `GET` | **Sprint Qualifying** | Starting grid order for the Saturday Sprint race (SQ1, SQ2, SQ3) | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/sprint-quly/sprint_quly_result.json) |
+| `GET` | **Sprint Race** | Saturday 100km race results with sprint points (8 for 1st down to 1 for 8th) | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/sprint-race/sprint_race_result.json) |
+| `GET` | **Grand Prix Race** | Final official Sunday race results, time behind winner, and points | [🔗 Open JSON](https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json) |
 
 ---
 
-## 📖 Detailed Data Points & Expandable Schemas
+## 📖 Detailed Guides for All 14 Endpoints
 
 ---
 
-### 1. Driver Standings & Per-Race Breakdown
+### 1. Driver Standings (`driversperrace.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/driversperrace.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/driversperrace.json`
 - **Data Origin:** ESPN Formula 1 Standings (merged with driver car number mappings)
 - **Generator Script:** `peerracepointdriver.py`
-- **Update Frequency:** Automated weekly post-race
+- **Update Frequency:** Recalculated every Monday at 00:00 UTC post-race
 
-#### What This Data Gives:
-Live standings for the World Drivers' Championship. For every driver, it supplies their standing rank, permanent car number, name, timing abbreviation, team, nationality, season total points, and a round-by-round points breakdown for every Grand Prix.
+> 💡 **In Plain English:** This is the main leaderboard for drivers. It tells you who is in 1st place, how many total points they have, and exactly how many points they scored in every individual race this year.
 
 #### Quick JSON Preview:
 ```json
@@ -405,15 +415,14 @@ Live standings for the World Drivers' Championship. For every driver, it supplie
 
 ---
 
-### 2. Constructor Standings & Per-Race Breakdown
+### 2. Constructor Standings (`carperrace.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/carperrace.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/carperrace.json`
 - **Data Origin:** ESPN Formula 1 Constructor Standings (with official team name normalization)
 - **Generator Script:** `peerracepointcar.py`
-- **Update Frequency:** Automated weekly post-race
+- **Update Frequency:** Recalculated every Monday at 00:00 UTC post-race
 
-#### What This Data Gives:
-Live standings for the World Constructors' Championship. Ranks all 11 teams and gives round-by-round points accumulated by both cars for every Grand Prix.
+> 💡 **In Plain English:** This is the team leaderboard. It shows which team (like Mercedes, Ferrari, or Red Bull) has the most combined points from both of their drivers.
 
 #### Quick JSON Preview:
 ```json
@@ -479,14 +488,13 @@ Live standings for the World Constructors' Championship. Ranks all 11 teams and 
 
 ---
 
-### 3. Complete Driver Profiles & Career Dossiers
+### 3. Complete Driver Profiles (`f1Info/drivers_data.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/drivers_data.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/drivers_data.json`
 - **Data Origin:** Formula 1 Driver Profiles & Biographies
 - **Generator Script:** `f1Info/code/scrape_drivers.py`
 
-#### What This Data Gives:
-Encyclopedic profiles for all 22 drivers. Includes transparent cutouts, transparent racing number graphics, 32-bit ARGB hex colors, date/place of birth, career narratives, quotes, 2026 season counters, and all-time career statistics.
+> 💡 **In Plain English:** The encyclopedia for F1 drivers. It has cutout portrait pictures, transparent car number graphics, official team colors, birthplaces, career stories, and detailed stats (races entered, podiums, wins, and poles).
 
 #### Quick JSON Preview:
 ```json
@@ -596,14 +604,13 @@ Encyclopedic profiles for all 22 drivers. Includes transparent cutouts, transpar
 
 ---
 
-### 4. Constructor Profiles & Technical Specs
+### 4. Constructor Profiles & Technical Specs (`f1Info/teams_data.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/teams_data.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/teams_data.json`
 - **Data Origin:** Formula 1 Team Profiles & Technical Specifications
 - **Generator Script:** `f1Info/code/scrape_teams.py`
 
-#### What This Data Gives:
-Technical specifications and heritage dossiers for all 11 teams. Includes transparent 2026 car liveries, vector logos, Team Principal, Technical Director, chassis code, engine supplier, and historical statistics.
+> 💡 **In Plain English:** Technical profiles about the 11 racing teams: who the team principal is, who designs the car, what engine supplier they use, pictures of their 2026 cars, and their official vector logos.
 
 #### Quick JSON Preview:
 ```json
@@ -674,14 +681,13 @@ Technical specifications and heritage dossiers for all 11 teams. Includes transp
 
 ---
 
-### 5. Season Race Calendar & Circuit Records
+### 5. Season Race Calendar & Circuit Records (`f1Info/races_data.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/races_data.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/f1Info/races_data.json`
 - **Data Origin:** Formula 1 Race Calendar, Circuit Database & Grand Prix Results
 - **Generator Script:** `f1Info/code/scrape_races.py`
 
-#### What This Data Gives:
-The master calendar for the 2026 season. Contains exact session schedules (FP1, FP2, FP3, Qualifying, Sprint, Race) in ISO 8601 UTC timestamps, circuit statistics (lap length, corners, all-time race lap record holder, team, year), transparent track map outlines, and race winners.
+> 💡 **In Plain English:** The master schedule of the year. Shows when every practice, qualifying, and race starts (with exact UTC times), circuit track maps, all-time track lap records, and who won finished races.
 
 #### Quick JSON Preview:
 ```json
@@ -762,13 +768,12 @@ The master calendar for the 2026 season. Contains exact session schedules (FP1, 
 
 ---
 
-### 6. Team Branding Assets & Car Liveries
+### 6. Team Visual Assets & Liveries (`teamsimgdata.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/teamsimgdata.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/teamsimgdata.json`
 - **Data Origin:** Formula 1 Team Branding & Car Livery Media Assets
 
-#### What This Data Gives:
-Direct visual UI tokens: team name, 32-bit ARGB hex color, transparent white vector logo, and 2026 car livery render.
+> 💡 **In Plain English:** A dedicated visual asset helper. Provides team colors, transparent logos, and car images without having to load all the biography text.
 
 #### Quick JSON Preview:
 ```json
@@ -807,13 +812,12 @@ Direct visual UI tokens: team name, 32-bit ARGB hex color, transparent white vec
 
 ---
 
-### 7. Circuit Track Outlines
+### 7. Circuit Track Outlines (`racesimg.json`)
 
-- **Endpoint URL:** `https://yashajagiya.github.io/tarasF1Data/racesimg.json`
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/racesimg.json`
 - **Data Origin:** Formula 1 Track & Circuit Media Assets
 
-#### What This Data Gives:
-Official transparent track outline maps for every Grand Prix circuit on the calendar.
+> 💡 **In Plain English:** Transparent track layout outline maps for every Grand Prix circuit on the calendar. Great for drawing circuits on maps or countdown cards.
 
 #### Quick JSON Preview:
 ```json
@@ -855,70 +859,388 @@ Official transparent track outline maps for every Grand Prix circuit on the cale
 
 ---
 
-### 8. Weekend Session Results (FP1-FP3, Qualy, Sprint & Race)
+### 8. Free Practice 1 (`practice1/fp1_extracted.json`)
 
-Each session produces a dedicated classification dataset:
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/practice1/fp1_extracted.json`
+- **Data Origin:** Formula 1 Official Session Results
 
-<table>
-  <thead>
-    <tr>
-      <th>Session</th>
-      <th>Endpoint URL</th>
-      <th>Key Telemetry & Data Points Captured</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Free Practice 1</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/practice1/fp1_extracted.json</code></td>
-      <td>Rank, Car Number, Driver Name, Team, Fastest Lap / Gap to Leader, Total Laps</td>
-    </tr>
-    <tr>
-      <td><b>Free Practice 2</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/practice2/fp2_extracted.json</code></td>
-      <td>Rank, Car Number, Driver Name, Team, Fastest Lap / Gap to Leader, Total Laps</td>
-    </tr>
-    <tr>
-      <td><b>Free Practice 3</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/practice3/fp3_extracted.json</code></td>
-      <td>Rank, Car Number, Driver Name, Team, Fastest Lap / Gap to Leader, Total Laps</td>
-    </tr>
-    <tr>
-      <td><b>Qualifying</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/qualifying/qualifying_results.json</code></td>
-      <td>Starting Grid Rank (P1 Pole), Q1 Lap, Q2 Lap, Q3 Shootout Lap, Total Laps</td>
-    </tr>
-    <tr>
-      <td><b>Sprint Qualifying</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/sprint-quly/sprint_quly_result.json</code></td>
-      <td>Sprint Grid Rank, SQ1 Lap, SQ2 Lap, SQ3 Shootout Lap, Total Laps</td>
-    </tr>
-    <tr>
-      <td><b>Sprint Race</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/sprint-race/sprint_race_result.json</code></td>
-      <td>Finishing Position, Laps Completed, Total Time / Gap, Sprint Points (8 to 1)</td>
-    </tr>
-    <tr>
-      <td><b>Grand Prix Race</b></td>
-      <td><code>https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json</code></td>
-      <td>Official Grand Prix Classification, Elapsed Race Time / Interval Gap, Championship Points</td>
-    </tr>
-  </tbody>
-</table>
+> 💡 **In Plain English:** The timing results from Friday's Free Practice 1 (FP1) session. Shows who set the fastest single lap, the gap behind the leader, and how many laps each driver turned.
 
-#### Quick JSON Preview (Grand Prix Race):
+#### Quick JSON Preview:
 ```json
 {
-  "session": "RACE RESULT",
   "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "circuitId": "zandvoort",
+  "results": [
+    { "position": "1", "driver": "Lando Norris", "team": "McLaren", "timeOrGap": "1:12.818", "laps": "28" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Free Practice 1</b></summary>
+
+```json
+{
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "raceDate": "21 - 23 Aug 2026",
+  "circuitName": "Circuit Zandvoort, Zandvoort",
+  "circuitId": "zandvoort",
+  "results": [
+    {
+      "position": "1",
+      "number": "1",
+      "driver": "Lando Norris",
+      "shortName": "NOR",
+      "team": "McLaren",
+      "timeOrGap": "1:12.818",
+      "laps": "28"
+    },
+    {
+      "position": "2",
+      "number": "12",
+      "driver": "Kimi Antonelli",
+      "shortName": "ANT",
+      "team": "Mercedes",
+      "timeOrGap": "+0.201s",
+      "laps": "26"
+    }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `raceName` | `String` | Official event title. |
+| `raceDate` | `String` | Weekend date range (e.g. `"21 - 23 Aug 2026"`). |
+| `circuitName`, `circuitId` | `String` | Venue name and unique circuit slug. |
+| `results[].position` | `String` | Finishing rank in the session (`"1"`, `"2"`, etc.). |
+| `results[].number` | `String` | Driver car number. |
+| `results[].driver` | `String` | Full driver name. |
+| `results[].shortName` | `String` | 3-letter broadcast acronym (e.g. `"NOR"`). |
+| `results[].team` | `String` | Constructor name. |
+| `results[].timeOrGap` | `String` | Best lap time for 1st place (`"1:12.818"`), or gap behind leader (`"+0.201s"`). |
+| `results[].laps` | `String` | Number of laps completed in the session. |
+
+---
+
+### 9. Free Practice 2 (`practice2/fp2_extracted.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/practice2/fp2_extracted.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** The timing results from Friday afternoon's Free Practice 2 (FP2) session, typically used by teams for qualifying simulation runs.
+
+#### Quick JSON Preview:
+```json
+{
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "circuitId": "zandvoort",
+  "results": [
+    { "position": "1", "driver": "George Russell", "team": "Mercedes", "timeOrGap": "1:10.702", "laps": "30" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Free Practice 2</b></summary>
+
+```json
+{
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "raceDate": "21 - 23 Aug 2026",
+  "circuitName": "Circuit Zandvoort, Zandvoort",
+  "circuitId": "zandvoort",
+  "results": [
+    {
+      "position": "1",
+      "number": "63",
+      "driver": "George Russell",
+      "shortName": "RUS",
+      "team": "Mercedes",
+      "timeOrGap": "1:10.702",
+      "laps": "30"
+    },
+    {
+      "position": "2",
+      "number": "1",
+      "driver": "Lando Norris",
+      "shortName": "NOR",
+      "team": "McLaren",
+      "timeOrGap": "+0.061s",
+      "laps": "29"
+    }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `raceName`, `raceDate` | `String` | Event title and weekend date range string. |
+| `circuitName`, `circuitId` | `String` | Circuit name and standardized circuit slug. |
+| `results[].position` | `String` | FP2 ranking position. |
+| `results[].number`, `driver` | `String` | Car racing number and full driver name. |
+| `results[].timeOrGap` | `String` | Best lap time or gap to P1 (`"+0.061s"`). |
+| `results[].laps` | `String` | Total laps turned during the session. |
+
+---
+
+### 10. Free Practice 3 (`practice3/fp3_extracted.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/practice3/fp3_extracted.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** Saturday morning's final practice session before afternoon Qualifying.
+
+#### Quick JSON Preview:
+```json
+{
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "circuitId": "zandvoort",
+  "results": [
+    { "position": "1", "driver": "Kimi Antonelli", "team": "Mercedes", "timeOrGap": "1:10.352", "laps": "22" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Free Practice 3</b></summary>
+
+```json
+{
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "raceDate": "21 - 23 Aug 2026",
+  "circuitName": "Circuit Zandvoort, Zandvoort",
+  "circuitId": "zandvoort",
+  "results": [
+    {
+      "position": "1",
+      "number": "12",
+      "driver": "Kimi Antonelli",
+      "shortName": "ANT",
+      "team": "Mercedes",
+      "timeOrGap": "1:10.352",
+      "laps": "22"
+    }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `raceName`, `raceDate` | `String` | Event title and date range. |
+| `circuitName`, `circuitId` | `String` | Circuit name and slug. |
+| `results[].position`, `number` | `String` | Session rank and car number. |
+| `results[].driver`, `team` | `String` | Driver name and constructor affiliation. |
+| `results[].timeOrGap`, `laps` | `String` | Lap time / gap and lap count. |
+
+---
+
+### 11. Knockout Qualifying (`qualifying/qualifying_results.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/qualifying/qualifying_results.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** The official results of Saturday's knockout qualifying session. Drivers are ranked from 1st (Pole Position) down to 22nd. Includes lap times across all 3 knockout rounds (Q1, Q2, and the Q3 top-10 pole shootout).
+
+#### Quick JSON Preview:
+```json
+{
+  "session": "QUALIFYING",
+  "results": [
+    { "position": "1", "driverNumber": "1", "driverName": "Lando Norris", "q3": "1:11.163", "laps": "21" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Qualifying Results</b></summary>
+
+```json
+{
+  "country": "Netherlands",
+  "session": "QUALIFYING",
+  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
+  "date": "21 - 23 Aug 2026",
+  "circuitName": "Circuit Zandvoort, Zandvoort",
+  "circuitId": "zandvoort",
   "results": [
     {
       "position": "1",
       "driverNumber": "1",
       "driverName": "Lando Norris",
-      "timeOrRetired": "2:4:44.859",
-      "points": "25"
+      "team": "McLaren",
+      "q1": "1:12.695",
+      "q2": "1:11.628",
+      "q3": "1:11.163",
+      "laps": "21"
+    },
+    {
+      "position": "2",
+      "driverNumber": "63",
+      "driverName": "George Russell",
+      "team": "Mercedes",
+      "q1": "1:12.802",
+      "q2": "1:11.750",
+      "q3": "1:11.312",
+      "laps": "20"
     }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `country`, `session` | `String` | Host nation and session name (`"QUALIFYING"`). |
+| `raceName`, `date` | `String` | Event title and weekend date range. |
+| `results[].position` | `String` | Starting grid position (`"1"` = Pole Position). |
+| `results[].driverNumber` | `String` | Permanent car racing number. |
+| `results[].driverName` | `String` | Driver full name. |
+| `results[].team` | `String` | Constructor name. |
+| `results[].q1` | `String` | Best lap time in Q1 (first knockout round). |
+| `results[].q2` | `String` | Best lap time in Q2 (empty string if knocked out in Q1). |
+| `results[].q3` | `String` | Best lap time in Q3 shootout (empty string if knocked out in Q1 or Q2). |
+| `results[].laps` | `String` | Total laps completed across all qualifying rounds. |
+
+---
+
+### 12. Sprint Qualifying Shootout (`sprint-quly/sprint_quly_result.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/sprint-quly/sprint_quly_result.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** On Sprint weekends, this session determines the starting grid for Saturday's 100km Sprint Race (SQ1, SQ2, and SQ3).
+
+#### Quick JSON Preview:
+```json
+{
+  "session": "SPRINT QUALIFYING",
+  "results": [
+    { "position": "1", "driverNumber": "12", "driverName": "Kimi Antonelli", "sq3": "1:27.501" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Sprint Qualifying</b></summary>
+
+```json
+{
+  "country": "China",
+  "session": "SPRINT QUALIFYING",
+  "raceName": "FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026",
+  "date": "17 - 19 Apr 2026",
+  "circuitName": "Shanghai International Circuit",
+  "circuitId": "shanghai",
+  "results": [
+    {
+      "position": "1",
+      "driverNumber": "12",
+      "driverName": "Kimi Antonelli",
+      "team": "Mercedes",
+      "sq1": "1:36.120",
+      "sq2": "1:32.410",
+      "sq3": "1:27.501",
+      "laps": "14"
+    }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `session` | `String` | Always set to `"SPRINT QUALIFYING"`. |
+| `results[].position` | `String` | Grid position for the Saturday Sprint race. |
+| `results[].sq1`, `sq2`, `sq3`| `String` | Lap times in Sprint Shootout rounds 1, 2, and 3. |
+| `results[].laps` | `String` | Total laps turned during the shootout. |
+
+---
+
+### 13. Sprint Race Classification & Points (`sprint-race/sprint_race_result.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/sprint-race/sprint_race_result.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** The official results of the 100km Saturday Sprint race. Shows the finishing order, laps, time gap, and the official championship points awarded (8 for 1st down to 1 for 8th).
+
+#### Quick JSON Preview:
+```json
+{
+  "session": "SPRINT",
+  "results": [
+    { "position": "1", "driverName": "Kimi Antonelli", "timeOrRetired": "31:42.501", "points": "8" }
+  ]
+}
+```
+
+<details>
+<summary><b>📂 Click to expand full sample JSON payload for Sprint Race Results</b></summary>
+
+```json
+{
+  "country": "China",
+  "session": "SPRINT",
+  "raceName": "FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026",
+  "date": "17 - 19 Apr 2026",
+  "circuitName": "Shanghai International Circuit",
+  "circuitId": "shanghai",
+  "results": [
+    {
+      "position": "1",
+      "driverNumber": "12",
+      "driverName": "Kimi Antonelli",
+      "team": "Mercedes",
+      "laps": "19",
+      "timeOrRetired": "31:42.501",
+      "points": "8"
+    },
+    {
+      "position": "2",
+      "driverNumber": "1",
+      "driverName": "Lando Norris",
+      "team": "McLaren",
+      "laps": "19",
+      "timeOrRetired": "+2.419s",
+      "points": "7"
+    }
+  ]
+}
+```
+</details>
+
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `session` | `String` | Always set to `"SPRINT"`. |
+| `results[].position` | `String` | Official Sprint finishing position. |
+| `results[].timeOrRetired` | `String` | Winner's total time (`"31:42.501"`) or gap behind winner (`"+2.419s"`). |
+| `results[].points` | `String` | Official championship points scored (8 for 1st, 7 for 2nd, down to 1 for 8th). |
+
+---
+
+### 14. Grand Prix Official Race Results (`race-result/race_results.json`)
+
+- **Direct URL:** `https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json`
+- **Data Origin:** Formula 1 Official Session Results
+
+> 💡 **In Plain English:** The final, official Sunday Grand Prix race classification. Gives the podium finishers, time gaps to the winner, retirements (`"DNF"`), and full World Championship points awarded.
+
+#### Quick JSON Preview:
+```json
+{
+  "session": "RACE RESULT",
+  "results": [
+    { "position": "1", "driverName": "Lando Norris", "team": "McLaren", "timeOrRetired": "2:4:44.859", "points": "25" }
   ]
 }
 ```
@@ -958,47 +1280,228 @@ Each session produces a dedicated classification dataset:
 ```
 </details>
 
-<details>
-<summary><b>📂 Click to expand full sample JSON payload for Knockout Qualifying</b></summary>
+#### Field-by-Field Detailed Breakdown:
+| Field Name | Data Type | Detailed Explanation |
+|---|---|---|
+| `country`, `session` | `String` | Host country and session title (`"RACE RESULT"`). |
+| `raceName`, `date` | `String` | Grand Prix commercial title and weekend date range string. |
+| `circuitName`, `circuitId` | `String` | Venue name and unique circuit slug. |
+| `results[].position` | `String` | Official finishing rank (`"1"`, `"2"`, or `"NC"` for Not Classified). |
+| `results[].driverNumber` | `String` | Permanent driver car racing number. |
+| `results[].driverName` | `String` | Full driver name. |
+| `results[].team` | `String` | Constructor / team name. |
+| `results[].laps` | `String` | Total completed laps in the race. |
+| `results[].timeOrRetired` | `String` | Winner's total elapsed race time (`"2:4:44.859"`), interval gap behind the winner (`"+11.536s"`), or reason for retirement (`"DNF"`). |
+| `results[].points` | `String` | Championship points awarded for the finish (including the fastest lap bonus point). |
 
-```json
-{
-  "country": "Netherlands",
-  "session": "QUALIFYING",
-  "raceName": "FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026",
-  "date": "21 - 23 Aug 2026",
-  "circuitName": "Circuit Zandvoort, Zandvoort",
-  "circuitId": "zandvoort",
-  "results": [
-    {
-      "position": "1",
-      "driverNumber": "1",
-      "driverName": "Lando Norris",
-      "team": "McLaren",
-      "q1": "1:12.695",
-      "q2": "1:11.628",
-      "q3": "1:11.163",
-      "laps": "21"
+---
+
+## 💻 Client Integration & Code Samples
+
+Quick-start examples showing how to query the API across major platforms and frameworks.
+
+### 1. 🤖 Kotlin / Android (Retrofit & Gson)
+
+The industry standard HTTP networking library for modern Android apps.
+
+```kotlin
+// 1. Dependencies (build.gradle.kts)
+// implementation("com.squareup.retrofit2:retrofit:2.11.0")
+// implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+import com.google.gson.annotations.SerializedName
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.GET
+
+// --- Models ---
+data class DriverStandingsResponse(
+    @SerializedName("displayName") val displayName: String,
+    @SerializedName("season") val season: String,
+    @SerializedName("entries") val entries: List<DriverStandingEntry>
+)
+
+data class DriverStandingEntry(
+    @SerializedName("rank") val rank: Int,
+    @SerializedName("driver_number") val driverNumber: Int? = null,
+    @SerializedName("name") val name: String,
+    @SerializedName("shortName") val shortName: String,
+    @SerializedName("abbreviation") val abbreviation: String,
+    @SerializedName("team_name") val teamName: String,
+    @SerializedName("nationality") val nationality: String,
+    @SerializedName("championshipPts") val championshipPts: PointsWrapper,
+    @SerializedName("races") val races: List<RaceScore>
+)
+
+data class PointsWrapper(
+    @SerializedName("value") val value: Int,
+    @SerializedName("displayValue") val displayValue: String
+)
+
+data class RaceScore(
+    @SerializedName("name") val name: String,
+    @SerializedName("displayName") val displayName: String,
+    @SerializedName("played") val played: Boolean,
+    @SerializedName("value") val value: Int,
+    @SerializedName("displayValue") val displayValue: String
+)
+
+// --- Retrofit API Service Interface ---
+interface TarasF1ApiService {
+    @GET("driversperrace.json")
+    suspend fun getDriverStandings(): DriverStandingsResponse
+
+    @GET("carperrace.json")
+    suspend fun getConstructorStandings(): Any
+
+    @GET("f1Info/races_data.json")
+    suspend fun getRaceCalendar(): Any
+}
+
+// --- Retrofit Singleton Client ---
+object F1ApiClient {
+    private const val BASE_URL = "https://yashajagiya.github.io/tarasF1Data/"
+
+    val service: TarasF1ApiService by lazy {
+        Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(TarasF1ApiService::class.java)
     }
-  ]
+}
+
+// --- Usage inside Coroutine / ViewModel ---
+suspend fun loadLeaderboard() {
+    try {
+        val standings = F1ApiClient.service.getDriverStandings()
+        println("🏆 ${standings.displayName} (Season ${standings.season})")
+        standings.entries.take(5).forEach { driver ->
+            println("P${driver.rank} #${driver.driverNumber ?: 0} ${driver.name} (${driver.teamName}): ${driver.championshipPts.displayValue} pts")
+        }
+    } catch (e: Exception) {
+        e.printStackTrace()
+    }
 }
 ```
-</details>
 
-#### Field-by-Field Detailed Breakdown:
-| Session Type | Key Name | Data Type | Detailed Explanation |
-|---|---|---|---|
-| **Common Header** | `raceName`, `date` | `String` | Event title and weekend date range string. |
-| | `circuitName`, `circuitId`| `String` | Circuit name and standardized circuit slug. |
-| **Practice (FP1-3)**| `position`, `number` | `String` | Classification rank and car racing number. |
-| | `driver`, `shortName` | `String` | Full driver name and 3-letter acronym (`"NOR"`). |
-| | `timeOrGap` | `String` | Fastest lap time for P1 (`"1:12.949"`) or delta to leader (`"+0.121s"`). |
-| | `laps` | `String` | Total laps turned during the 60-minute session. |
-| **Qualifying** | `position`, `driverNumber`| `String` | Starting grid position (`"1"` = Pole) and car number. |
-| | `q1`, `q2`, `q3` | `String` | Fastest lap in Q1, Q2, and Q3 pole shootout (empty if eliminated). |
-| **Race Results** | `position`, `driverName` | `String` | Official finishing rank (`"1"`, `"2"`, or `"NC"`/`"DNF"`). |
-| | `timeOrRetired` | `String` | Total elapsed duration (`"2:4:44.859"`), gap (`"+11.536s"`), or retirement reason (`"DNF"`). |
-| | `points` | `String` | Championship points awarded (including fastest lap point). |
+---
+
+### 2. 🟨 JavaScript / TypeScript (Axios & Native Fetch)
+
+The most popular HTTP libraries for Node.js, React, Vue, Next.js, and browser web applications.
+
+#### Option A: Axios (`npm install axios`)
+```javascript
+import axios from 'axios';
+
+const BASE_URL = 'https://yashajagiya.github.io/tarasF1Data';
+
+async function fetchF1Standings() {
+  try {
+    const response = await axios.get(`${BASE_URL}/driversperrace.json`);
+    const { displayName, season, entries } = response.data;
+
+    console.log(`🏆 ${displayName} - Season ${season}`);
+    
+    // Display top 5 drivers
+    entries.slice(0, 5).forEach((d) => {
+      console.log(`P${d.rank} #${d.driver_number} ${d.name} (${d.team_name}) - ${d.championshipPts.displayValue} pts`);
+    });
+  } catch (error) {
+    console.error('Failed to fetch F1 data:', error.message);
+  }
+}
+
+fetchF1Standings();
+```
+
+#### Option B: Modern Native Fetch API (Zero Dependencies - Node 18+ & All Browsers)
+```javascript
+async function getTopConstructors() {
+  const res = await fetch('https://yashajagiya.github.io/tarasF1Data/carperrace.json');
+  if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+  
+  const data = await res.json();
+  data.entries.slice(0, 3).forEach((team) => {
+    console.log(`P${team.rank} ${team.team}: ${team.points.displayValue} pts`);
+  });
+}
+
+getTopConstructors();
+```
+
+---
+
+### 3. 🐍 Python (Requests)
+
+The most widely used HTTP library in Python for scripts, data analysis, Flask/FastAPI, and Discord/Telegram bots.
+
+```python
+# Install: pip install requests
+import requests
+
+BASE_URL = "https://yashajagiya.github.io/tarasF1Data"
+
+def get_driver_standings():
+    url = f"{BASE_URL}/driversperrace.json"
+    
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()  # Raises HTTPError for 4xx/5xx responses
+        
+        data = response.json()
+        print(f"🏆 {data['displayName']} - Season {data['season']}\n" + "="*40)
+        
+        for driver in data['entries'][:10]:
+            rank = driver['rank']
+            number = driver.get('driver_number', '-')
+            name = driver['name']
+            team = driver['team_name']
+            pts = driver['championshipPts']['displayValue']
+            print(f"P{rank:<2} #{number:<2} {name:<20} ({team:<16}) {pts:>4} pts")
+            
+    except requests.exceptions.RequestException as e:
+        print(f"Network error: {e}")
+
+def get_race_schedule():
+    url = f"{BASE_URL}/f1Info/races_data.json"
+    response = requests.get(url, timeout=10).json()
+    
+    print(f"\n📅 2026 Season Calendar ({response['totalRaces']} Rounds):")
+    for race in response['races'][:3]:
+        date = race['schedule']['race']['date']
+        time = race['schedule']['race']['time']
+        print(f"Round {race['round']}: {race['raceName']} -> {date} at {time}")
+
+if __name__ == "__main__":
+    get_driver_standings()
+    get_race_schedule()
+```
+
+---
+
+### 4. 💻 Bash / Terminal (cURL & jq)
+
+Zero-code command line queries for Linux, macOS, WSL, or Git Bash.
+
+```bash
+# 1. Fetch top 5 drivers in standings
+curl -s https://yashajagiya.github.io/tarasF1Data/driversperrace.json | \
+  jq -r '.entries[0:5][] | "P\(.rank) #\(.driver_number) \(.name) (\(.team_name)): \(.championshipPts.displayValue) pts"'
+
+# 2. View Constructor Leaderboard (Top 3)
+curl -s https://yashajagiya.github.io/tarasF1Data/carperrace.json | \
+  jq -r '.entries[0:3][] | "P\(.rank) \(.team): \(.points.displayValue) points"'
+
+# 3. Check upcoming 2026 race calendar schedule
+curl -s https://yashajagiya.github.io/tarasF1Data/f1Info/races_data.json | \
+  jq -r '.races[0:3][] | "Round \(.round): \(.raceName) | Date: \(.schedule.race.date) \(.schedule.race.time)"'
+
+# 4. Filter car livery and logo images for Mercedes & Ferrari
+curl -s https://yashajagiya.github.io/tarasF1Data/teamsimgdata.json | \
+  jq -r '.[] | select(.team_name=="Mercedes" or .team_name=="Ferrari") | "\(.team_name) Car Render: \(.team_car)"'
+```
 
 ---
 
@@ -1028,3 +1531,4 @@ python peerracepointcar.py
 - Created and maintained for the **TARAS F1** project ecosystem by [Yash Ajagiya](https://github.com/yashajagiya).
 - Data aggregated from publicly available sources for non-commercial sports information and educational use.
 - Formula 1, F1, and related marks are trademarks of Formula One Licensing B.V.
+
