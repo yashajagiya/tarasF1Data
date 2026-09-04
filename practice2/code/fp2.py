@@ -125,7 +125,22 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
         
-        # Find the most recent session that is on or before target_date
+        # 1. Check for active race weekend having FP2
+        for event in schedule:
+            sched = event.get('schedule', {})
+            fp2_info = sched.get('fp2')
+            race_date = sched.get('race', {}).get('date')
+            session_dates = [v.get('date') for v in sched.values() if isinstance(v, dict) and v.get('date')]
+            if session_dates and race_date and fp2_info and fp2_info.get('date'):
+                min_date = min(session_dates)
+                if min_date <= target_date <= race_date:
+                    event_id = event.get('id')
+                    circuit_id = event.get('circuit', {}).get('circuitId', 'unknown')
+                    url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/2"
+                    print(f"Found active race weekend FP2 session ({fp2_info.get('date')}): {url}")
+                    return url, circuit_id, event
+
+        # 2. Otherwise find the most recent session that is on or before target_date
         best_match = None
         best_date = None
         
