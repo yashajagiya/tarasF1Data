@@ -100,8 +100,8 @@ def scrape_f1_qualifying(url, output_file='qualifying_results.json', circuit_id=
                     })
 
     if len(results) == 0:
-        print(f"No qualifying results available yet at {url} (session may not have concluded or results are not yet published). Preserving existing data.")
-        return False
+        print(f"No qualifying results available yet at {url} (session may not have concluded or results are not yet published). Saving session details with empty results.")
+
 
     scraped_data = {
         "country": country_name,
@@ -203,7 +203,13 @@ def push_to_git(practice_num):
     if os.path.abspath(source_dir) != os.path.abspath(target_dir):
         shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
     
-    # 2. Run git commands
+    # 2. Also ensure root workspace has the directory updated
+    parent_dir = os.path.dirname(target_repo)
+    parent_practice_dir = os.path.join(parent_dir, practice_num)
+    if os.path.isdir(parent_practice_dir) and os.path.abspath(parent_practice_dir) != os.path.abspath(target_dir):
+        shutil.copytree(target_dir, parent_practice_dir, dirs_exist_ok=True)
+    
+    # 3. Run git commands
     try:
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
         
