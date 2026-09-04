@@ -6,7 +6,7 @@ from datetime import date, datetime
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id=None):
+def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id=None, event_info=None):
     print(f"Fetching data from {url}...")
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -19,6 +19,22 @@ def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id
         html_content = response.text
     except Exception as e:
         print(f"Error fetching the URL: {e}")
+        if event_info:
+            print("Using fallback event metadata from schedule.")
+            country_name = event_info.get('f1siteracename', 'Unknown').replace('-', ' ').title()
+            scraped_data = {
+                "country": country_name,
+                "session": "SPRINT",
+                "raceName": event_info.get('raceName', 'Unknown Race').upper(),
+                "date": event_info.get('raceDate', 'Unknown Date'),
+                "circuitName": event_info.get('circuit', {}).get('circuitName', 'Unknown Circuit'),
+                "circuitId": circuit_id or event_info.get('circuit', {}).get('circuitId', 'unknown'),
+                "results": []
+            }
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(scraped_data, f, indent=4, ensure_ascii=False)
+            print(f"Fallback data successfully saved to '{output_file}'!")
+            return True
         print("Please ensure the URL is accessible or provide a local HTML file.")
         return False
 
@@ -29,11 +45,13 @@ def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id
     h1_tag = soup.find('h1')
     full_title = h1_tag.get_text(strip=True) if h1_tag else ""
     
-    # Example: "FORMULA 1 MOËT & CHANDON BELGIAN GRAND PRIX 2026 - QUALIFYING"
+    # Example: "FORMULA 1 MOËT & CHANDON BELGIAN GRAND PRIX 2026 - SPRINT"
     parts = full_title.split('-')
-    race_name = parts[0].strip() if len(parts) > 0 else full_title
-    session = parts[-1].strip() if len(parts) > 1 else ""
-    
+    race_name = parts[0].strip() if len(parts) > 0 and parts[0].strip() else ""
+    session = parts[-1].strip() if len(parts) > 1 and parts[-1].strip() else "SPRINT"
+    if not race_name and event_info and event_info.get('raceName'):
+        race_name = event_info.get('raceName')
+        
     # Extract Country Name from URL
     url_parts = url.split('/')
     country_name = "Unknown"
@@ -44,6 +62,8 @@ def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id
             country_name = url_parts[races_index + 2].replace('-', ' ').title()
         except Exception:
             pass
+    if country_name == "Unknown" and event_info and event_info.get('f1siteracename'):
+        country_name = event_info.get('f1siteracename').replace('-', ' ').title()
 
     # 2. Extract Date and Circuit Name
     date_text = ""
@@ -55,6 +75,11 @@ def scrape_f1_sprint_race(url, output_file='sprint_race_result.json', circuit_id
         if len(p_siblings) >= 2:
             date_text = p_siblings[0].get_text(strip=True)
             circuit_name = p_siblings[1].get_text(strip=True)
+
+    if not date_text and event_info and event_info.get('raceDate'):
+        date_text = event_info.get('raceDate')
+    if not circuit_name and event_info and event_info.get('circuit', {}).get('circuitName'):
+        circuit_name = event_info.get('circuit', {}).get('circuitName')
 
     # 3. Extract Table Data
     table = soup.find('table', class_=lambda c: c and 'Table-module_table' in c)
@@ -123,7 +148,7 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
     """
     Dynamically builds the sprint-results URL by checking schedule.json.
     Only returns a URL if the race weekend has a sprint (sprintRace date is not null).
-    Finds the most recent sprint race session on or before target_date.
+    Finds the active race weekend's sprint or the most recent sprint race session on or before target_date.
     """
     if target_date is None:
         target_date = date.today().isoformat()
@@ -135,7 +160,24 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
         
-        # Find the most recent sprint race session that is on or before target_date
+        # 1. Check for active race weekend having Sprint Race
+        for event in schedule:
+            sched = event.get('schedule', {})
+            sprint_race_date = sched.get('sprintRace', {}).get('date')
+            race_info = sched.get('race')
+            race_date = race_info.get('date') if race_info else None
+            session_dates = [v.get('date') for v in sched.values() if isinstance(v, dict) and v.get('date')]
+            if session_dates and race_date and sprint_race_date:
+                min_date = min(session_dates)
+                if min_date <= target_date <= race_date:
+                    event_id = event.get('id')
+                    circuit_id = event.get('circuit', {}).get('circuitId', 'unknown')
+                    country_name = event.get('f1siteracename', 'unknown')
+                    url = f"https://www.formula1.com/en/results/2026/races/{event_id}/sprint-results"
+                    print(f"Found active race weekend Sprint Race session ({sprint_race_date}): {url}")
+                    return url, circuit_id, event
+
+        # 2. Otherwise find the most recent sprint race session that is on or before target_date
         best_match = None
         best_date = None
         
@@ -159,15 +201,15 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
             print(f"Found latest Sprint Race session ({best_date}): {url}")
             print(f"  Race: {best_match.get('raceName')}")
             print(f"  Country: {country_name}")
-            return url, circuit_id
+            return url, circuit_id, best_match
                 
         print(f"No Sprint Race session found on or before: {target_date}")
         print("(Only sprint weekends have sprint races - most races don't have sprints)")
-        return None, None
+        return None, None, None
         
     except FileNotFoundError:
         print(f"Error: {schedule_path} not found.")
-        return None, None
+        return None, None, None
 
 def find_target_repo(script_path):
     current = os.path.abspath(script_path)
@@ -251,12 +293,12 @@ def push_to_git(practice_num):
 
 if __name__ == "__main__":
     target_date = None  # Uses today's date automatically to find the correct event
-    url, circuit_id = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
+    url, circuit_id, event = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'sprint_race_result.json')
-        success = scrape_f1_sprint_race(url, output_file, circuit_id=circuit_id)
+        success = scrape_f1_sprint_race(url, output_file, circuit_id=circuit_id, event_info=event)
         # Push to github automatically if scraping succeeded
         if success:
             push_to_git('sprint-race')
