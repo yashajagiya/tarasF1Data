@@ -6,7 +6,7 @@ import urllib.request
 from datetime import date, datetime
 from bs4 import BeautifulSoup
 
-def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None):
+def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None, event_info=None):
     print(f"Fetching data from {url}...\n")
     
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -14,7 +14,20 @@ def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None):
         with urllib.request.urlopen(req) as response:
             html = response.read().decode('utf-8')
     except Exception as e:
-        print(f"Error fetching data: {e}")
+        print(f"Error fetching data from {url}: {e}")
+        if event_info:
+            print("Using fallback event metadata from schedule.")
+            extracted_data = {
+                "raceName": f"{event_info.get('raceName', 'Unknown Race')} - PRACTICE 3".upper(),
+                "raceDate": event_info.get('raceDate', 'Unknown Date'),
+                "circuitName": event_info.get('circuit', {}).get('circuitName', 'Unknown Circuit'),
+                "circuitId": circuit_id or event_info.get('circuit', {}).get('circuitId', 'unknown'),
+                "results": []
+            }
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(extracted_data, f, indent=4, ensure_ascii=False)
+            print(f"Fallback data successfully saved to '{output_file}'!")
+            return True
         return False
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -23,18 +36,34 @@ def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None):
     
     # Extract Race Name
     h1 = soup.find('h1')
-    extracted_data['raceName'] = h1.text.strip() if h1 else 'Unknown Race'
+    if h1:
+        extracted_data['raceName'] = h1.text.strip()
+    elif event_info and event_info.get('raceName'):
+        extracted_data['raceName'] = f"{event_info.get('raceName')} - PRACTICE 3".upper()
+    else:
+        extracted_data['raceName'] = 'Unknown Race'
     
     # Extract Race Date and Circuit
-    # Targeting the general display classes to extract date and circuit since they don't have unique IDs
     date_p = soup.find('p', class_='typography-module_display-s-bold__Vxu9c')
-    extracted_data['raceDate'] = date_p.text.strip() if date_p else 'Unknown Date'
+    if date_p:
+        extracted_data['raceDate'] = date_p.text.strip()
+    elif event_info and event_info.get('raceDate'):
+        extracted_data['raceDate'] = event_info.get('raceDate')
+    else:
+        extracted_data['raceDate'] = 'Unknown Date'
     
     circuit_p = soup.find('p', class_='typography-module_body-xs-semibold__Fyfwn')
-    extracted_data['circuitName'] = circuit_p.text.strip() if circuit_p else 'Unknown Circuit'
+    if circuit_p:
+        extracted_data['circuitName'] = circuit_p.text.strip()
+    elif event_info and event_info.get('circuit', {}).get('circuitName'):
+        extracted_data['circuitName'] = event_info.get('circuit', {}).get('circuitName')
+    else:
+        extracted_data['circuitName'] = 'Unknown Circuit'
     
     if circuit_id:
         extracted_data['circuitId'] = circuit_id
+    elif event_info and event_info.get('circuit', {}).get('circuitId'):
+        extracted_data['circuitId'] = event_info.get('circuit', {}).get('circuitId')
     
     extracted_data['results'] = []
     
@@ -76,8 +105,7 @@ def extract_fp3_data(url, output_file='fp3_extracted.json', circuit_id=None):
                 extracted_data['results'].append(result)
 
     if len(extracted_data['results']) == 0:
-        print(f"No FP3 results available yet at {url} (session may not have concluded or results are not yet published). Preserving existing data.")
-        return False
+        print(f"No FP3 results available yet at {url} (session may not have concluded or results are not yet published). Saving session details with empty results.")
                 
     # Save to JSON file
     with open(output_file, 'w', encoding='utf-8') as f:
@@ -97,7 +125,22 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
         with open(schedule_path, 'r', encoding='utf-8') as f:
             schedule = json.load(f)
         
-        # Find the most recent session that is on or before target_date
+        # 1. Check for active race weekend having FP3
+        for event in schedule:
+            sched = event.get('schedule', {})
+            fp3_info = sched.get('fp3')
+            race_date = sched.get('race', {}).get('date')
+            session_dates = [v.get('date') for v in sched.values() if isinstance(v, dict) and v.get('date')]
+            if session_dates and race_date and fp3_info and fp3_info.get('date'):
+                min_date = min(session_dates)
+                if min_date <= target_date <= race_date:
+                    event_id = event.get('id')
+                    circuit_id = event.get('circuit', {}).get('circuitId', 'unknown')
+                    url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/3"
+                    print(f"Found active race weekend FP3 session ({fp3_info.get('date')}): {url}")
+                    return url, circuit_id, event
+
+        # 2. Otherwise find the most recent session that is on or before target_date
         best_match = None
         best_date = None
         
@@ -113,14 +156,14 @@ def get_dynamic_url(schedule_file='schedule.json', target_date=None):
             circuit_id = best_match.get('circuit', {}).get('circuitId', 'unknown')
             url = f"https://www.formula1.com/en/results/2026/races/{event_id}/practice/3"
             print(f"Found latest FP3 session ({best_date}): {url}")
-            return url, circuit_id
+            return url, circuit_id, best_match
                 
         print(f"No FP3 session found on or before: {target_date}")
-        return None, None
+        return None, None, None
         
     except FileNotFoundError:
         print(f"Error: {schedule_path} not found.")
-        return None, None
+        return None, None, None
 
 def find_target_repo(script_path):
     current = os.path.abspath(script_path)
@@ -168,7 +211,13 @@ def push_to_git(practice_num):
     if os.path.abspath(source_dir) != os.path.abspath(target_dir):
         shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
     
-    # 2. Run git commands
+    # 2. Also ensure root workspace has the directory updated
+    parent_dir = os.path.dirname(target_repo)
+    parent_practice_dir = os.path.join(parent_dir, practice_num)
+    if os.path.isdir(parent_practice_dir) and os.path.abspath(parent_practice_dir) != os.path.abspath(target_dir):
+        shutil.copytree(target_dir, parent_practice_dir, dirs_exist_ok=True)
+    
+    # 3. Run git commands
     try:
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
         
@@ -198,12 +247,12 @@ def push_to_git(practice_num):
 
 if __name__ == "__main__":
     target_date = None  # Uses today's date automatically to find the correct event
-    url, circuit_id = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
+    url, circuit_id, event_info = get_dynamic_url(schedule_file='schedule.json', target_date=target_date)
     
     if url:
         script_dir = os.path.dirname(os.path.abspath(__file__))
         output_file = os.path.join(os.path.dirname(script_dir), 'fp3_extracted.json')
-        success = extract_fp3_data(url, output_file, circuit_id=circuit_id)
+        success = extract_fp3_data(url, output_file, circuit_id=circuit_id, event_info=event_info)
         # Push to github automatically if extraction succeeded
         if success:
             push_to_git('practice3')
