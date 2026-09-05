@@ -3,5 +3,204 @@
     "raceDate": "04 - 06 Sep 2026",
     "circuitName": "Authentics",
     "circuitId": "monza",
-    "results": []
+    "results": [
+        {
+            "position": "1",
+            "number": "63",
+            "driver": "George Russell",
+            "shortName": "RUS",
+            "team": "Mercedes",
+            "timeOrGap": "1:22.219",
+            "laps": "13"
+        },
+        {
+            "position": "2",
+            "number": "44",
+            "driver": "Lewis Hamilton",
+            "shortName": "HAM",
+            "team": "Ferrari",
+            "timeOrGap": "+0.226s",
+            "laps": "21"
+        },
+        {
+            "position": "3",
+            "number": "3",
+            "driver": "Max Verstappen",
+            "shortName": "VER",
+            "team": "Red Bull Racing",
+            "timeOrGap": "+0.350s",
+            "laps": "24"
+        },
+        {
+            "position": "4",
+            "number": "12",
+            "driver": "Kimi Antonelli",
+            "shortName": "ANT",
+            "team": "Mercedes",
+            "timeOrGap": "+0.361s",
+            "laps": "18"
+        },
+        {
+            "position": "5",
+            "number": "1",
+            "driver": "Lando Norris",
+            "shortName": "NOR",
+            "team": "McLaren",
+            "timeOrGap": "+0.406s",
+            "laps": "18"
+        },
+        {
+            "position": "6",
+            "number": "16",
+            "driver": "Charles Leclerc",
+            "shortName": "LEC",
+            "team": "Ferrari",
+            "timeOrGap": "+0.489s",
+            "laps": "21"
+        },
+        {
+            "position": "7",
+            "number": "41",
+            "driver": "Arvid Lindblad",
+            "shortName": "LIN",
+            "team": "Racing Bulls",
+            "timeOrGap": "+0.505s",
+            "laps": "21"
+        },
+        {
+            "position": "8",
+            "number": "81",
+            "driver": "Oscar Piastri",
+            "shortName": "PIA",
+            "team": "McLaren",
+            "timeOrGap": "+0.554s",
+            "laps": "21"
+        },
+        {
+            "position": "9",
+            "number": "10",
+            "driver": "Pierre Gasly",
+            "shortName": "GAS",
+            "team": "Alpine",
+            "timeOrGap": "+0.679s",
+            "laps": "24"
+        },
+        {
+            "position": "10",
+            "number": "43",
+            "driver": "Franco Colapinto",
+            "shortName": "COL",
+            "team": "Alpine",
+            "timeOrGap": "+0.882s",
+            "laps": "23"
+        },
+        {
+            "position": "11",
+            "number": "27",
+            "driver": "Nico Hulkenberg",
+            "shortName": "HUL",
+            "team": "Audi",
+            "timeOrGap": "+0.907s",
+            "laps": "22"
+        },
+        {
+            "position": "12",
+            "number": "30",
+            "driver": "Liam Lawson",
+            "shortName": "LAW",
+            "team": "Red Bull Racing",
+            "timeOrGap": "+0.984s",
+            "laps": "23"
+        },
+        {
+            "position": "13",
+            "number": "5",
+            "driver": "Gabriel Bortoleto",
+            "shortName": "BOR",
+            "team": "Audi",
+            "timeOrGap": "+1.079s",
+            "laps": "21"
+        },
+        {
+            "position": "14",
+            "number": "87",
+            "driver": "Oliver Bearman",
+            "shortName": "BEA",
+            "team": "Haas F1 Team",
+            "timeOrGap": "+1.366s",
+            "laps": "23"
+        },
+        {
+            "position": "15",
+            "number": "22",
+            "driver": "Yuki Tsunoda",
+            "shortName": "TSU",
+            "team": "Racing Bulls",
+            "timeOrGap": "+1.598s",
+            "laps": "16"
+        },
+        {
+            "position": "16",
+            "number": "55",
+            "driver": "Carlos Sainz",
+            "shortName": "SAI",
+            "team": "Williams",
+            "timeOrGap": "+1.656s",
+            "laps": "28"
+        },
+        {
+            "position": "17",
+            "number": "31",
+            "driver": "Esteban Ocon",
+            "shortName": "OCO",
+            "team": "Haas F1 Team",
+            "timeOrGap": "+1.801s",
+            "laps": "25"
+        },
+        {
+            "position": "18",
+            "number": "23",
+            "driver": "Alexander Albon",
+            "shortName": "ALB",
+            "team": "Williams",
+            "timeOrGap": "+2.218s",
+            "laps": "29"
+        },
+        {
+            "position": "19",
+            "number": "14",
+            "driver": "Fernando Alonso",
+            "shortName": "ALO",
+            "team": "Aston Martin",
+            "timeOrGap": "+2.700s",
+            "laps": "20"
+        },
+        {
+            "position": "20",
+            "number": "77",
+            "driver": "Valtteri Bottas",
+            "shortName": "BOT",
+            "team": "Cadillac",
+            "timeOrGap": "+2.785s",
+            "laps": "20"
+        },
+        {
+            "position": "21",
+            "number": "11",
+            "driver": "Sergio Perez",
+            "shortName": "PER",
+            "team": "Cadillac",
+            "timeOrGap": "+2.812s",
+            "laps": "20"
+        },
+        {
+            "position": "22",
+            "number": "18",
+            "driver": "Lance Stroll",
+            "shortName": "STR",
+            "team": "Aston Martin",
+            "timeOrGap": "+3.336s",
+            "laps": "20"
+        }
+    ]
 }
