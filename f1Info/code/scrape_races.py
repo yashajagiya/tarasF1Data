@@ -17,6 +17,7 @@ import shutil
 import subprocess
 import sys
 import os
+import time
 from datetime import datetime
 
 # Fix Windows console encoding
@@ -35,6 +36,29 @@ HEADERS = {
     ),
     "Accept": "application/json",
 }
+
+
+def create_session() -> requests.Session:
+    """Create a persistent requests session with proper headers."""
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    return session
+
+
+def fetch_with_retry(session: requests.Session, url: str, timeout: int = 25, max_attempts: int = 3):
+    """Fetch URL with retries and exponential backoff."""
+    last_err = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            resp = session.get(url, timeout=timeout)
+            resp.encoding = "utf-8"
+            resp.raise_for_status()
+            return resp
+        except requests.RequestException as e:
+            last_err = e
+            if attempt < max_attempts:
+                time.sleep(2 * attempt)
+    raise last_err
 
 
 def extract_race(race: dict) -> dict:
@@ -95,13 +119,12 @@ def extract_race(race: dict) -> dict:
     }
 
 
-def fetch_latest_result() -> dict | None:
+def fetch_latest_result(session: requests.Session) -> dict | None:
     """Fetch the latest race result from the GitHub-hosted JSON.
     Returns a dict with circuitId, winner number/name, and team, or None."""
-    print(f"Fetching latest race result from GitHub...", end=" ", flush=True)
+    print("Fetching latest race result from GitHub...", end=" ", flush=True)
     try:
-        resp = requests.get(RACE_RESULTS_URL, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
+        resp = fetch_with_retry(session, RACE_RESULTS_URL, timeout=15)
         data = resp.json()
 
         circuit_id = data.get("circuitId")
@@ -111,7 +134,7 @@ def fetch_latest_result() -> dict | None:
             return None
 
         # Position 1 = winner
-        p1 = next((r for r in results if r.get("position") == "1"), None)
+        p1 = next((r for r in results if str(r.get("position")) == "1"), None)
         if not p1:
             print("SKIP  (no P1 found)")
             return None
@@ -131,15 +154,14 @@ def fetch_latest_result() -> dict | None:
         return None
 
 
-def fetch_race_images() -> dict:
+def fetch_race_images(session: requests.Session) -> dict:
     """Fetch track images and GP names from GitHub-hosted JSON.
     Returns a dict mapping circuitId to {'trackImage': ..., 'gpName': ...}."""
-    print(f"Fetching race images from GitHub...", end=" ", flush=True)
+    print("Fetching race images from GitHub...", end=" ", flush=True)
     try:
-        resp = requests.get(RACES_IMG_URL, headers=HEADERS, timeout=15)
-        resp.raise_for_status()
+        resp = fetch_with_retry(session, RACES_IMG_URL, timeout=15)
         data = resp.json()
-        
+
         mapping = {}
         for item in data:
             cid = item.get("circuit_id")
@@ -155,12 +177,14 @@ def fetch_race_images() -> dict:
         return {}
 
 
-def fetch_races() -> dict:
+def fetch_races(session: requests.Session | None = None) -> dict:
     """Fetch the current season race data from the F1 API."""
+    if session is None:
+        session = create_session()
+
     print(f"Fetching race data from {API_URL}...", end=" ", flush=True)
 
-    resp = requests.get(API_URL, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
+    resp = fetch_with_retry(session, API_URL, timeout=30)
     api_data = resp.json()
 
     season = api_data.get("season")
@@ -168,24 +192,24 @@ def fetch_races() -> dict:
     races_raw = api_data.get("races", [])
 
     print(f"OK  ({len(races_raw)} races found)")
-    
+
     # ── Fetch race images/names mapping ──────────────────────────
-    images_mapping = fetch_race_images()
+    images_mapping = fetch_race_images(session)
 
     races = []
     for race in races_raw:
         extracted = extract_race(race)
-        
+
         # Patch in track image and GP name inside circuit
         circuit_id = extracted.get("circuit", {}).get("circuitId")
         img_data = images_mapping.get(circuit_id, {})
         extracted["circuit"]["trackImage"] = img_data.get("trackImage")
         extracted["circuit"]["gpName"] = img_data.get("gpName")
-        
+
         races.append(extracted)
 
     # ── Patch missing winners from GitHub race result ────────────
-    latest = fetch_latest_result()
+    latest = fetch_latest_result(session)
     patched_circuit = None
     if latest:
         for race in races:
@@ -221,26 +245,8 @@ def fetch_races() -> dict:
     }
 
 
-def main():
-    print("=" * 60)
-    print("  F1 2026 Race Data Scraper")
-    print("=" * 60)
-    print()
-
-    try:
-        result = fetch_races()
-    except requests.RequestException as e:
-        print(f"FAIL  ERROR: {e}")
-        return
-
-    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'races_data.json'))
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
-
-    print()
-    print(f"Done! Saved {result['totalRaces']} races to {out_path}")
-
 def find_target_repo(script_path):
+    """Locate the target tarasF1Data git repository."""
     current = os.path.abspath(script_path)
     candidates = []
     while True:
@@ -253,7 +259,7 @@ def find_target_repo(script_path):
         if os.path.isdir(os.path.join(current, '.git')):
             candidates.append(current)
         current = parent
-    
+
     for cand in candidates:
         try:
             out = subprocess.check_output(['git', 'remote', '-v'], cwd=cand, text=True)
@@ -265,6 +271,7 @@ def find_target_repo(script_path):
 
 
 def push_f1info_to_git(out_path, info_type="races"):
+    """Sync and commit generated JSON to target Git repository."""
     target_repo = find_target_repo(__file__)
     if not target_repo or not os.path.isdir(target_repo):
         print(f"Error: Target git repository not found for {out_path}.")
@@ -278,6 +285,12 @@ def push_f1info_to_git(out_path, info_type="races"):
 
     if os.path.abspath(out_path) != os.path.abspath(dest_path):
         shutil.copy2(out_path, dest_path)
+
+    # Also sync to root workspace file if it exists
+    workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+    root_json = os.path.join(workspace_root, file_name)
+    if os.path.exists(root_json) and os.path.abspath(root_json) != os.path.abspath(out_path):
+        shutil.copy2(out_path, root_json)
 
     git_file_path = f"f1Info/{file_name}"
     print(f"Syncing {git_file_path} to Git repository: {target_repo}")
@@ -321,8 +334,10 @@ def main():
     print("=" * 60)
     print()
 
+    session = create_session()
+
     try:
-        result = fetch_races()
+        result = fetch_races(session)
     except requests.RequestException as e:
         print(f"FAIL  ERROR: {e}")
         return
@@ -334,7 +349,7 @@ def main():
     print()
     print(f"Done! Saved {result['totalRaces']} races to {out_path}")
 
-    # GitHub Upload
+    # GitHub Upload & sync
     push_f1info_to_git(out_path, info_type="races")
 
     # Quick summary
