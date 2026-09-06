@@ -5,7 +5,9 @@
     "hero": {
       "first_name": "George",
       "last_name": "Russell",
-      "country": "Great Britain",
+      "name_acronym": "RUS",
+      "driver_id": "GEORUS01",
+      "country": "United Kingdom",
       "team": "Mercedes",
       "number": "63",
       "team_color": "0xFF27F4D2",
@@ -67,6 +69,8 @@
     "hero": {
       "first_name": "Kimi",
       "last_name": "Antonelli",
+      "name_acronym": "ANT",
+      "driver_id": "ANDANT01",
       "country": "Italy",
       "team": "Mercedes",
       "number": "12",
@@ -130,6 +134,8 @@
     "hero": {
       "first_name": "Charles",
       "last_name": "Leclerc",
+      "name_acronym": "LEC",
+      "driver_id": "CHALEC01",
       "country": "Monaco",
       "team": "Ferrari",
       "number": "16",
@@ -190,7 +196,9 @@
     "hero": {
       "first_name": "Lewis",
       "last_name": "Hamilton",
-      "country": "Great Britain",
+      "name_acronym": "HAM",
+      "driver_id": "LEWHAM01",
+      "country": "United Kingdom",
       "team": "Ferrari",
       "number": "44",
       "team_color": "0xFFE8002D",
@@ -248,7 +256,9 @@
     "hero": {
       "first_name": "Lando",
       "last_name": "Norris",
-      "country": "Great Britain",
+      "name_acronym": "NOR",
+      "driver_id": "LANNOR01",
+      "country": "United Kingdom",
       "team": "McLaren",
       "number": "1",
       "team_color": "0xFFFF8000",
@@ -309,6 +319,8 @@
     "hero": {
       "first_name": "Oscar",
       "last_name": "Piastri",
+      "name_acronym": "PIA",
+      "driver_id": "OSCPIA01",
       "country": "Australia",
       "team": "McLaren",
       "number": "81",
@@ -370,6 +382,8 @@
     "hero": {
       "first_name": "Max",
       "last_name": "Verstappen",
+      "name_acronym": "VER",
+      "driver_id": "MAXVER01",
       "country": "Netherlands",
       "team": "Red Bull Racing",
       "number": "3",
@@ -430,6 +444,8 @@
     "hero": {
       "first_name": "Isack",
       "last_name": "Hadjar",
+      "name_acronym": "HAD",
+      "driver_id": "ISAHAD01",
       "country": "France",
       "team": "Red Bull Racing",
       "number": "6",
@@ -492,6 +508,8 @@
     "hero": {
       "first_name": "Liam",
       "last_name": "Lawson",
+      "name_acronym": "LAW",
+      "driver_id": "LIALAW01",
       "country": "New Zealand",
       "team": "Racing Bulls",
       "number": "30",
@@ -554,7 +572,9 @@
     "hero": {
       "first_name": "Arvid",
       "last_name": "Lindblad",
-      "country": "Great Britain",
+      "name_acronym": "LIN",
+      "driver_id": "ARVLIN01",
+      "country": "United Kingdom",
       "team": "Racing Bulls",
       "number": "41",
       "team_color": "0xFF6692FF",
@@ -611,6 +631,8 @@
     "hero": {
       "first_name": "Pierre",
       "last_name": "Gasly",
+      "name_acronym": "GAS",
+      "driver_id": "PIEGAS01",
       "country": "France",
       "team": "Alpine",
       "number": "10",
@@ -670,6 +692,8 @@
     "hero": {
       "first_name": "Franco",
       "last_name": "Colapinto",
+      "name_acronym": "COL",
+      "driver_id": "FRACOL01",
       "country": "Argentina",
       "team": "Alpine",
       "number": "43",
@@ -728,6 +752,8 @@
     "hero": {
       "first_name": "Esteban",
       "last_name": "Ocon",
+      "name_acronym": "OCO",
+      "driver_id": "ESTOCO01",
       "country": "France",
       "team": "Haas F1 Team",
       "number": "31",
@@ -787,7 +813,9 @@
     "hero": {
       "first_name": "Oliver",
       "last_name": "Bearman",
-      "country": "Great Britain",
+      "name_acronym": "BEA",
+      "driver_id": "OLIBEA01",
+      "country": "United Kingdom",
       "team": "Haas F1 Team",
       "number": "87",
       "team_color": "0xFFDEE1E2",
@@ -847,6 +875,8 @@
     "hero": {
       "first_name": "Nico",
       "last_name": "Hulkenberg",
+      "name_acronym": "HUL",
+      "driver_id": "NICHUL01",
       "country": "Germany",
       "team": "Audi",
       "number": "27",
@@ -905,6 +935,8 @@
     "hero": {
       "first_name": "Gabriel",
       "last_name": "Bortoleto",
+      "name_acronym": "BOR",
+      "driver_id": "GABBOR01",
       "country": "Brazil",
       "team": "Audi",
       "number": "5",
@@ -964,6 +996,8 @@
     "hero": {
       "first_name": "Carlos",
       "last_name": "Sainz",
+      "name_acronym": "SAI",
+      "driver_id": "CARSAI01",
       "country": "Spain",
       "team": "Williams",
       "number": "55",
@@ -1023,6 +1057,8 @@
     "hero": {
       "first_name": "Alexander",
       "last_name": "Albon",
+      "name_acronym": "ALB",
+      "driver_id": "ALEALB01",
       "country": "Thailand",
       "team": "Williams",
       "number": "23",
@@ -1082,6 +1118,8 @@
     "hero": {
       "first_name": "Fernando",
       "last_name": "Alonso",
+      "name_acronym": "ALO",
+      "driver_id": "FERALO01",
       "country": "Spain",
       "team": "Aston Martin",
       "number": "14",
@@ -1140,6 +1178,8 @@
     "hero": {
       "first_name": "Lance",
       "last_name": "Stroll",
+      "name_acronym": "STR",
+      "driver_id": "LANSTR01",
       "country": "Canada",
       "team": "Aston Martin",
       "number": "18",
@@ -1197,6 +1237,8 @@
     "hero": {
       "first_name": "Sergio",
       "last_name": "Perez",
+      "name_acronym": "PER",
+      "driver_id": "SERPER01",
       "country": "Mexico",
       "team": "Cadillac",
       "number": "11",
@@ -1251,6 +1293,8 @@
     "hero": {
       "first_name": "Valtteri",
       "last_name": "Bottas",
+      "name_acronym": "BOT",
+      "driver_id": "VALBOT01",
       "country": "Finland",
       "team": "Cadillac",
       "number": "77",
