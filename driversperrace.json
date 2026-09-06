@@ -11,8 +11,8 @@
       "team_name": "Mercedes",
       "nationality": "Italy",
       "championshipPts": {
-        "value": 242,
-        "displayValue": "242"
+        "value": 267,
+        "displayValue": "267"
       },
       "races": [
         {
@@ -116,9 +116,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 25,
+          "displayValue": "25"
         },
         {
           "name": "ESP",
@@ -201,8 +201,8 @@
       "team_name": "Mercedes",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 183,
-        "displayValue": "183"
+        "value": 201,
+        "displayValue": "201"
       },
       "races": [
         {
@@ -306,9 +306,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 18,
+          "displayValue": "18"
         },
         {
           "name": "ESP",
@@ -391,8 +391,8 @@
       "team_name": "Ferrari",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 183,
-        "displayValue": "183"
+        "value": 191,
+        "displayValue": "191"
       },
       "races": [
         {
@@ -496,9 +496,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "ESP",
@@ -581,8 +581,8 @@
       "team_name": "McLaren",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 159,
-        "displayValue": "159"
+        "value": 171,
+        "displayValue": "171"
       },
       "races": [
         {
@@ -686,9 +686,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 12,
+          "displayValue": "12"
         },
         {
           "name": "ESP",
@@ -876,9 +876,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -961,8 +961,8 @@
       "team_name": "Red Bull Racing",
       "nationality": "Netherlands",
       "championshipPts": {
-        "value": 112,
-        "displayValue": "112"
+        "value": 127,
+        "displayValue": "127"
       },
       "races": [
         {
@@ -1066,9 +1066,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 15,
+          "displayValue": "15"
         },
         {
           "name": "ESP",
@@ -1151,8 +1151,8 @@
       "team_name": "McLaren",
       "nationality": "Australia",
       "championshipPts": {
-        "value": 104,
-        "displayValue": "104"
+        "value": 116,
+        "displayValue": "116"
       },
       "races": [
         {
@@ -1208,8 +1208,8 @@
           "name": "MCO",
           "displayName": "Monaco Grand Prix",
           "played": true,
-          "value": 10,
-          "displayValue": "10"
+          "value": 12,
+          "displayValue": "12"
         },
         {
           "name": "BAR",
@@ -1256,9 +1256,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 10,
+          "displayValue": "10"
         },
         {
           "name": "ESP",
@@ -1341,8 +1341,8 @@
       "team_name": "Red Bull Racing",
       "nationality": "France",
       "championshipPts": {
-        "value": 68,
-        "displayValue": "68"
+        "value": 71,
+        "displayValue": "71"
       },
       "races": [
         {
@@ -1398,8 +1398,8 @@
           "name": "MCO",
           "displayName": "Monaco Grand Prix",
           "played": true,
-          "value": 12,
-          "displayValue": "12"
+          "value": 15,
+          "displayValue": "15"
         },
         {
           "name": "BAR",
@@ -1531,8 +1531,8 @@
       "team_name": "Racing Bulls",
       "nationality": "New Zealand",
       "championshipPts": {
-        "value": 49,
-        "displayValue": "49"
+        "value": 51,
+        "displayValue": "51"
       },
       "races": [
         {
@@ -1588,8 +1588,8 @@
           "name": "MCO",
           "displayName": "Monaco Grand Prix",
           "played": true,
-          "value": 8,
-          "displayValue": "8"
+          "value": 10,
+          "displayValue": "10"
         },
         {
           "name": "BAR",
@@ -1636,9 +1636,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -1721,8 +1721,8 @@
       "team_name": "Alpine",
       "nationality": "France",
       "championshipPts": {
-        "value": 44,
-        "displayValue": "44"
+        "value": 41,
+        "displayValue": "41"
       },
       "races": [
         {
@@ -1778,8 +1778,8 @@
           "name": "MCO",
           "displayName": "Monaco Grand Prix",
           "played": true,
-          "value": 15,
-          "displayValue": "15"
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "BAR",
@@ -1826,9 +1826,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "ESP",
@@ -1911,8 +1911,8 @@
       "team_name": "Racing Bulls",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 23,
-        "displayValue": "23"
+        "value": 29,
+        "displayValue": "29"
       },
       "races": [
         {
@@ -1968,8 +1968,8 @@
           "name": "MCO",
           "displayName": "Monaco Grand Prix",
           "played": true,
-          "value": 6,
-          "displayValue": "6"
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "BAR",
@@ -2016,9 +2016,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "ESP",
@@ -2101,8 +2101,8 @@
       "team_name": "Alpine",
       "nationality": "Argentina",
       "championshipPts": {
-        "value": 19,
-        "displayValue": "19"
+        "value": 21,
+        "displayValue": "21"
       },
       "races": [
         {
@@ -2206,9 +2206,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "ESP",
@@ -2396,9 +2396,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -2586,9 +2586,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -2776,9 +2776,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -2966,9 +2966,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -3156,9 +3156,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -3346,9 +3346,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -3536,9 +3536,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -3621,8 +3621,8 @@
       "team_name": "",
       "nationality": "Japan",
       "championshipPts": {
-        "value": 0,
-        "displayValue": "0"
+        "value": 1,
+        "displayValue": "1"
       },
       "races": [
         {
@@ -3726,9 +3726,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "ESP",
@@ -3916,9 +3916,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -4106,9 +4106,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
@@ -4296,9 +4296,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "ESP",
