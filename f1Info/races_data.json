@@ -5,7 +5,7 @@
     "championshipName": "2026 Formula 1 World Championship",
     "year": 2026
   },
-  "totalRaces": 22,
+  "totalRaces": 23,
   "races": [
     {
       "raceId": "australian_2026",
@@ -578,9 +578,9 @@
         "gpName": "Heineken Dutch GP"
       },
       "winner": {
-        "drivernumber": 1,
+        "drivernumber": 4,
         "fullName": "Lando Norris",
-        "teamWinner": "McLaren"
+        "teamWinner": "McLaren Formula 1 Team"
       }
     },
     {
@@ -625,7 +625,11 @@
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmonzadetailed.webp",
         "gpName": "Pirelli Italian GP"
       },
-      "winner": null
+      "winner": {
+        "drivernumber": 12,
+        "fullName": "Kimi Antonelli",
+        "teamWinner": "Mercedes"
+      }
     },
     {
       "raceId": "spanish_2026",
@@ -716,9 +720,53 @@
       "winner": null
     },
     {
+      "raceId": "bahrain_2026",
+      "raceName": "Formula 1 Gulf Air Bahrain Grand Prix in Malaysia 2026",
+      "round": 16,
+      "laps": 56,
+      "schedule": {
+        "race": {
+          "date": "2026-10-04",
+          "time": null
+        },
+        "qualy": {
+          "date": "2026-10-03",
+          "time": null
+        },
+        "fp1": {
+          "date": "2026-10-02",
+          "time": null
+        },
+        "fp2": {
+          "date": "2026-10-02",
+          "time": null
+        },
+        "fp3": {
+          "date": "2026-10-03",
+          "time": null
+        }
+      },
+      "circuit": {
+        "circuitId": "sepang",
+        "circuitName": "Sepang International Circuit",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur",
+        "circuitLength": "nullkm",
+        "lapRecord": null,
+        "firstParticipationYear": null,
+        "corners": null,
+        "fastestLapDriverId": null,
+        "fastestLapTeamId": null,
+        "fastestLapYear": null,
+        "trackImage": null,
+        "gpName": null
+      },
+      "winner": null
+    },
+    {
       "raceId": "singapore_2026",
       "raceName": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
-      "round": 16,
+      "round": 17,
       "laps": 62,
       "schedule": {
         "race": {
@@ -762,7 +810,7 @@
     {
       "raceId": "united_states_2026",
       "raceName": "Formula 1 MSC Cruises United States Grand Prix 2026",
-      "round": 17,
+      "round": 18,
       "laps": 56,
       "schedule": {
         "race": {
@@ -806,7 +854,7 @@
     {
       "raceId": "mexican_2026",
       "raceName": "Formula 1 Gran Premio de La Ciudad de México 2026",
-      "round": 18,
+      "round": 19,
       "laps": 71,
       "schedule": {
         "race": {
@@ -850,7 +898,7 @@
     {
       "raceId": "brazilian_2026",
       "raceName": "Formula 1 MSC Cruises Grande Premio de Sao Paulo 2026",
-      "round": 19,
+      "round": 20,
       "laps": 71,
       "schedule": {
         "race": {
@@ -894,7 +942,7 @@
     {
       "raceId": "las_vegas_2026",
       "raceName": "Formula 1 Heineken Las Vegas Grand Prix 2026",
-      "round": 20,
+      "round": 21,
       "laps": 50,
       "schedule": {
         "race": {
@@ -938,7 +986,7 @@
     {
       "raceId": "qatar_2026",
       "raceName": "Formula 1 Qatar Airways Qatar Grand Prix 2026",
-      "round": 21,
+      "round": 22,
       "laps": 57,
       "schedule": {
         "race": {
@@ -982,7 +1030,7 @@
     {
       "raceId": "abu_dhabi_2026",
       "raceName": "Formula 1 Etihad Airways Abu Dhabi Grand Prix 2026",
-      "round": 22,
+      "round": 23,
       "laps": 58,
       "schedule": {
         "race": {
