@@ -1036,9 +1036,9 @@
         {
           "name": "ITA",
           "displayName": "Pirelli Italian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "ESP",
