@@ -673,7 +673,11 @@
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmadringdetailed.webp",
         "gpName": "Tag Heuer Spanish GP"
       },
-      "winner": null
+      "winner": {
+        "drivernumber": 12,
+        "fullName": "Kimi Antonelli",
+        "teamWinner": "Mercedes"
+      }
     },
     {
       "raceId": "azerbaijan_2026",
