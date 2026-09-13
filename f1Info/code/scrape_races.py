@@ -58,6 +58,7 @@ def fetch_with_retry(session: requests.Session, url: str, timeout: int = 25, max
             last_err = e
             if attempt < max_attempts:
                 time.sleep(2 * attempt)
+    assert last_err is not None, "max_attempts must be >= 1"
     raise last_err
 
 
