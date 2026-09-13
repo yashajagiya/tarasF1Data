@@ -307,7 +307,7 @@ def push_to_git(practice_num):
             cwd=target_repo, text=True
         )
         if push_res.returncode == 0:
-            print("\n  ✓ Successfully pushed to GitHub!\n")
+            print("\n  OK - Successfully pushed to GitHub!\n")
             return True
         else:
             print("      First push failed, retrying after pull...")
@@ -320,15 +320,15 @@ def push_to_git(practice_num):
                 cwd=target_repo, text=True
             )
             if retry.returncode == 0:
-                print("\n  ✓ Successfully pushed to GitHub on retry!\n")
+                print("\n  OK - Successfully pushed to GitHub on retry!\n")
                 return True
             else:
-                print("\n  ✗ ERROR: Git push failed! Check your git credentials.\n")
+                print("\n  FAIL - ERROR: Git push failed! Check your git credentials.\n")
                 print("  Try running: git push origin main")
                 print(f"  In directory: {target_repo}\n")
                 return False
     except Exception as e:
-        print(f"\n  ✗ ERROR during git push: {e}\n")
+        print(f"\n  FAIL - ERROR during git push: {e}\n")
         return False
 
 if __name__ == "__main__":
