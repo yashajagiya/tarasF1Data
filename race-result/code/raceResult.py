@@ -221,59 +221,115 @@ def find_target_repo(script_path):
 def push_to_git(practice_num):
     target_repo = find_target_repo(__file__)
     if not target_repo or not os.path.isdir(target_repo):
-        print("Error: Target git repository 'tarasF1Data' not found.")
-        return
+        print("ERROR: Target git repository 'tarasF1Data' not found.")
+        return False
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    source_dir = os.path.dirname(script_dir) # e.g., .../race-result
+    source_dir = os.path.dirname(script_dir)  # e.g., .../race-result
     target_dir = os.path.join(target_repo, practice_num)
-    
-    print(f"Syncing to Git repository: {target_repo}")
-    
+
+    print(f"\n{'='*50}")
+    print(f"  Git Push: {practice_num}")
+    print(f"{'='*50}")
+    print(f"  Source:  {source_dir}")
+    print(f"  Target:  {target_dir}")
+    print(f"  Repo:    {target_repo}")
+    print(f"{'='*50}\n")
+
     # 0. Pull latest changes first
+    print("[1/5] Pulling latest changes...")
     try:
-        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
-    except Exception:
-        pass
+        pull_res = subprocess.run(
+            ["git", "pull", "--rebase", "--autostash", "origin", "main"],
+            cwd=target_repo, capture_output=True, text=True
+        )
+        if pull_res.returncode == 0:
+            print("      Pull OK.")
+        else:
+            print(f"      Pull warning: {pull_res.stderr.strip()}")
+    except Exception as e:
+        print(f"      Pull skipped: {e}")
 
     # 1. Copy the directory to tarasF1Data if not already in target_repo
+    print("[2/5] Syncing files...")
     if os.path.abspath(source_dir) != os.path.abspath(target_dir):
         shutil.copytree(source_dir, target_dir, dirs_exist_ok=True)
-    
+        print(f"      Copied {source_dir} -> {target_dir}")
+    else:
+        print("      Source is already inside target repo, no copy needed.")
+
+    # Verify the JSON file exists in the target
+    json_files = [f for f in os.listdir(target_dir) if f.endswith('.json') and f != 'schedule.json']
+    for jf in json_files:
+        fpath = os.path.join(target_dir, jf)
+        fsize = os.path.getsize(fpath)
+        print(f"      Found: {jf} ({fsize} bytes)")
+
     # 2. Also ensure root workspace has the directory updated
     parent_dir = os.path.dirname(target_repo)
     parent_practice_dir = os.path.join(parent_dir, practice_num)
     if os.path.isdir(parent_practice_dir) and os.path.abspath(parent_practice_dir) != os.path.abspath(target_dir):
         shutil.copytree(target_dir, parent_practice_dir, dirs_exist_ok=True)
-    
-    # 3. Run git commands
+
+    # 3. Stage files
+    print("[3/5] Staging files...")
     try:
         subprocess.run(["git", "add", practice_num], cwd=target_repo, check=True)
-        
-        # Check if there are any changes staged for commit
-        result = subprocess.run(["git", "diff", "--cached", "--quiet", practice_num], cwd=target_repo, capture_output=True)
+        print("      Staged OK.")
+    except subprocess.CalledProcessError as e:
+        print(f"      ERROR staging files: {e}")
+        return False
+
+    # 4. Commit
+    print("[4/5] Committing...")
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--quiet", practice_num],
+            cwd=target_repo, capture_output=True
+        )
         if result.returncode != 0:
             commit_msg = f"Auto-update {practice_num} JSON data — {now}"
             subprocess.run(["git", "commit", "-m", commit_msg], cwd=target_repo, check=True)
-            print(f"Committed changes: {commit_msg}")
+            print(f"      Committed: {commit_msg}")
         else:
-            commit_msg = f"Auto-update {practice_num} JSON data (verified) — {now}"
-            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=target_repo, check=True)
-            print(f"Committed (no data changes): {commit_msg}")
-            
-        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
-        if push_res.returncode == 0:
-            print("Successfully pushed to GitHub!")
-        else:
-            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
-            retry = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
-            if retry.returncode == 0:
-                print("Successfully pushed to GitHub on retry!")
-            else:
-                print(f"Error during git push: {retry.stderr or retry.stdout}")
+            print("      No changes detected, skipping commit.")
+            return True
     except subprocess.CalledProcessError as e:
-        print(f"Error during git push: {e}")
+        print(f"      ERROR committing: {e}")
+        return False
+
+    # 5. Push (NOT using capture_output so credential dialogs can appear)
+    print("[5/5] Pushing to GitHub...")
+    try:
+        push_res = subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=target_repo, text=True
+        )
+        if push_res.returncode == 0:
+            print("\n  ✓ Successfully pushed to GitHub!\n")
+            return True
+        else:
+            print("      First push failed, retrying after pull...")
+            subprocess.run(
+                ["git", "pull", "--rebase", "--autostash", "origin", "main"],
+                cwd=target_repo, check=False
+            )
+            retry = subprocess.run(
+                ["git", "push", "origin", "main"],
+                cwd=target_repo, text=True
+            )
+            if retry.returncode == 0:
+                print("\n  ✓ Successfully pushed to GitHub on retry!\n")
+                return True
+            else:
+                print("\n  ✗ ERROR: Git push failed! Check your git credentials.\n")
+                print("  Try running: git push origin main")
+                print(f"  In directory: {target_repo}\n")
+                return False
+    except Exception as e:
+        print(f"\n  ✗ ERROR during git push: {e}\n")
+        return False
 
 if __name__ == "__main__":
     target_date = None  # Uses today's date automatically to find the correct event
