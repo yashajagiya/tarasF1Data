@@ -11,8 +11,8 @@
       "team_name": "Mercedes",
       "nationality": "Italy",
       "championshipPts": {
-        "value": 267,
-        "displayValue": "267"
+        "value": 292,
+        "displayValue": "292"
       },
       "races": [
         {
@@ -123,9 +123,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 25,
+          "displayValue": "25"
         },
         {
           "name": "AZE",
@@ -201,8 +201,8 @@
       "team_name": "Mercedes",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 201,
-        "displayValue": "201"
+        "value": 211,
+        "displayValue": "211"
       },
       "races": [
         {
@@ -313,9 +313,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 10,
+          "displayValue": "10"
         },
         {
           "name": "AZE",
@@ -503,9 +503,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -581,8 +581,8 @@
       "team_name": "McLaren",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 171,
-        "displayValue": "171"
+        "value": 186,
+        "displayValue": "186"
       },
       "races": [
         {
@@ -693,9 +693,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 15,
+          "displayValue": "15"
         },
         {
           "name": "AZE",
@@ -771,8 +771,8 @@
       "team_name": "Ferrari",
       "nationality": "Monaco",
       "championshipPts": {
-        "value": 155,
-        "displayValue": "155"
+        "value": 167,
+        "displayValue": "167"
       },
       "races": [
         {
@@ -883,9 +883,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 12,
+          "displayValue": "12"
         },
         {
           "name": "AZE",
@@ -961,8 +961,8 @@
       "team_name": "Red Bull Racing",
       "nationality": "Netherlands",
       "championshipPts": {
-        "value": 127,
-        "displayValue": "127"
+        "value": 145,
+        "displayValue": "145"
       },
       "races": [
         {
@@ -1073,9 +1073,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 18,
+          "displayValue": "18"
         },
         {
           "name": "AZE",
@@ -1151,8 +1151,8 @@
       "team_name": "McLaren",
       "nationality": "Australia",
       "championshipPts": {
-        "value": 116,
-        "displayValue": "116"
+        "value": 120,
+        "displayValue": "120"
       },
       "races": [
         {
@@ -1263,9 +1263,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "AZE",
@@ -1531,8 +1531,8 @@
       "team_name": "Racing Bulls",
       "nationality": "New Zealand",
       "championshipPts": {
-        "value": 51,
-        "displayValue": "51"
+        "value": 59,
+        "displayValue": "59"
       },
       "races": [
         {
@@ -1643,9 +1643,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "AZE",
@@ -1833,9 +1833,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -1911,8 +1911,8 @@
       "team_name": "Racing Bulls",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 29,
-        "displayValue": "29"
+        "value": 31,
+        "displayValue": "31"
       },
       "races": [
         {
@@ -2023,9 +2023,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "AZE",
@@ -2101,8 +2101,8 @@
       "team_name": "Alpine",
       "nationality": "Argentina",
       "championshipPts": {
-        "value": 21,
-        "displayValue": "21"
+        "value": 27,
+        "displayValue": "27"
       },
       "races": [
         {
@@ -2213,9 +2213,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "AZE",
@@ -2403,9 +2403,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -2593,9 +2593,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -2671,8 +2671,8 @@
       "team_name": "Audi",
       "nationality": "Germany",
       "championshipPts": {
-        "value": 6,
-        "displayValue": "6"
+        "value": 7,
+        "displayValue": "7"
       },
       "races": [
         {
@@ -2783,9 +2783,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "AZE",
@@ -2973,9 +2973,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -3163,9 +3163,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -3353,9 +3353,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -3543,9 +3543,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -3733,9 +3733,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -3923,9 +3923,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -4113,9 +4113,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -4303,9 +4303,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
