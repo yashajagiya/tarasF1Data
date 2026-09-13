@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 468,
-        "displayValue": "468"
+        "value": 503,
+        "displayValue": "503"
       },
       "races": [
         {
@@ -105,8 +105,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 13,
-          "displayValue": "13"
+          "value": 46,
+          "displayValue": "46"
         },
         {
           "name": "ITA",
@@ -118,9 +118,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 35,
+          "displayValue": "35"
         },
         {
           "name": "AZE",
@@ -191,8 +191,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 346,
-        "displayValue": "346"
+        "value": 358,
+        "displayValue": "358"
       },
       "races": [
         {
@@ -290,8 +290,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 9,
-          "displayValue": "9"
+          "value": 31,
+          "displayValue": "31"
         },
         {
           "name": "ITA",
@@ -303,9 +303,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 12,
+          "displayValue": "12"
         },
         {
           "name": "AZE",
@@ -376,8 +376,8 @@
       "rank": 3,
       "team": "McLaren",
       "points": {
-        "value": 287,
-        "displayValue": "287"
+        "value": 306,
+        "displayValue": "306"
       },
       "races": [
         {
@@ -475,8 +475,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 10,
-          "displayValue": "10"
+          "value": 43,
+          "displayValue": "43"
         },
         {
           "name": "ITA",
@@ -488,9 +488,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 19,
+          "displayValue": "19"
         },
         {
           "name": "AZE",
@@ -561,8 +561,8 @@
       "rank": 4,
       "team": "Red Bull Racing",
       "points": {
-        "value": 204,
-        "displayValue": "204"
+        "value": 230,
+        "displayValue": "230"
       },
       "races": [
         {
@@ -660,8 +660,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 3,
-          "displayValue": "3"
+          "value": 9,
+          "displayValue": "9"
         },
         {
           "name": "ITA",
@@ -673,9 +673,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 26,
+          "displayValue": "26"
         },
         {
           "name": "AZE",
@@ -746,8 +746,8 @@
       "rank": 5,
       "team": "Racing Bulls",
       "points": {
-        "value": 75,
-        "displayValue": "75"
+        "value": 77,
+        "displayValue": "77"
       },
       "races": [
         {
@@ -858,9 +858,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "AZE",
@@ -931,8 +931,8 @@
       "rank": 6,
       "team": "Alpine",
       "points": {
-        "value": 62,
-        "displayValue": "62"
+        "value": 68,
+        "displayValue": "68"
       },
       "races": [
         {
@@ -1022,16 +1022,16 @@
         {
           "name": "HUN",
           "displayName": "AWS Hungarian Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 1,
-          "displayValue": "1"
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "ITA",
@@ -1043,9 +1043,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "AZE",
@@ -1228,9 +1228,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -1301,8 +1301,8 @@
       "rank": 8,
       "team": "Audi",
       "points": {
-        "value": 16,
-        "displayValue": "16"
+        "value": 17,
+        "displayValue": "17"
       },
       "races": [
         {
@@ -1400,8 +1400,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 0,
-          "displayValue": "-"
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "ITA",
@@ -1413,9 +1413,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "AZE",
@@ -1598,9 +1598,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -1770,8 +1770,8 @@
           "name": "NLD",
           "displayName": "Heineken Dutch Grand Prix",
           "played": true,
-          "value": 0,
-          "displayValue": "-"
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "ITA",
@@ -1783,9 +1783,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
@@ -1968,9 +1968,9 @@
         {
           "name": "ESP",
           "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "AZE",
