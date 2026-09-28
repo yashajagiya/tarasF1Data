@@ -36,14 +36,14 @@
     },
     "season_2026": {
       "Season Position": "2nd",
-      "Season Points": "211",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "177",
-      "Grand Prix Wins": "2",
-      "Grand Prix Podiums": "7",
-      "Grand Prix Poles": "4",
-      "Grand Prix Top 10s": "11",
-      "DHL Fastest Laps": "1",
+      "Season Points": "236",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "202",
+      "Grand Prix Wins": "3",
+      "Grand Prix Podiums": "8",
+      "Grand Prix Poles": "5",
+      "Grand Prix Top 10s": "12",
+      "DHL Fastest Laps": "2",
       "DNFs": "2",
       "Sprint Races": "5",
       "Sprint Points": "34",
@@ -53,12 +53,12 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "166",
-      "Career Points": "1244",
-      "Highest Race Finish": "1 (x7)",
-      "Podiums": "31",
-      "Highest Grid Position": "1 (x12)",
-      "Pole Positions": "12",
+      "Grands Prix Entered": "167",
+      "Career Points": "1269",
+      "Highest Race Finish": "1 (x8)",
+      "Podiums": "32",
+      "Highest Grid Position": "1 (x13)",
+      "Pole Positions": "13",
       "World Championships": "0",
       "DNFs": "21"
     }
@@ -101,14 +101,14 @@
     },
     "season_2026": {
       "Season Position": "1st",
-      "Season Points": "292",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "266",
+      "Season Points": "302",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "276",
       "Grand Prix Wins": "8",
       "Grand Prix Podiums": "12",
       "Grand Prix Poles": "6",
-      "Grand Prix Top 10s": "12",
-      "DHL Fastest Laps": "0",
+      "Grand Prix Top 10s": "13",
+      "DHL Fastest Laps": "7",
       "DNFs": "1",
       "Sprint Races": "5",
       "Sprint Points": "26",
@@ -118,8 +118,8 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "38",
-      "Career Points": "442",
+      "Grands Prix Entered": "39",
+      "Career Points": "452",
       "Highest Race Finish": "1 (x8)",
       "Podiums": "15",
       "Highest Grid Position": "1 (x6)",
@@ -163,13 +163,13 @@
     },
     "season_2026": {
       "Season Position": "5th",
-      "Season Points": "167",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "139",
+      "Season Points": "179",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "151",
       "Grand Prix Wins": "1",
       "Grand Prix Podiums": "4",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "11",
+      "Grand Prix Top 10s": "12",
       "DHL Fastest Laps": "2",
       "DNFs": "3",
       "Sprint Races": "5",
@@ -180,8 +180,8 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "185",
-      "Career Points": "1839",
+      "Grands Prix Entered": "186",
+      "Career Points": "1851",
       "Highest Race Finish": "1 (x9)",
       "Podiums": "54",
       "Highest Grid Position": "1 (x27)",
@@ -223,13 +223,13 @@
     },
     "season_2026": {
       "Season Position": "3rd",
-      "Season Points": "191",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "171",
+      "Season Points": "199",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "179",
       "Grand Prix Wins": "1",
       "Grand Prix Podiums": "5",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "13",
+      "Grand Prix Top 10s": "14",
       "DHL Fastest Laps": "1",
       "DNFs": "1",
       "Sprint Races": "5",
@@ -240,8 +240,8 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "394",
-      "Career Points": "5209.5",
+      "Grands Prix Entered": "395",
+      "Career Points": "5217.5",
       "Highest Race Finish": "1 (x106)",
       "Podiums": "207",
       "Highest Grid Position": "1 (x104)",
@@ -287,14 +287,14 @@
     "season_2026": {
       "Season Position": "4th",
       "Season Points": "186",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "154",
       "Grand Prix Wins": "2",
       "Grand Prix Podiums": "5",
       "Grand Prix Poles": "3",
       "Grand Prix Top 10s": "11",
       "DHL Fastest Laps": "2",
-      "DNFs": "2",
+      "DNFs": "3",
       "Sprint Races": "5",
       "Sprint Points": "32",
       "Sprint Wins": "1",
@@ -303,14 +303,14 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "165",
+      "Grands Prix Entered": "166",
       "Career Points": "1616",
       "Highest Race Finish": "1 (x13)",
       "Podiums": "49",
       "Highest Grid Position": "1 (x19)",
       "Pole Positions": "19",
       "World Championships": "1",
-      "DNFs": "17"
+      "DNFs": "18"
     }
   },
   {
@@ -350,7 +350,7 @@
     "season_2026": {
       "Season Position": "7th",
       "Season Points": "120",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "99",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "2",
@@ -366,7 +366,7 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "82",
+      "Grands Prix Entered": "83",
       "Career Points": "919",
       "Highest Race Finish": "1 (x9)",
       "Podiums": "28",
@@ -411,13 +411,13 @@
     },
     "season_2026": {
       "Season Position": "6th",
-      "Season Points": "145",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "133",
+      "Season Points": "163",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "151",
       "Grand Prix Wins": "0",
-      "Grand Prix Podiums": "6",
+      "Grand Prix Podiums": "7",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "10",
+      "Grand Prix Top 10s": "11",
       "DHL Fastest Laps": "1",
       "DNFs": "4",
       "Sprint Races": "5",
@@ -428,10 +428,10 @@
       "Sprint Top 10s": "5"
     },
     "career_stats": {
-      "Grands Prix Entered": "247",
-      "Career Points": "3589.5",
+      "Grands Prix Entered": "248",
+      "Career Points": "3607.5",
       "Highest Race Finish": "1 (x71)",
-      "Podiums": "133",
+      "Podiums": "134",
       "Highest Grid Position": "1 (x48)",
       "Pole Positions": "48",
       "World Championships": "4",
@@ -475,13 +475,13 @@
     },
     "season_2026": {
       "Season Position": "8th",
-      "Season Points": "71",
-      "Grand Prix Races": "11",
-      "Grand Prix Points": "71",
+      "Season Points": "86",
+      "Grand Prix Races": "12",
+      "Grand Prix Points": "86",
       "Grand Prix Wins": "0",
-      "Grand Prix Podiums": "1",
+      "Grand Prix Podiums": "2",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "8",
+      "Grand Prix Top 10s": "9",
       "DHL Fastest Laps": "0",
       "DNFs": "2",
       "Sprint Races": "4",
@@ -492,10 +492,10 @@
       "Sprint Top 10s": "2"
     },
     "career_stats": {
-      "Grands Prix Entered": "34",
-      "Career Points": "122",
-      "Highest Race Finish": "3 (x2)",
-      "Podiums": "2",
+      "Grands Prix Entered": "35",
+      "Career Points": "137",
+      "Highest Race Finish": "3 (x3)",
+      "Podiums": "3",
       "Highest Grid Position": "3 (x1)",
       "Pole Positions": "0",
       "World Championships": "0",
@@ -540,7 +540,7 @@
     "season_2026": {
       "Season Position": "9th",
       "Season Points": "59",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "56",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
@@ -556,7 +556,7 @@
       "Sprint Top 10s": "2"
     },
     "career_stats": {
-      "Grands Prix Entered": "49",
+      "Grands Prix Entered": "50",
       "Career Points": "103",
       "Highest Race Finish": "5 (x2)",
       "Podiums": "0",
@@ -598,13 +598,13 @@
     },
     "season_2026": {
       "Season Position": "11th",
-      "Season Points": "31",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "30",
+      "Season Points": "37",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "36",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "9",
+      "Grand Prix Top 10s": "10",
       "DHL Fastest Laps": "0",
       "DNFs": "0",
       "Sprint Races": "5",
@@ -615,8 +615,8 @@
       "Sprint Top 10s": "3"
     },
     "career_stats": {
-      "Grands Prix Entered": "13",
-      "Career Points": "31",
+      "Grands Prix Entered": "14",
+      "Career Points": "37",
       "Highest Race Finish": "6 (x1)",
       "Podiums": "0",
       "Highest Grid Position": "7 (x1)",
@@ -660,14 +660,14 @@
     "season_2026": {
       "Season Position": "10th",
       "Season Points": "41",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "39",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "1",
       "Grand Prix Top 10s": "9",
       "DHL Fastest Laps": "0",
-      "DNFs": "1",
+      "DNFs": "2",
       "Sprint Races": "5",
       "Sprint Points": "2",
       "Sprint Wins": "0",
@@ -676,14 +676,14 @@
       "Sprint Top 10s": "2"
     },
     "career_stats": {
-      "Grands Prix Entered": "191",
+      "Grands Prix Entered": "192",
       "Career Points": "499",
       "Highest Race Finish": "1 (x1)",
       "Podiums": "5",
       "Highest Grid Position": "1 (x1)",
       "Pole Positions": "1",
       "World Championships": "0",
-      "DNFs": "29"
+      "DNFs": "30"
     }
   },
   {
@@ -720,14 +720,14 @@
     "season_2026": {
       "Season Position": "12th",
       "Season Points": "27",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "27",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
       "Grand Prix Top 10s": "8",
       "DHL Fastest Laps": "0",
-      "DNFs": "0",
+      "DNFs": "1",
       "Sprint Races": "5",
       "Sprint Points": "0",
       "Sprint Wins": "0",
@@ -736,14 +736,14 @@
       "Sprint Top 10s": "2"
     },
     "career_stats": {
-      "Grands Prix Entered": "40",
+      "Grands Prix Entered": "41",
       "Career Points": "32",
       "Highest Race Finish": "6 (x1)",
       "Podiums": "0",
       "Highest Grid Position": "7 (x1)",
       "Pole Positions": "0",
       "World Championships": "0",
-      "DNFs": "4"
+      "DNFs": "5"
     }
   },
   {
@@ -779,14 +779,14 @@
       }
     },
     "season_2026": {
-      "Season Position": "18th",
-      "Season Points": "3",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "3",
+      "Season Position": "16th",
+      "Season Points": "7",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "7",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "2",
+      "Grand Prix Top 10s": "3",
       "DHL Fastest Laps": "0",
       "DNFs": "1",
       "Sprint Races": "5",
@@ -797,8 +797,8 @@
       "Sprint Top 10s": "1"
     },
     "career_stats": {
-      "Grands Prix Entered": "194",
-      "Career Points": "486",
+      "Grands Prix Entered": "195",
+      "Career Points": "490",
       "Highest Race Finish": "1 (x1)",
       "Podiums": "4",
       "Highest Grid Position": "3 (x3)",
@@ -842,13 +842,13 @@
     },
     "season_2026": {
       "Season Position": "13th",
-      "Season Points": "18",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "17",
+      "Season Points": "20",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "19",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "3",
+      "Grand Prix Top 10s": "4",
       "DHL Fastest Laps": "0",
       "DNFs": "4",
       "Sprint Races": "5",
@@ -859,8 +859,8 @@
       "Sprint Top 10s": "1"
     },
     "career_stats": {
-      "Grands Prix Entered": "41",
-      "Career Points": "66",
+      "Grands Prix Entered": "42",
+      "Career Points": "68",
       "Highest Race Finish": "4 (x1)",
       "Podiums": "0",
       "Highest Grid Position": "8 (x2)",
@@ -903,7 +903,7 @@
     "season_2026": {
       "Season Position": "15th",
       "Season Points": "7",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "7",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
@@ -919,7 +919,7 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "263",
+      "Grands Prix Entered": "264",
       "Career Points": "629",
       "Highest Race Finish": "3 (x1)",
       "Podiums": "1",
@@ -964,7 +964,7 @@
     "season_2026": {
       "Season Position": "14th",
       "Season Points": "10",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "10",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
@@ -980,7 +980,7 @@
       "Sprint Top 10s": "1"
     },
     "career_stats": {
-      "Grands Prix Entered": "37",
+      "Grands Prix Entered": "38",
       "Career Points": "29",
       "Highest Race Finish": "6 (x1)",
       "Podiums": "0",
@@ -1023,14 +1023,14 @@
       }
     },
     "season_2026": {
-      "Season Position": "16th",
-      "Season Points": "6",
-      "Grand Prix Races": "14",
-      "Grand Prix Points": "6",
+      "Season Position": "17th",
+      "Season Points": "7",
+      "Grand Prix Races": "15",
+      "Grand Prix Points": "7",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
-      "Grand Prix Top 10s": "3",
+      "Grand Prix Top 10s": "4",
       "DHL Fastest Laps": "0",
       "DNFs": "3",
       "Sprint Races": "5",
@@ -1041,8 +1041,8 @@
       "Sprint Top 10s": "1"
     },
     "career_stats": {
-      "Grands Prix Entered": "243",
-      "Career Points": "1342.5",
+      "Grands Prix Entered": "244",
+      "Career Points": "1343.5",
       "Highest Race Finish": "1 (x4)",
       "Podiums": "29",
       "Highest Grid Position": "1 (x6)",
@@ -1084,16 +1084,16 @@
       }
     },
     "season_2026": {
-      "Season Position": "17th",
+      "Season Position": "18th",
       "Season Points": "5",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "5",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
       "Grand Prix Top 10s": "2",
       "DHL Fastest Laps": "0",
-      "DNFs": "3",
+      "DNFs": "4",
       "Sprint Races": "5",
       "Sprint Points": "0",
       "Sprint Wins": "0",
@@ -1102,14 +1102,14 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "141",
+      "Grands Prix Entered": "142",
       "Career Points": "318",
       "Highest Race Finish": "3 (x2)",
       "Podiums": "2",
       "Highest Grid Position": "4 (x5)",
       "Pole Positions": "0",
       "World Championships": "0",
-      "DNFs": "26"
+      "DNFs": "27"
     }
   },
   {
@@ -1146,14 +1146,14 @@
     "season_2026": {
       "Season Position": "19th",
       "Season Points": "3",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "3",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
       "Grand Prix Top 10s": "2",
       "DHL Fastest Laps": "0",
-      "DNFs": "5",
+      "DNFs": "6",
       "Sprint Races": "5",
       "Sprint Points": "0",
       "Sprint Wins": "0",
@@ -1162,14 +1162,14 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "441",
+      "Grands Prix Entered": "442",
       "Career Points": "2396",
       "Highest Race Finish": "1 (x32)",
       "Podiums": "106",
       "Highest Grid Position": "1 (x22)",
       "Pole Positions": "22",
       "World Championships": "2",
-      "DNFs": "93"
+      "DNFs": "94"
     }
   },
   {
@@ -1205,14 +1205,14 @@
     "season_2026": {
       "Season Position": "21st",
       "Season Points": "0",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "0",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
       "Grand Prix Top 10s": "0",
       "DHL Fastest Laps": "0",
-      "DNFs": "9",
+      "DNFs": "10",
       "Sprint Races": "5",
       "Sprint Points": "0",
       "Sprint Wins": "0",
@@ -1221,14 +1221,14 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "203",
+      "Grands Prix Entered": "204",
       "Career Points": "325",
       "Highest Race Finish": "3 (x3)",
       "Podiums": "3",
       "Highest Grid Position": "1 (x1)",
       "Pole Positions": "1",
       "World Championships": "0",
-      "DNFs": "43"
+      "DNFs": "44"
     }
   },
   {
@@ -1261,7 +1261,7 @@
     "season_2026": {
       "Season Position": "23rd",
       "Season Points": "0",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "0",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
@@ -1277,7 +1277,7 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "295",
+      "Grands Prix Entered": "296",
       "Career Points": "1638",
       "Highest Race Finish": "1 (x6)",
       "Podiums": "39",
@@ -1320,14 +1320,14 @@
     "season_2026": {
       "Season Position": "22nd",
       "Season Points": "0",
-      "Grand Prix Races": "14",
+      "Grand Prix Races": "15",
       "Grand Prix Points": "0",
       "Grand Prix Wins": "0",
       "Grand Prix Podiums": "0",
       "Grand Prix Poles": "0",
       "Grand Prix Top 10s": "0",
       "DHL Fastest Laps": "0",
-      "DNFs": "6",
+      "DNFs": "7",
       "Sprint Races": "5",
       "Sprint Points": "0",
       "Sprint Wins": "0",
@@ -1336,14 +1336,14 @@
       "Sprint Top 10s": "0"
     },
     "career_stats": {
-      "Grands Prix Entered": "260",
+      "Grands Prix Entered": "261",
       "Career Points": "1797",
       "Highest Race Finish": "1 (x10)",
       "Podiums": "67",
       "Highest Grid Position": "1 (x20)",
       "Pole Positions": "20",
       "World Championships": "0",
-      "DNFs": "35"
+      "DNFs": "36"
     }
   }
 ]
