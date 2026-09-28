@@ -675,8 +675,8 @@
       },
       "winner": {
         "drivernumber": 12,
-        "fullName": "Kimi Antonelli",
-        "teamWinner": "Mercedes"
+        "fullName": "Andrea Kimi Antonelli",
+        "teamWinner": "Mercedes Formula 1 Team"
       }
     },
     {
@@ -721,7 +721,11 @@
         "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackbakudetailed.webp",
         "gpName": "Qatar Airways Azerbaijan GP"
       },
-      "winner": null
+      "winner": {
+        "drivernumber": 63,
+        "fullName": "George Russell",
+        "teamWinner": "Mercedes Formula 1 Team"
+      }
     },
     {
       "raceId": "bahrain_2026",
