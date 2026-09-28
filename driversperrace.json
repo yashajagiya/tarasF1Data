@@ -11,8 +11,8 @@
       "team_name": "Mercedes",
       "nationality": "Italy",
       "championshipPts": {
-        "value": 292,
-        "displayValue": "292"
+        "value": 302,
+        "displayValue": "302"
       },
       "races": [
         {
@@ -130,9 +130,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 10,
+          "displayValue": "10"
         },
         {
           "name": "MYS",
@@ -201,8 +201,8 @@
       "team_name": "Mercedes",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 211,
-        "displayValue": "211"
+        "value": 236,
+        "displayValue": "236"
       },
       "races": [
         {
@@ -320,9 +320,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 25,
+          "displayValue": "25"
         },
         {
           "name": "MYS",
@@ -391,8 +391,8 @@
       "team_name": "Ferrari",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 191,
-        "displayValue": "191"
+        "value": 199,
+        "displayValue": "199"
       },
       "races": [
         {
@@ -510,9 +510,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "MYS",
@@ -700,9 +700,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -771,8 +771,8 @@
       "team_name": "Ferrari",
       "nationality": "Monaco",
       "championshipPts": {
-        "value": 167,
-        "displayValue": "167"
+        "value": 179,
+        "displayValue": "179"
       },
       "races": [
         {
@@ -890,9 +890,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 12,
+          "displayValue": "12"
         },
         {
           "name": "MYS",
@@ -961,8 +961,8 @@
       "team_name": "Red Bull Racing",
       "nationality": "Netherlands",
       "championshipPts": {
-        "value": 145,
-        "displayValue": "145"
+        "value": 163,
+        "displayValue": "163"
       },
       "races": [
         {
@@ -1080,9 +1080,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 18,
+          "displayValue": "18"
         },
         {
           "name": "MYS",
@@ -1270,9 +1270,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1341,8 +1341,8 @@
       "team_name": "Red Bull Racing",
       "nationality": "France",
       "championshipPts": {
-        "value": 71,
-        "displayValue": "71"
+        "value": 86,
+        "displayValue": "86"
       },
       "races": [
         {
@@ -1460,9 +1460,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 15,
+          "displayValue": "15"
         },
         {
           "name": "MYS",
@@ -1650,9 +1650,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1840,9 +1840,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1911,8 +1911,8 @@
       "team_name": "Racing Bulls",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 31,
-        "displayValue": "31"
+        "value": 37,
+        "displayValue": "37"
       },
       "races": [
         {
@@ -2030,9 +2030,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "MYS",
@@ -2220,9 +2220,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -2291,8 +2291,8 @@
       "team_name": "Haas F1 Team",
       "nationality": "Britain",
       "championshipPts": {
-        "value": 18,
-        "displayValue": "18"
+        "value": 20,
+        "displayValue": "20"
       },
       "races": [
         {
@@ -2410,9 +2410,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
         },
         {
           "name": "MYS",
@@ -2600,9 +2600,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -2790,9 +2790,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -2854,6 +2854,196 @@
     },
     {
       "rank": 16,
+      "driver_number": 31,
+      "name": "Esteban Ocon",
+      "shortName": "E. Ocon",
+      "abbreviation": "OCO",
+      "team_name": "Haas F1 Team",
+      "nationality": "France",
+      "championshipPts": {
+        "value": 7,
+        "displayValue": "7"
+      },
+      "races": [
+        {
+          "name": "AUS",
+          "displayName": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "CHN",
+          "displayName": "Heineken Chinese Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "JPN",
+          "displayName": "Aramco Japanese Grand Prix",
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
+        },
+        {
+          "name": "BRN",
+          "displayName": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SAU",
+          "displayName": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MIA",
+          "displayName": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "CAN",
+          "displayName": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "MCO",
+          "displayName": "Monaco Grand Prix",
+          "played": true,
+          "value": 2,
+          "displayValue": "2"
+        },
+        {
+          "name": "BAR",
+          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "AUT",
+          "displayName": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "GBR",
+          "displayName": "Pirelli British Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "BEL",
+          "displayName": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "HUN",
+          "displayName": "AWS Hungarian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "NLD",
+          "displayName": "Heineken Dutch Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "ITA",
+          "displayName": "Pirelli Italian Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "ESP",
+          "displayName": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "value": 0,
+          "displayValue": "-"
+        },
+        {
+          "name": "AZE",
+          "displayName": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
+        },
+        {
+          "name": "MYS",
+          "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "SGP",
+          "displayName": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "USA",
+          "displayName": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "MEX",
+          "displayName": "Mexico City Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "BRA",
+          "displayName": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "LAS",
+          "displayName": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "QAT",
+          "displayName": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        },
+        {
+          "name": "UAE",
+          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "value": 0,
+          "displayValue": ""
+        }
+      ]
+    },
+    {
+      "rank": 17,
       "driver_number": 55,
       "name": "Carlos Sainz",
       "shortName": "C. Sainz",
@@ -2861,8 +3051,8 @@
       "team_name": "Williams",
       "nationality": "Spain",
       "championshipPts": {
-        "value": 6,
-        "displayValue": "6"
+        "value": 7,
+        "displayValue": "7"
       },
       "races": [
         {
@@ -2980,9 +3170,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "MYS",
@@ -3043,7 +3233,7 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 18,
       "driver_number": 23,
       "name": "Alexander Albon",
       "shortName": "A. Albon",
@@ -3170,199 +3360,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MYS",
-          "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SGP",
-          "displayName": "Singapore Airlines Singapore Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "USA",
-          "displayName": "MSC Cruises United States Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MEX",
-          "displayName": "Mexico City Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "BRA",
-          "displayName": "MSC Cruises São Paulo Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "LAS",
-          "displayName": "Heineken Las Vegas Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "QAT",
-          "displayName": "Qatar Airways Qatar Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "UAE",
-          "displayName": "Etihad Airways Abu Dhabi Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        }
-      ]
-    },
-    {
-      "rank": 18,
-      "driver_number": 31,
-      "name": "Esteban Ocon",
-      "shortName": "E. Ocon",
-      "abbreviation": "OCO",
-      "team_name": "Haas F1 Team",
-      "nationality": "France",
-      "championshipPts": {
-        "value": 3,
-        "displayValue": "3"
-      },
-      "races": [
-        {
-          "name": "AUS",
-          "displayName": "Qatar Airways Australian Grand Prix",
           "played": true,
           "value": 0,
           "displayValue": "-"
-        },
-        {
-          "name": "CHN",
-          "displayName": "Heineken Chinese Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "JPN",
-          "displayName": "Aramco Japanese Grand Prix",
-          "played": true,
-          "value": 1,
-          "displayValue": "1"
-        },
-        {
-          "name": "BRN",
-          "displayName": "Gulf Air Bahrain Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "SAU",
-          "displayName": "STC Saudi Arabian Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
-        },
-        {
-          "name": "MIA",
-          "displayName": "Crypto.com Miami Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "CAN",
-          "displayName": "Lenovo Canadian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "MCO",
-          "displayName": "Monaco Grand Prix",
-          "played": true,
-          "value": 2,
-          "displayValue": "2"
-        },
-        {
-          "name": "BAR",
-          "displayName": "MSC Cruises Barcelona-Catalunya Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "AUT",
-          "displayName": "Lenovo Austrian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "GBR",
-          "displayName": "Pirelli British Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "BEL",
-          "displayName": "Moët & Chandon Belgian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "HUN",
-          "displayName": "AWS Hungarian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "NLD",
-          "displayName": "Heineken Dutch Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "ITA",
-          "displayName": "Pirelli Italian Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "ESP",
-          "displayName": "Tag Heuer Spanish Grand Prix",
-          "played": true,
-          "value": 0,
-          "displayValue": "-"
-        },
-        {
-          "name": "AZE",
-          "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
         },
         {
           "name": "MYS",
@@ -3550,9 +3550,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -3930,9 +3930,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -4120,9 +4120,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -4310,9 +4310,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
