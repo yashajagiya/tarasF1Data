@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 503,
-        "displayValue": "503"
+        "value": 538,
+        "displayValue": "538"
       },
       "races": [
         {
@@ -49,8 +49,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 45,
-          "displayValue": "45"
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "CAN",
@@ -125,9 +125,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 35,
+          "displayValue": "35"
         },
         {
           "name": "MYS",
@@ -191,8 +191,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 358,
-        "displayValue": "358"
+        "value": 378,
+        "displayValue": "378"
       },
       "races": [
         {
@@ -234,8 +234,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 20,
-          "displayValue": "20"
+          "value": 8,
+          "displayValue": "8"
         },
         {
           "name": "CAN",
@@ -310,9 +310,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 20,
+          "displayValue": "20"
         },
         {
           "name": "MYS",
@@ -419,8 +419,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 48,
-          "displayValue": "48"
+          "value": 15,
+          "displayValue": "15"
         },
         {
           "name": "CAN",
@@ -495,9 +495,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -561,8 +561,8 @@
       "rank": 4,
       "team": "Red Bull Racing",
       "points": {
-        "value": 230,
-        "displayValue": "230"
+        "value": 263,
+        "displayValue": "263"
       },
       "races": [
         {
@@ -604,8 +604,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 14,
-          "displayValue": "14"
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "CAN",
@@ -680,9 +680,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 33,
+          "displayValue": "33"
         },
         {
           "name": "MYS",
@@ -746,8 +746,8 @@
       "rank": 5,
       "team": "Racing Bulls",
       "points": {
-        "value": 77,
-        "displayValue": "77"
+        "value": 83,
+        "displayValue": "83"
       },
       "races": [
         {
@@ -865,9 +865,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "MYS",
@@ -974,8 +974,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 7,
-          "displayValue": "7"
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "CAN",
@@ -1050,9 +1050,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1116,8 +1116,8 @@
       "rank": 7,
       "team": "Haas F1 Team",
       "points": {
-        "value": 21,
-        "displayValue": "21"
+        "value": 27,
+        "displayValue": "27"
       },
       "races": [
         {
@@ -1235,9 +1235,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 6,
+          "displayValue": "6"
         },
         {
           "name": "MYS",
@@ -1420,9 +1420,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1486,8 +1486,8 @@
       "rank": 9,
       "team": "Williams",
       "points": {
-        "value": 11,
-        "displayValue": "11"
+        "value": 12,
+        "displayValue": "12"
       },
       "races": [
         {
@@ -1529,8 +1529,8 @@
           "name": "MIA",
           "displayName": "Crypto.com Miami Grand Prix",
           "played": true,
-          "value": 3,
-          "displayValue": "3"
+          "value": 0,
+          "displayValue": "-"
         },
         {
           "name": "CAN",
@@ -1605,9 +1605,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 1,
+          "displayValue": "1"
         },
         {
           "name": "MYS",
@@ -1790,9 +1790,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
@@ -1975,9 +1975,9 @@
         {
           "name": "AZE",
           "displayName": "Qatar Airways Azerbaijan Grand Prix",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "MYS",
