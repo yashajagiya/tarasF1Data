@@ -275,8 +275,7 @@ def push_f1info_to_git(out_path, info_type="races"):
     """Sync and commit generated JSON to target Git repository."""
     target_repo = find_target_repo(__file__)
     if not target_repo or not os.path.isdir(target_repo):
-        print(f"Error: Target git repository not found for {out_path}.")
-        return
+        raise RuntimeError(f"Target git repository not found for {out_path}.")
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     file_name = os.path.basename(out_path)
@@ -324,9 +323,10 @@ def push_f1info_to_git(out_path, info_type="races"):
             if retry.returncode == 0:
                 print(f"Uploaded {git_file_path} to GitHub successfully on retry.")
             else:
-                print(f"Git push error: {retry.stderr or retry.stdout}")
+                raise RuntimeError(f"Git push failed: {retry.stderr or retry.stdout}")
     except Exception as e:
         print(f"Error during GitHub upload: {e}")
+        raise
 
 
 def main():
