@@ -17,8 +17,10 @@ import shutil
 import subprocess
 import sys
 import os
+import re
 import time
-from datetime import datetime
+from datetime import datetime, timezone
+from html.parser import HTMLParser
 
 # Fix Windows console encoding
 if sys.platform == "win32":
@@ -27,6 +29,7 @@ if sys.platform == "win32":
 API_URL = "https://f1api.dev/api/current"
 RACE_RESULTS_URL = "https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json"
 RACES_IMG_URL = "https://yashajagiya.github.io/tarasF1Data/racesimg.json"
+OFFICIAL_BAHRAIN_URL = "https://www.formula1.com/en/racing/2026/bahrain"
 
 HEADERS = {
     "User-Agent": (
@@ -120,6 +123,107 @@ def extract_race(race: dict) -> dict:
     }
 
 
+class OfficialRacePageParser(HTMLParser):
+    """Extract event JSON-LD, circuit stats, and track image from an F1 page."""
+
+    def __init__(self):
+        super().__init__()
+        self.json_ld = []
+        self.circuit_stats = {}
+        self.track_image = None
+        self._in_json_ld = False
+        self._json_ld_parts = []
+        self._field = None
+        self._field_label = ""
+        self._field_parts = []
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "script" and attributes.get("type") == "application/ld+json":
+            self._in_json_ld = True
+            self._json_ld_parts = []
+        elif tag == "dt":
+            self._field = "label"
+            self._field_parts = []
+        elif tag == "dd":
+            self._field = "value"
+            self._field_parts = []
+        elif tag == "link":
+            image_url = attributes.get("href", "")
+            if "/common/f1/" in image_url and "/track/" in image_url:
+                self.track_image = image_url
+
+    def handle_data(self, data):
+        if self._in_json_ld:
+            self._json_ld_parts.append(data)
+        if self._field:
+            self._field_parts.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "script" and self._in_json_ld:
+            self.json_ld.append("".join(self._json_ld_parts).strip())
+            self._in_json_ld = False
+        elif tag == "dt" and self._field == "label":
+            self._field_label = " ".join("".join(self._field_parts).split())
+            self._field = None
+        elif tag == "dd" and self._field == "value":
+            value = " ".join("".join(self._field_parts).split())
+            if self._field_label and value:
+                self.circuit_stats[self._field_label] = value
+            self._field_label = ""
+            self._field = None
+
+
+def fetch_official_bahrain_data(session: requests.Session) -> dict:
+    """Fetch missing Bahrain circuit and session data from the official event page."""
+    response = fetch_with_retry(session, OFFICIAL_BAHRAIN_URL, timeout=30)
+    parser = OfficialRacePageParser()
+    parser.feed(response.text)
+
+    event = next(
+        (json.loads(block) for block in parser.json_ld if '"@type":"SportsEvent"' in block),
+        None,
+    )
+    if not event:
+        raise ValueError("Official Bahrain page did not contain SportsEvent JSON-LD")
+
+    session_keys = {
+        "practice 1": "fp1",
+        "practice 2": "fp2",
+        "practice 3": "fp3",
+        "qualifying": "qualy",
+        "race": "race",
+    }
+    schedule = {}
+    for item in event.get("subEvent", []):
+        name = item.get("name", "").lower()
+        key = next((value for label, value in session_keys.items() if name.startswith(label)), None)
+        start_date = item.get("startDate")
+        if key and start_date:
+            start = datetime.fromisoformat(start_date.replace("Z", "+00:00")).astimezone(timezone.utc)
+            schedule[key] = {
+                "date": start.strftime("%Y-%m-%d"),
+                "time": start.strftime("%H:%M:%SZ"),
+            }
+
+    stats = parser.circuit_stats
+    gp_name = re.sub(r"^FORMULA 1\s+|\s+2026$", "", event.get("name", ""), flags=re.IGNORECASE)
+    gp_name = re.sub(r"\s+GRAND PRIX", " GP", gp_name, count=1, flags=re.IGNORECASE)
+    gp_name = " ".join("GP" if part.lower() == "gp" else part.title() for part in gp_name.split())
+
+    return {
+        "schedule": schedule,
+        "laps": int(stats["Number of Laps"]) if stats.get("Number of Laps", "").isdigit() else None,
+        "circuit": {
+            "circuitLength": stats.get("Circuit Length"),
+            "lapRecord": stats.get("Fastest lap time"),
+            "firstParticipationYear": int(stats["First Grand Prix"]) if stats.get("First Grand Prix", "").isdigit() else None,
+            "trackImage": parser.track_image,
+            "gpName": gp_name or None,
+        },
+    }
+
+
 def fetch_latest_result(session: requests.Session) -> dict | None:
     """Fetch the latest race result from the GitHub-hosted JSON.
     Returns a dict with circuitId, winner number/name, and team, or None."""
@@ -201,11 +305,30 @@ def fetch_races(session: requests.Session | None = None) -> dict:
     for race in races_raw:
         extracted = extract_race(race)
 
+        if extracted.get("raceId") == "bahrain_2026":
+            print("Fetching missing Bahrain data from Formula1.com...", end=" ", flush=True)
+            try:
+                official = fetch_official_bahrain_data(session)
+                for key, value in official["circuit"].items():
+                    current = extracted["circuit"].get(key)
+                    if value is not None and (not current or str(current).lower() in {"null", "nullkm"}):
+                        extracted["circuit"][key] = value
+                if official.get("laps") and not extracted.get("laps"):
+                    extracted["laps"] = official["laps"]
+                for key, values in official["schedule"].items():
+                    current = extracted["schedule"].setdefault(key, {})
+                    for field, value in values.items():
+                        if value and not current.get(field):
+                            current[field] = value
+                print("OK")
+            except Exception as e:
+                print(f"FAIL  ({e})")
+
         # Patch in track image and GP name inside circuit
         circuit_id = extracted.get("circuit", {}).get("circuitId")
         img_data = images_mapping.get(circuit_id, {})
-        extracted["circuit"]["trackImage"] = img_data.get("trackImage")
-        extracted["circuit"]["gpName"] = img_data.get("gpName")
+        extracted["circuit"]["trackImage"] = img_data.get("trackImage") or extracted["circuit"].get("trackImage")
+        extracted["circuit"]["gpName"] = img_data.get("gpName") or extracted["circuit"].get("gpName")
 
         races.append(extracted)
 

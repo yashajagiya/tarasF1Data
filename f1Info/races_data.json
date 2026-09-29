@@ -735,23 +735,23 @@
       "schedule": {
         "race": {
           "date": "2026-10-04",
-          "time": null
+          "time": "07:00:00Z"
         },
         "qualy": {
           "date": "2026-10-03",
-          "time": null
+          "time": "08:00:00Z"
         },
         "fp1": {
           "date": "2026-10-02",
-          "time": null
+          "time": "04:30:00Z"
         },
         "fp2": {
           "date": "2026-10-02",
-          "time": null
+          "time": "08:00:00Z"
         },
         "fp3": {
           "date": "2026-10-03",
-          "time": null
+          "time": "04:30:00Z"
         }
       },
       "circuit": {
@@ -759,15 +759,15 @@
         "circuitName": "Sepang International Circuit",
         "country": "Malaysia",
         "city": "Kuala Lumpur",
-        "circuitLength": "nullkm",
-        "lapRecord": null,
-        "firstParticipationYear": null,
+        "circuitLength": "5.543km",
+        "lapRecord": "1:34.080",
+        "firstParticipationYear": 1999,
         "corners": null,
         "fastestLapDriverId": null,
         "fastestLapTeamId": null,
         "fastestLapYear": null,
-        "trackImage": null,
-        "gpName": null
+        "trackImage": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackkualalumpurdetailed.webp",
+        "gpName": "Gulf Air Bahrain GP In Malaysia"
       },
       "winner": null
     },
