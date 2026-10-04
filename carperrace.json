@@ -6,8 +6,8 @@
       "rank": 1,
       "team": "Mercedes",
       "points": {
-        "value": 538,
-        "displayValue": "538"
+        "value": 556,
+        "displayValue": "556"
       },
       "races": [
         {
@@ -132,9 +132,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 18,
+          "displayValue": "18"
         },
         {
           "name": "SGP",
@@ -191,8 +191,8 @@
       "rank": 2,
       "team": "Ferrari",
       "points": {
-        "value": 378,
-        "displayValue": "378"
+        "value": 405,
+        "displayValue": "405"
       },
       "races": [
         {
@@ -317,9 +317,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 27,
+          "displayValue": "27"
         },
         {
           "name": "SGP",
@@ -376,8 +376,8 @@
       "rank": 3,
       "team": "McLaren",
       "points": {
-        "value": 306,
-        "displayValue": "306"
+        "value": 316,
+        "displayValue": "316"
       },
       "races": [
         {
@@ -502,9 +502,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 10,
+          "displayValue": "10"
         },
         {
           "name": "SGP",
@@ -561,8 +561,8 @@
       "rank": 4,
       "team": "Red Bull Racing",
       "points": {
-        "value": 263,
-        "displayValue": "263"
+        "value": 298,
+        "displayValue": "298"
       },
       "races": [
         {
@@ -687,9 +687,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 35,
+          "displayValue": "35"
         },
         {
           "name": "SGP",
@@ -746,8 +746,8 @@
       "rank": 5,
       "team": "Racing Bulls",
       "points": {
-        "value": 83,
-        "displayValue": "83"
+        "value": 90,
+        "displayValue": "90"
       },
       "races": [
         {
@@ -872,9 +872,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 7,
+          "displayValue": "7"
         },
         {
           "name": "SGP",
@@ -1057,9 +1057,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "SGP",
@@ -1242,9 +1242,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "SGP",
@@ -1427,9 +1427,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "SGP",
@@ -1612,9 +1612,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "SGP",
@@ -1671,8 +1671,8 @@
       "rank": 10,
       "team": "Aston Martin",
       "points": {
-        "value": 3,
-        "displayValue": "3"
+        "value": 7,
+        "displayValue": "7"
       },
       "races": [
         {
@@ -1797,9 +1797,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
-          "value": 0,
-          "displayValue": ""
+          "played": true,
+          "value": 4,
+          "displayValue": "4"
         },
         {
           "name": "SGP",
@@ -1982,9 +1982,9 @@
         {
           "name": "MYS",
           "displayName": "Gulf Air Bahrain Grand Prix in Malaysia",
-          "played": false,
+          "played": true,
           "value": 0,
-          "displayValue": ""
+          "displayValue": "-"
         },
         {
           "name": "SGP",
