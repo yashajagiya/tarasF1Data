@@ -194,6 +194,8 @@ def load_all_known_sessions(repo_dir=None):
     if repo_dir is None:
         base_dir = os.path.dirname(os.path.abspath(__file__))
         candidates = [
+            os.path.abspath(os.path.join(base_dir, "..", "v1")),
+            os.path.abspath(os.path.join(base_dir, "..", "..", "v1")),
             os.path.abspath(os.path.join(base_dir, "..", "..")),
             os.path.abspath(os.path.join(base_dir, "..")),
             os.path.abspath(os.path.join(base_dir, "..", "..", "tarasF1Data")),
@@ -250,6 +252,25 @@ def load_all_known_sessions(repo_dir=None):
                 max_completed_round = r_num
 
     events = {}
+
+    # 1. Load pre-extracted historical rounds from data/sessions/
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    candidates_sessions = [
+        os.path.join(base_dir, "..", "data", "sessions"),
+        os.path.join(base_dir, "data", "sessions"),
+        os.path.join(repo_dir, "tarasF1DataV2", "data", "sessions"),
+    ]
+    sessions_dir = next((p for p in candidates_sessions if os.path.exists(p)), None)
+    if sessions_dir:
+        for fname in os.listdir(sessions_dir):
+            if fname.startswith("round_") and fname.endswith(".json"):
+                fpath = os.path.join(sessions_dir, fname)
+                r_payload = _safe_load_json(fpath)
+                if r_payload and isinstance(r_payload, dict) and "round" in r_payload:
+                    r_num_loaded = r_payload["round"]
+                    events[f"round_{r_num_loaded}"] = r_payload
+                    if r_payload.get("status") == "completed" and r_num_loaded > max_completed_round:
+                        max_completed_round = r_num_loaded
 
     # Build standardized event payload for every detected round
     for r_num, bucket in round_buckets.items():
@@ -319,10 +340,23 @@ def load_all_known_sessions(repo_dir=None):
             "sessions": sessions_dict
         }
 
-        events[f"round_{r_num}"] = event_obj
+        # If round already exists from master/historical storage, merge without overwriting with partial data
+        round_key = f"round_{r_num}"
+        if round_key in events:
+            existing = events[round_key]
+            existing_has_race = bool(existing.get("sessions", {}).get("race"))
+            this_has_race = bool(sessions_dict.get("race"))
+            if existing_has_race and not this_has_race:
+                # Existing has full Grand Prix race results; keep existing complete round
+                continue
+            if len(existing.get("completed_sessions", [])) > len(completed):
+                # Existing has more sessions than this partial bucket; keep existing
+                continue
 
-        # Provide round_14 alias if round 12 is Zandvoort for backward compatibility
-        if circuit_id == "zandvoort" and f"round_14" not in events:
+        events[round_key] = event_obj
+
+        # Provide round_14 alias only if round 14 is not in events and circuit was zandvoort
+        if circuit_id == "zandvoort" and "round_14" not in events:
             events["round_14"] = dict(event_obj)
             events["round_14"]["round"] = 14
 

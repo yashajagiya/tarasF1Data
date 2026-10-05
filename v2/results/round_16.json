@@ -1,12 +1,21 @@
 {
   "round": 16,
-  "race_name": "FORMULA 1 GULF AIR BAHRAIN GRAND PRIX IN MALAYSIA 2026",
-  "country": "Bahrain",
+  "race_name": "Formula 1 Gulf Air Bahrain Grand Prix in Malaysia 2026",
+  "country": "Malaysia",
   "circuit_id": "sepang",
-  "circuit_name": "Sepang International Circuit, Kuala Lumpur",
+  "circuit_name": "Sepang International Circuit",
   "date_range": "02 - 04 Oct 2026",
+  "status": "completed",
   "weekend_format": "conventional",
   "has_sprint": false,
+  "completed_sessions": [
+    "practice_1",
+    "practice_2",
+    "practice_3",
+    "qualifying",
+    "race"
+  ],
+  "upcoming_sessions": [],
   "sessions": {
     "practice_1": [
       {

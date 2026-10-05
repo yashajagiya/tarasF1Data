@@ -56,8 +56,20 @@ def build_v2_api():
         print("  • Successfully fetched live ESPN data.")
     except Exception as e:
         print(f"  ⚠️ Live fetch failed ({e}). Using cached standings from driversperrace.json.")
-        cached_d_path = os.path.join(BASE_DIR, "..", "tarasF1Data", "driversperrace.json")
-        cached_t_path = os.path.join(BASE_DIR, "..", "tarasF1Data", "carperrace.json")
+        cached_d_candidates = [
+            os.path.join(BASE_DIR, "..", "v1", "driversperrace.json"),
+            os.path.join(BASE_DIR, "..", "v1", "f1_standings.json"),
+            os.path.join(BASE_DIR, "..", "tarasF1Data", "driversperrace.json"),
+            os.path.join(BASE_DIR, "..", "driversperrace.json"),
+        ]
+        cached_t_candidates = [
+            os.path.join(BASE_DIR, "..", "v1", "carperrace.json"),
+            os.path.join(BASE_DIR, "..", "v1", "f1_constructor_standings.json"),
+            os.path.join(BASE_DIR, "..", "tarasF1Data", "carperrace.json"),
+            os.path.join(BASE_DIR, "..", "carperrace.json"),
+        ]
+        cached_d_path = next((p for p in cached_d_candidates if os.path.exists(p)), cached_d_candidates[0])
+        cached_t_path = next((p for p in cached_t_candidates if os.path.exists(p)), cached_t_candidates[0])
         standings_data = {"season": 2026, "drivers": [], "teams": []}
         if os.path.exists(cached_d_path):
             d_raw = json.load(open(cached_d_path, encoding="utf-8"))
@@ -384,7 +396,7 @@ def git_commit_and_push(repo_dir):
     try:
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=repo_dir, check=False)
-        subprocess.run(["git", "add", "v2/", "tarasF1DataV2/"], cwd=repo_dir, check=True)
+        subprocess.run(["git", "add", "v1/", "v2/", "tarasF1DataV2/", "extract_rounds.py"], cwd=repo_dir, check=True)
         
         diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo_dir)
         if diff.returncode != 0:
@@ -423,6 +435,8 @@ def run_session_scraper(session_name):
         return False
 
     candidates = [
+        os.path.abspath(os.path.join(BASE_DIR, "..", "v1", *target)),
+        os.path.abspath(os.path.join(BASE_DIR, "..", "..", "v1", *target)),
         os.path.abspath(os.path.join(BASE_DIR, "..", *target)),
         os.path.abspath(os.path.join(BASE_DIR, "..", "..", *target)),
         os.path.abspath(os.path.join(BASE_DIR, "..", "tarasF1Data", *target)),

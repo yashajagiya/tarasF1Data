@@ -1,0 +1,208 @@
+{
+  "round": 4,
+  "session": "sprint_race",
+  "race_name": "Formula 1 Crypto.com Miami Grand Prix 2026",
+  "circuit_name": "Miami International Autodrome, Miami Gardens",
+  "circuit_id": "miami",
+  "date": "01 - 03 May 2026",
+  "results": [
+    {
+      "position": 1,
+      "driver_number": 1,
+      "driver_name": "Lando Norris",
+      "team": "McLaren",
+      "laps": 19,
+      "time_or_retired": "29:15.045",
+      "points": 8
+    },
+    {
+      "position": 2,
+      "driver_number": 81,
+      "driver_name": "Oscar Piastri",
+      "team": "McLaren",
+      "laps": 19,
+      "time_or_retired": "+3.766s",
+      "points": 7
+    },
+    {
+      "position": 3,
+      "driver_number": 16,
+      "driver_name": "Charles Leclerc",
+      "team": "Ferrari",
+      "laps": 19,
+      "time_or_retired": "+6.251s",
+      "points": 6
+    },
+    {
+      "position": 4,
+      "driver_number": 63,
+      "driver_name": "George Russell",
+      "team": "Mercedes",
+      "laps": 19,
+      "time_or_retired": "+12.951s",
+      "points": 5
+    },
+    {
+      "position": 5,
+      "driver_number": 3,
+      "driver_name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "laps": 19,
+      "time_or_retired": "+13.639s",
+      "points": 4
+    },
+    {
+      "position": 6,
+      "driver_number": 12,
+      "driver_name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "laps": 19,
+      "time_or_retired": "+13.777s",
+      "points": 3
+    },
+    {
+      "position": 7,
+      "driver_number": 44,
+      "driver_name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "laps": 19,
+      "time_or_retired": "+21.665s",
+      "points": 2
+    },
+    {
+      "position": 8,
+      "driver_number": 10,
+      "driver_name": "Pierre Gasly",
+      "team": "Alpine",
+      "laps": 19,
+      "time_or_retired": "+30.525s",
+      "points": 1
+    },
+    {
+      "position": 9,
+      "driver_number": 6,
+      "driver_name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "laps": 19,
+      "time_or_retired": "+35.346s",
+      "points": 0
+    },
+    {
+      "position": 10,
+      "driver_number": 43,
+      "driver_name": "Franco Colapinto",
+      "team": "Alpine",
+      "laps": 19,
+      "time_or_retired": "+36.970s",
+      "points": 0
+    },
+    {
+      "position": 11,
+      "driver_number": 31,
+      "driver_name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "laps": 19,
+      "time_or_retired": "+56.972s",
+      "points": 0
+    },
+    {
+      "position": 12,
+      "driver_number": 87,
+      "driver_name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "laps": 19,
+      "time_or_retired": "+57.365s",
+      "points": 0
+    },
+    {
+      "position": 13,
+      "driver_number": 55,
+      "driver_name": "Carlos Sainz",
+      "team": "Williams",
+      "laps": 19,
+      "time_or_retired": "+58.504s",
+      "points": 0
+    },
+    {
+      "position": 14,
+      "driver_number": 30,
+      "driver_name": "Liam Lawson",
+      "team": "Racing Bulls",
+      "laps": 19,
+      "time_or_retired": "+59.358s",
+      "points": 0
+    },
+    {
+      "position": 15,
+      "driver_number": 14,
+      "driver_name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "laps": 19,
+      "time_or_retired": "+76.067s",
+      "points": 0
+    },
+    {
+      "position": 16,
+      "driver_number": 11,
+      "driver_name": "Sergio Perez",
+      "team": "Cadillac",
+      "laps": 19,
+      "time_or_retired": "+76.691s",
+      "points": 0
+    },
+    {
+      "position": 17,
+      "driver_number": 18,
+      "driver_name": "Lance Stroll",
+      "team": "Aston Martin",
+      "laps": 19,
+      "time_or_retired": "+77.626s",
+      "points": 0
+    },
+    {
+      "position": 18,
+      "driver_number": 23,
+      "driver_name": "Alexander Albon",
+      "team": "Williams",
+      "laps": 19,
+      "time_or_retired": "+88.173s",
+      "points": 0
+    },
+    {
+      "position": 19,
+      "driver_number": 77,
+      "driver_name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "laps": 19,
+      "time_or_retired": "+89.597s",
+      "points": 0
+    },
+    {
+      "position": "NC",
+      "driver_number": 27,
+      "driver_name": "Nico Hulkenberg",
+      "team": "Audi",
+      "laps": 0,
+      "time_or_retired": "DNS",
+      "points": 0
+    },
+    {
+      "position": "NC",
+      "driver_number": 41,
+      "driver_name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "laps": 0,
+      "time_or_retired": "DNS",
+      "points": 0
+    },
+    {
+      "position": "DQ",
+      "driver_number": 5,
+      "driver_name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "laps": "",
+      "time_or_retired": "DSQ",
+      "points": 0
+    }
+  ]
+}

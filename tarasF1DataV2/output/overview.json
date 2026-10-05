@@ -20,6 +20,7 @@
       "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/mercedes/2025mercedeslogowhite.webp"
     }
   },
+  "active_weekend": null,
   "next_event": {
     "round": 17,
     "race_name": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
@@ -56,11 +57,7 @@
     "round": 16,
     "race_name": "Formula 1 Gulf Air Bahrain Grand Prix in Malaysia 2026",
     "circuit_name": "Sepang International Circuit",
-    "winner": {
-      "drivernumber": 3,
-      "fullName": "Max Verstappen",
-      "teamWinner": "Red Bull Racing"
-    },
+    "winner": "Max Verstappen",
     "podium": [
       {
         "position": 1,

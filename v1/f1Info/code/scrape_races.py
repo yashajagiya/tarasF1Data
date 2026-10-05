@@ -1,0 +1,496 @@
+"""
+F1 2026 Race Data Scraper
+Fetches race calendar from https://f1api.dev/api/current and extracts:
+  - Championship info
+  - Race schedule (race, qualy, FP1–FP3, sprint qualy, sprint race)
+  - Circuit details
+  - Winner: driver number + full name combined
+  - Winning team
+Also fetches the latest race result from the GitHub-hosted JSON to patch in
+winner data that the F1 API may not have updated yet (matched by circuitId).
+Outputs: races_data.json
+"""
+
+import requests
+import json
+import shutil
+import subprocess
+import sys
+import os
+import re
+import time
+from datetime import datetime, timezone
+from html.parser import HTMLParser
+
+# Fix Windows console encoding
+if sys.platform == "win32":
+    os.environ.setdefault("PYTHONIOENCODING", "utf-8")
+
+API_URL = "https://f1api.dev/api/current"
+RACE_RESULTS_URL = "https://yashajagiya.github.io/tarasF1Data/race-result/race_results.json"
+RACES_IMG_URL = "https://yashajagiya.github.io/tarasF1Data/racesimg.json"
+OFFICIAL_BAHRAIN_URL = "https://www.formula1.com/en/racing/2026/bahrain"
+
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/126.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json",
+}
+
+
+def create_session() -> requests.Session:
+    """Create a persistent requests session with proper headers."""
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    return session
+
+
+def fetch_with_retry(session: requests.Session, url: str, timeout: int = 25, max_attempts: int = 3):
+    """Fetch URL with retries and exponential backoff."""
+    last_err = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            resp = session.get(url, timeout=timeout)
+            resp.encoding = "utf-8"
+            resp.raise_for_status()
+            return resp
+        except requests.RequestException as e:
+            last_err = e
+            if attempt < max_attempts:
+                time.sleep(2 * attempt)
+    assert last_err is not None, "max_attempts must be >= 1"
+    raise last_err
+
+
+def extract_race(race: dict) -> dict:
+    """Extract and flatten a single race entry from the API response."""
+
+    # ── Schedule ─────────────────────────────────────────────────
+    schedule_raw = race.get("schedule", {})
+    schedule = {}
+    for session_key in ("race", "qualy", "fp1", "fp2", "fp3", "sprintQualy", "sprintRace"):
+        session = schedule_raw.get(session_key, {})
+        date = session.get("date")
+        time_ = session.get("time")
+        if date:
+            schedule[session_key] = {
+                "date": date,
+                "time": time_,
+            }
+
+    # ── Circuit ──────────────────────────────────────────────────
+    circuit_raw = race.get("circuit", {})
+    circuit = {
+        "circuitId": circuit_raw.get("circuitId"),
+        "circuitName": circuit_raw.get("circuitName"),
+        "country": circuit_raw.get("country"),
+        "city": circuit_raw.get("city"),
+        "circuitLength": circuit_raw.get("circuitLength"),
+        "lapRecord": circuit_raw.get("lapRecord"),
+        "firstParticipationYear": circuit_raw.get("firstParticipationYear"),
+        "corners": circuit_raw.get("corners"),
+        "fastestLapDriverId": circuit_raw.get("fastestLapDriverId"),
+        "fastestLapTeamId": circuit_raw.get("fastestLapTeamId"),
+        "fastestLapYear": circuit_raw.get("fastestLapYear"),
+    }
+
+    # ── Winner ───────────────────────────────────────────────────
+    winner_raw = race.get("winner")
+    team_raw = race.get("teamWinner")
+    winner = None
+    if winner_raw:
+        number = winner_raw.get("number", "")
+        name = winner_raw.get("name", "")
+        surname = winner_raw.get("surname", "")
+        full_name = f"{name} {surname}".strip()
+        winner = {
+            "drivernumber": number,
+            "fullName": full_name,
+            "teamWinner": team_raw.get("teamName") if team_raw else None
+        }
+
+    return {
+        "raceId": race.get("raceId"),
+        "raceName": race.get("raceName"),
+        "round": race.get("round"),
+        "laps": race.get("laps"),
+        "schedule": schedule,
+        "circuit": circuit,
+        "winner": winner,
+    }
+
+
+class OfficialRacePageParser(HTMLParser):
+    """Extract event JSON-LD, circuit stats, and track image from an F1 page."""
+
+    def __init__(self):
+        super().__init__()
+        self.json_ld = []
+        self.circuit_stats = {}
+        self.track_image = None
+        self._in_json_ld = False
+        self._json_ld_parts = []
+        self._field = None
+        self._field_label = ""
+        self._field_parts = []
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "script" and attributes.get("type") == "application/ld+json":
+            self._in_json_ld = True
+            self._json_ld_parts = []
+        elif tag == "dt":
+            self._field = "label"
+            self._field_parts = []
+        elif tag == "dd":
+            self._field = "value"
+            self._field_parts = []
+        elif tag == "link":
+            image_url = attributes.get("href", "")
+            if "/common/f1/" in image_url and "/track/" in image_url:
+                self.track_image = image_url
+
+    def handle_data(self, data):
+        if self._in_json_ld:
+            self._json_ld_parts.append(data)
+        if self._field:
+            self._field_parts.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "script" and self._in_json_ld:
+            self.json_ld.append("".join(self._json_ld_parts).strip())
+            self._in_json_ld = False
+        elif tag == "dt" and self._field == "label":
+            self._field_label = " ".join("".join(self._field_parts).split())
+            self._field = None
+        elif tag == "dd" and self._field == "value":
+            value = " ".join("".join(self._field_parts).split())
+            if self._field_label and value:
+                self.circuit_stats[self._field_label] = value
+            self._field_label = ""
+            self._field = None
+
+
+def fetch_official_bahrain_data(session: requests.Session) -> dict:
+    """Fetch missing Bahrain circuit and session data from the official event page."""
+    response = fetch_with_retry(session, OFFICIAL_BAHRAIN_URL, timeout=30)
+    parser = OfficialRacePageParser()
+    parser.feed(response.text)
+
+    event = next(
+        (json.loads(block) for block in parser.json_ld if '"@type":"SportsEvent"' in block),
+        None,
+    )
+    if not event:
+        raise ValueError("Official Bahrain page did not contain SportsEvent JSON-LD")
+
+    session_keys = {
+        "practice 1": "fp1",
+        "practice 2": "fp2",
+        "practice 3": "fp3",
+        "qualifying": "qualy",
+        "race": "race",
+    }
+    schedule = {}
+    for item in event.get("subEvent", []):
+        name = item.get("name", "").lower()
+        key = next((value for label, value in session_keys.items() if name.startswith(label)), None)
+        start_date = item.get("startDate")
+        if key and start_date:
+            start = datetime.fromisoformat(start_date.replace("Z", "+00:00")).astimezone(timezone.utc)
+            schedule[key] = {
+                "date": start.strftime("%Y-%m-%d"),
+                "time": start.strftime("%H:%M:%SZ"),
+            }
+
+    stats = parser.circuit_stats
+    gp_name = re.sub(r"^FORMULA 1\s+|\s+2026$", "", event.get("name", ""), flags=re.IGNORECASE)
+    gp_name = re.sub(r"\s+GRAND PRIX", " GP", gp_name, count=1, flags=re.IGNORECASE)
+    gp_name = " ".join("GP" if part.lower() == "gp" else part.title() for part in gp_name.split())
+
+    return {
+        "schedule": schedule,
+        "laps": int(stats["Number of Laps"]) if stats.get("Number of Laps", "").isdigit() else None,
+        "circuit": {
+            "circuitLength": stats.get("Circuit Length"),
+            "lapRecord": stats.get("Fastest lap time"),
+            "firstParticipationYear": int(stats["First Grand Prix"]) if stats.get("First Grand Prix", "").isdigit() else None,
+            "trackImage": parser.track_image,
+            "gpName": gp_name or None,
+        },
+    }
+
+
+def fetch_latest_result(session: requests.Session) -> dict | None:
+    """Fetch the latest race result from the GitHub-hosted JSON.
+    Returns a dict with circuitId, winner number/name, and team, or None."""
+    print("Fetching latest race result from GitHub...", end=" ", flush=True)
+    try:
+        resp = fetch_with_retry(session, RACE_RESULTS_URL, timeout=15)
+        data = resp.json()
+
+        circuit_id = data.get("circuitId")
+        results = data.get("results", [])
+        if not circuit_id or not results:
+            print("SKIP  (no data)")
+            return None
+
+        # Position 1 = winner
+        p1 = next((r for r in results if str(r.get("position")) == "1"), None)
+        if not p1:
+            print("SKIP  (no P1 found)")
+            return None
+
+        result = {
+            "circuitId": circuit_id,
+            "winner": {
+                "drivernumber": int(p1.get("driverNumber", 0)),
+                "fullName": p1.get("driverName", ""),
+                "teamWinner": p1.get("team", ""),
+            },
+        }
+        print(f"OK  ({data.get('raceName', circuit_id)} -> #{result['winner']['drivernumber']} {result['winner']['fullName']})")
+        return result
+    except Exception as e:
+        print(f"FAIL  ({e})")
+        return None
+
+
+def fetch_race_images(session: requests.Session) -> dict:
+    """Fetch track images and GP names from GitHub-hosted JSON.
+    Returns a dict mapping circuitId to {'trackImage': ..., 'gpName': ...}."""
+    print("Fetching race images from GitHub...", end=" ", flush=True)
+    try:
+        resp = fetch_with_retry(session, RACES_IMG_URL, timeout=15)
+        data = resp.json()
+
+        mapping = {}
+        for item in data:
+            cid = item.get("circuit_id")
+            if cid:
+                mapping[cid] = {
+                    "trackImage": item.get("track_image"),
+                    "gpName": item.get("gp_name")
+                }
+        print(f"OK  ({len(mapping)} images found)")
+        return mapping
+    except Exception as e:
+        print(f"FAIL  ({e})")
+        return {}
+
+
+def fetch_races(session: requests.Session | None = None) -> dict:
+    """Fetch the current season race data from the F1 API."""
+    if session is None:
+        session = create_session()
+
+    print(f"Fetching race data from {API_URL}...", end=" ", flush=True)
+
+    resp = fetch_with_retry(session, API_URL, timeout=30)
+    api_data = resp.json()
+
+    season = api_data.get("season")
+    championship = api_data.get("championship", {})
+    races_raw = api_data.get("races", [])
+
+    print(f"OK  ({len(races_raw)} races found)")
+
+    # ── Fetch race images/names mapping ──────────────────────────
+    images_mapping = fetch_race_images(session)
+
+    races = []
+    for race in races_raw:
+        extracted = extract_race(race)
+
+        if extracted.get("raceId") == "bahrain_2026":
+            print("Fetching missing Bahrain data from Formula1.com...", end=" ", flush=True)
+            try:
+                official = fetch_official_bahrain_data(session)
+                for key, value in official["circuit"].items():
+                    current = extracted["circuit"].get(key)
+                    if value is not None and (not current or str(current).lower() in {"null", "nullkm"}):
+                        extracted["circuit"][key] = value
+                if official.get("laps") and not extracted.get("laps"):
+                    extracted["laps"] = official["laps"]
+                for key, values in official["schedule"].items():
+                    current = extracted["schedule"].setdefault(key, {})
+                    for field, value in values.items():
+                        if value and not current.get(field):
+                            current[field] = value
+                print("OK")
+            except Exception as e:
+                print(f"FAIL  ({e})")
+
+        # Patch in track image and GP name inside circuit
+        circuit_id = extracted.get("circuit", {}).get("circuitId")
+        img_data = images_mapping.get(circuit_id, {})
+        extracted["circuit"]["trackImage"] = img_data.get("trackImage") or extracted["circuit"].get("trackImage")
+        extracted["circuit"]["gpName"] = img_data.get("gpName") or extracted["circuit"].get("gpName")
+
+        races.append(extracted)
+
+    # ── Patch missing winners from GitHub race result ────────────
+    latest = fetch_latest_result(session)
+    patched_circuit = None
+    if latest:
+        for race in races:
+            circuit_id = race.get("circuit", {}).get("circuitId")
+            if circuit_id == latest["circuitId"] and race["winner"] is None:
+                race["winner"] = latest["winner"]
+                patched_circuit = circuit_id
+                print(f"  >> Patched R{race['round']} ({race['raceName']}) with GitHub result")
+
+    # ── Log all races ────────────────────────────────────────────
+    print()
+    for extracted in races:
+        winner_info = ""
+        if extracted["winner"]:
+            w = extracted["winner"]
+            tw = w.get("teamWinner") or "TBD"
+            src = " [GitHub]" if extracted.get("circuit", {}).get("circuitId") == patched_circuit else ""
+            winner_info = f" | Winner: #{w.get('drivernumber', '')} {w.get('fullName', '')} ({tw}){src}"
+        else:
+            winner_info = " | TBD"
+
+        print(f"  R{extracted['round']:>2}: {extracted['raceName']}{winner_info}")
+
+    return {
+        "season": season,
+        "championship": {
+            "championshipId": championship.get("championshipId"),
+            "championshipName": championship.get("championshipName"),
+            "year": championship.get("year")
+        },
+        "totalRaces": len(races),
+        "races": races,
+    }
+
+
+def find_target_repo(script_path):
+    """Locate the target tarasF1Data git repository."""
+    current = os.path.abspath(script_path)
+    candidates = []
+    while True:
+        parent = os.path.dirname(current)
+        if parent == current:
+            break
+        nested = os.path.join(current, 'tarasF1Data')
+        if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, '.git')):
+            candidates.append(nested)
+        if os.path.isdir(os.path.join(current, '.git')):
+            candidates.append(current)
+        current = parent
+
+    for cand in candidates:
+        try:
+            out = subprocess.check_output(['git', 'remote', '-v'], cwd=cand, text=True)
+            if 'tarasf1data' in out.lower():
+                return cand
+        except Exception:
+            pass
+    return candidates[0] if candidates else None
+
+
+def push_f1info_to_git(out_path, info_type="races"):
+    """Sync and commit generated JSON to target Git repository."""
+    target_repo = find_target_repo(__file__)
+    if not target_repo or not os.path.isdir(target_repo):
+        raise RuntimeError(f"Target git repository not found for {out_path}.")
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    file_name = os.path.basename(out_path)
+    target_dir = os.path.join(target_repo, 'f1Info')
+    os.makedirs(target_dir, exist_ok=True)
+    dest_path = os.path.join(target_dir, file_name)
+
+    if os.path.abspath(out_path) != os.path.abspath(dest_path):
+        shutil.copy2(out_path, dest_path)
+
+    # Also sync to root workspace file if it exists
+    workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+    root_json = os.path.join(workspace_root, file_name)
+    if os.path.exists(root_json) and os.path.abspath(root_json) != os.path.abspath(out_path):
+        shutil.copy2(out_path, root_json)
+
+    git_file_path = f"f1Info/{file_name}"
+    print(f"Syncing {git_file_path} to Git repository: {target_repo}")
+
+    try:
+        # Pull latest changes first
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+
+        # Stage the file and folder
+        subprocess.run(["git", "add", "f1Info"], cwd=target_repo, check=True)
+
+        # Check for staged changes
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=target_repo, capture_output=True)
+        if result.returncode != 0:
+            commit_msg = f"Auto-update {info_type} data — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed changes: {commit_msg}")
+        else:
+            commit_msg = f"Auto-update {info_type} data (verified) — {now}"
+            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=target_repo, check=True)
+            print(f"Committed (no data changes): {commit_msg}")
+
+        # Push to origin main
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print(f"Uploaded {git_file_path} to GitHub successfully.")
+        else:
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=target_repo, check=False)
+            retry = subprocess.run(["git", "push", "origin", "main"], cwd=target_repo, capture_output=True, text=True)
+            if retry.returncode == 0:
+                print(f"Uploaded {git_file_path} to GitHub successfully on retry.")
+            else:
+                raise RuntimeError(f"Git push failed: {retry.stderr or retry.stdout}")
+    except Exception as e:
+        print(f"Error during GitHub upload: {e}")
+        raise
+
+
+def main():
+    print("=" * 60)
+    print("  F1 2026 Race Data Scraper")
+    print("=" * 60)
+    print()
+
+    session = create_session()
+
+    try:
+        result = fetch_races(session)
+    except requests.RequestException as e:
+        print(f"FAIL  ERROR: {e}")
+        return
+
+    out_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'races_data.json'))
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+
+    print()
+    print(f"Done! Saved {result['totalRaces']} races to {out_path}")
+
+    # GitHub Upload & sync
+    push_f1info_to_git(out_path, info_type="races")
+
+    # Quick summary
+    print()
+    print("-" * 80)
+    print(f"{'R#':<4} {'Race':<50} {'Winner':<25}")
+    print("-" * 80)
+    for r in result["races"]:
+        rnd = f"R{r['round']}"
+        name = r["raceName"][:48]
+        if r["winner"]:
+            w = f"#{r['winner'].get('drivernumber', '')} {r['winner'].get('fullName', '')}"
+        else:
+            w = "TBD"
+        print(f"{rnd:<4} {name:<50} {w:<25}")
+    print("-" * 80)
+
+
+if __name__ == "__main__":
+    main()

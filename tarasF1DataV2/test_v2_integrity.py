@@ -93,6 +93,20 @@ def run_integrity_tests():
     assert len(sessions["race"]) > 0, "Race results empty!"
     print("  [PASS] 6. results/latest.json integrity verified (FP1, FP2, FP3, Qualy, Sprint, Race all intact)")
 
+    # 7. Test Historical Rounds (Round 1 to Round 15)
+    for r_num in range(1, 16):
+        r_path = os.path.join(OUTPUT_DIR, "results", f"round_{r_num}.json")
+        assert os.path.exists(r_path), f"results/round_{r_num}.json is missing!"
+        r_data = json.load(open(r_path, encoding="utf-8"))
+        assert r_data["round"] == r_num, f"Round number mismatch in {r_path}!"
+        assert r_data["status"] == "completed", f"Status in {r_path} not completed!"
+        assert len(r_data["sessions"]["race"]) > 0, f"Race results empty in {r_path}!"
+        assert len(r_data["sessions"]["practice_1"]) > 0, f"FP1 results empty in {r_path}!"
+        assert len(r_data["sessions"]["qualifying"]) > 0, f"Qualifying results empty in {r_path}!"
+        if r_data.get("has_sprint"):
+            assert len(r_data["sessions"]["sprint_race"]) > 0, f"Sprint race empty in sprint weekend {r_path}!"
+    print("  [PASS] 7. All historical rounds 1 to 15 verified (FP1, Qualy, Sprint, Race all intact)")
+
     print("\n" + "=" * 70)
     print("  ✅ ALL INTEGRITY TESTS PASSED: 100% DATA RETENTION CONFIRMED!")
     print("=" * 70)

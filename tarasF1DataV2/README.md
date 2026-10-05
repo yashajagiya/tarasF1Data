@@ -25,7 +25,8 @@
 | **Teams** | [`teams.json`](output/teams.json) | **All 11 constructors**: 2026 car renders, white logos, leadership, power units, chassis, factory bases, and standings. | 84 KB |
 | **Standings** | [`standings.json`](output/standings.json) | Complete leaderboards for both Drivers and Constructors with **round-by-round point breakdowns**. | 190 KB |
 | **Calendar** | [`calendar.json`](output/calendar.json) | Complete 22-race season with track outline maps, circuit specifications (lap records, corners, length), and UTC schedules. | 29 KB |
-| **Weekend Results** | [`results/latest.json`](output/results/latest.json) | Complete classifications for **every session** (FP1, FP2, FP3, Qualy, Sprint, Race) in one document without overwriting past races! | 51 KB |
+| **Weekend Results** | [`results/latest.json`](output/results/latest.json) | Complete classifications for **every session** (FP1, FP2, FP3, Qualy, Sprint, Race) in one document without overwriting past races! | 26 KB |
+| **Historical Rounds** | [`results/round_1.json`](output/results/round_1.json) ... [`round_16.json`](output/results/round_16.json) | Full weekend session archives for **all completed rounds** (Round 1 through 16). | ~26 KB each |
 
 ---
 
@@ -39,6 +40,10 @@ const data = await response.json();
 
 console.log(`Championship Leader: ${data.championship_leader.driver.name} (${data.championship_leader.driver.points} pts)`);
 console.log(`Next Race: ${data.next_event.race_name} at ${data.next_event.circuit_name}`);
+
+// Fetch specific past round (e.g. Round 15 Azerbaijan)
+const round15 = await fetch("https://yashajagiya.github.io/tarasF1Data/v2/results/round_15.json").then(r => r.json());
+console.log(`Round 15 Winner: ${round15.sessions.race[0].driver_name}`);
 ```
 
 ### 2. Python (`requests`)
@@ -50,6 +55,10 @@ drivers = requests.get("https://yashajagiya.github.io/tarasF1Data/v2/drivers.jso
 
 for d in drivers:
     print(f"#{d['number']:>2} {d['code']} | {d['name']:<20} | {d['team']['name']:<18} | {d['standings']['points']} pts")
+
+# Fetch any past round results
+round_14 = requests.get("https://yashajagiya.github.io/tarasF1Data/v2/results/round_14.json").json()
+print("Round 14 Podium:", [p["driver_name"] for p in round_14["sessions"]["race"][:3]])
 ```
 
 ### 3. Android Kotlin (Retrofit)
@@ -82,6 +91,9 @@ interface F1ApiService {
 
     @GET("v2/drivers.json")
     suspend fun getDrivers(): List<DriverDto>
+
+    @GET("v2/results/round_{round}.json")
+    suspend fun getRoundResults(@Path("round") round: Int): RoundResultDto
 }
 ```
 
@@ -94,11 +106,13 @@ tarasF1DataV2/
 ├── data/
 │   ├── drivers_registry.json    ← Master registry of all 23 drivers (IDs, numbers, colors, images)
 │   ├── teams_registry.json      ← Master registry of all 11 teams (specs, engines, leadership)
-│   └── calendar_master.json     ← Master 2026 calendar (22 rounds, circuit records, track maps)
+│   ├── calendar_master.json     ← Master 2026 calendar (23 rounds, circuit records, track maps)
+│   └── sessions/                ← Master archives for all rounds (round_1.json ... round_16.json)
 ├── collectors/
 │   ├── espn_standings.py        ← Pure data collector for live ESPN standings (Driver + Constructor)
 │   ├── f1_encyclopedia.py       ← Loads deep biographies, career stats, and 16-metric 2026 stats
 │   └── f1_sessions.py           ← Consolidates FP1–FP3, Qualy, Sprint, and Race classifications
+├── extract_rounds.py            ← Historical Extractor (extracts Round 15 down to 1 from Formula 1)
 ├── build.py                     ← The Master Build Engine (runs collectors, builds V2 API)
 ├── output/                      ← The generated, production-ready static API files
 │   ├── overview.json
@@ -108,7 +122,7 @@ tarasF1DataV2/
 │   ├── calendar.json
 │   └── results/
 │       ├── latest.json
-│       └── round_16.json
+│       ├── round_1.json ... round_16.json
 └── README.md                    ← This developer guide
 ```
 
@@ -116,11 +130,30 @@ tarasF1DataV2/
 
 ## 🚀 How to Run & Build
 
-To regenerate all API files with live data:
+### 1. Extract Historical Rounds (e.g. Round 15 down to Round 1)
+
+```bash
+# Extract all old rounds (15 down to 1):
+python tarasF1DataV2/extract_rounds.py
+
+# Extract a specific round:
+python tarasF1DataV2/extract_rounds.py --round 15
+
+# Extract specific rounds:
+python tarasF1DataV2/extract_rounds.py --rounds 15,14,13
+
+# Re-scrape and force update:
+python tarasF1DataV2/extract_rounds.py --all --force
+
+# Extract and auto-rebuild V2 API:
+python tarasF1DataV2/extract_rounds.py --build
+```
+
+### 2. Build the Complete V2 API
 
 ```bash
 cd m:\tarasF1Data\tarasF1DataV2
 python build.py
 ```
 
-All updated endpoints will be written directly into `tarasF1DataV2/output/`.
+All updated endpoints will be written directly into `tarasF1DataV2/output/` and synchronized to public `v2/`.

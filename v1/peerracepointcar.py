@@ -1,0 +1,217 @@
+"""
+F1 Constructor Standings Extractor
+Fetches and displays F1 constructor standings from the ESPN API.
+Uses only the Python standard library — no pip installs needed.
+"""
+
+import urllib.request
+import json
+import ssl
+import subprocess
+import os
+from datetime import datetime
+
+API_URL = "https://site.api.espn.com/apis/v2/sports/racing/f1/standings"
+
+# Map ESPN display names → official F1.com team names.
+# Only teams whose ESPN name differs from the F1.com name need an entry;
+# all others pass through unchanged via the dict.get() fallback.
+OFFICIAL_TEAM_NAMES = {
+    "Red Bull":      "Red Bull Racing",
+    "Haas":          "Haas F1 Team",
+}
+
+# Path to the cloned GitHub repo (assuming script is in the repo root)
+REPO_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def fetch_standings():
+    """Fetch raw standings data from the ESPN F1 API."""
+    # Create an SSL context that doesn't verify certs (some envs lack CA bundles)
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    req = urllib.request.Request(API_URL, headers={"User-Agent": "curl/8.4.0"})
+    with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def extract_standings(data):
+    """
+    Extract structured constructor standings from the raw API response.
+
+    The ESPN API nests the constructor standings inside:
+      data -> children[1] -> standings
+
+    Each entry contains:
+      - team: { name, displayName, color, ... }
+      - stats: flat list of typed objects:
+          type "rank"    -> constructor rank
+          type "points"  -> championship points
+          type "overall" -> ignored
+          everything else -> individual race results
+
+    Returns a dict with:
+      - displayName: str
+      - season: str
+      - entries: list of constructor dicts, each containing:
+          - rank, team
+          - points: { value, displayValue }
+          - races: list of { name, displayName, played, value, displayValue }
+    """
+    # Navigate to the constructor standings object (children[1])
+    children = data.get("children", [])
+    if len(children) < 2:
+        return {"displayName": "", "season": "", "entries": []}
+
+    standings_data = children[1].get("standings", {})
+
+    standings = {
+        "displayName": standings_data.get("displayName", ""),
+        "season": standings_data.get("season", ""),
+        "entries": [],
+    }
+
+    for entry in standings_data.get("entries", []):
+        team = entry.get("team", {})
+        stats = entry.get("stats", [])
+
+        # Build lookup from the stats array
+        rank = 0
+        pts_value = 0
+        pts_display = "0"
+        races = []
+
+        for stat in stats:
+            stat_type = stat.get("type", "")
+
+            if stat_type == "rank":
+                rank = int(stat.get("value", 0))
+
+            elif stat_type == "points":
+                pts_value = int(stat.get("value", 0))
+                pts_display = stat.get("displayValue", "0")
+
+            elif stat_type == "overall":
+                # Summary row — skip
+                continue
+
+            else:
+                # Individual race result
+                races.append({
+                    "name": stat.get("name", ""),
+                    "displayName": stat.get("displayName", ""),
+                    "played": stat.get("played", False),
+                    "value": int(stat.get("value", 0)),
+                    "displayValue": stat.get("displayValue", "").strip(),
+                })
+
+        espn_name = team.get("displayName", "")
+        constructor = {
+            "rank": rank,
+            "team": OFFICIAL_TEAM_NAMES.get(espn_name, espn_name),
+            "points": {
+                "value": pts_value,
+                "displayValue": pts_display,
+            },
+            "races": races,
+        }
+
+        standings["entries"].append(constructor)
+
+    return standings
+
+
+def print_standings(standings):
+    """Pretty-print the standings to the console."""
+    print(f"\n{'='*60}")
+    print(f"  {standings['displayName']}  --  Season {standings['season']}")
+    print(f"{'='*60}\n")
+
+    for constructor in standings["entries"]:
+        pts = constructor["points"]
+        print(f"  #{constructor['rank']:>2}  {constructor['team']}")
+        print(f"       Points: {pts['displayValue']}")
+
+        played_races = [r for r in constructor["races"] if r["played"]]
+        if played_races:
+            race_strs = [f"{r['name']}({r['displayValue']})" for r in played_races]
+            print(f"       Races:  {', '.join(race_strs)}")
+        print()
+
+    print(f"{'='*60}")
+    print(f"  Total constructors: {len(standings['entries'])}")
+    print(f"{'='*60}\n")
+
+
+def save_standings(standings, filename="carperrace.json"):
+    """Save the extracted standings to the GitHub repo directory."""
+    filepath = os.path.join(REPO_DIR, filename)
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(standings, f, indent=2, ensure_ascii=False)
+    print(f"Standings saved to {filepath}")
+    return filepath
+
+
+def git_commit_and_push(filepath, message=None):
+    """Auto-commit and push the file to GitHub reliably every time it runs."""
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    filename = os.path.basename(filepath)
+
+    try:
+        # Stage the file
+        subprocess.run(["git", "add", filename], cwd=REPO_DIR,
+                        capture_output=True, text=True, check=True)
+
+        # Check if there are staged changes to commit
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"],
+                                 cwd=REPO_DIR, capture_output=True)
+        if result.returncode != 0:
+            commit_msg = message or f"Auto-update constructor standings — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=True)
+            print(f"Committed changes: {commit_msg}")
+        else:
+            commit_msg = message or f"Auto-update constructor standings (verified) — {now}"
+            subprocess.run(["git", "commit", "--allow-empty", "-m", commit_msg], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=True)
+            print(f"Committed (no data changes): {commit_msg}")
+
+        # Pull latest with autostash to avoid merge/unstaged conflicts
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=REPO_DIR,
+                        capture_output=True, text=True, check=False)
+
+        # Push commit
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR,
+                                   capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print("Pushed to GitHub successfully!")
+        else:
+            # Retry push after rebase
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=REPO_DIR,
+                            capture_output=True, text=True, check=False)
+            retry = subprocess.run(["git", "push", "origin", "main"], cwd=REPO_DIR,
+                                    capture_output=True, text=True)
+            if retry.returncode == 0:
+                print("Pushed to GitHub successfully on retry!")
+            else:
+                print(f"Git push error: {retry.stderr or retry.stdout}")
+
+    except Exception as e:
+        print(f"Git error: {e}")
+
+
+def main():
+    print("Fetching F1 constructor standings from ESPN API...")
+    raw_data = fetch_standings()
+
+    standings = extract_standings(raw_data)
+
+    print_standings(standings)
+    filepath = save_standings(standings)
+    git_commit_and_push(filepath)
+
+
+if __name__ == "__main__":
+    main()

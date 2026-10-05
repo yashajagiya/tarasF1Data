@@ -1,0 +1,210 @@
+{
+  "round": 5,
+  "session": "sprint_qualifying",
+  "race_name": "Formula 1 Lenovo Grand Prix Du Canada 2026",
+  "circuit_name": "Circuit Gilles-Villeneuve, Montréal",
+  "circuit_id": "gilles_villeneuve",
+  "date": "22 - 24 May 2026",
+  "results": [
+    {
+      "position": 1,
+      "driver_number": 63,
+      "driver_name": "George Russell",
+      "team": "Mercedes",
+      "sq1": "1:14.772",
+      "sq2": "1:13.026",
+      "sq3": "1:12.965",
+      "laps": 19
+    },
+    {
+      "position": 2,
+      "driver_number": 12,
+      "driver_name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "sq1": "1:14.010",
+      "sq2": "1:13.551",
+      "sq3": "1:13.033",
+      "laps": 16
+    },
+    {
+      "position": 3,
+      "driver_number": 1,
+      "driver_name": "Lando Norris",
+      "team": "McLaren",
+      "sq1": "1:14.265",
+      "sq2": "1:13.957",
+      "sq3": "1:13.280",
+      "laps": 15
+    },
+    {
+      "position": 4,
+      "driver_number": 81,
+      "driver_name": "Oscar Piastri",
+      "team": "McLaren",
+      "sq1": "1:14.665",
+      "sq2": "1:13.858",
+      "sq3": "1:13.299",
+      "laps": 15
+    },
+    {
+      "position": 5,
+      "driver_number": 44,
+      "driver_name": "Lewis Hamilton",
+      "team": "Ferrari",
+      "sq1": "1:13.889",
+      "sq2": "1:13.465",
+      "sq3": "1:13.326",
+      "laps": 23
+    },
+    {
+      "position": 6,
+      "driver_number": 16,
+      "driver_name": "Charles Leclerc",
+      "team": "Ferrari",
+      "sq1": "1:15.006",
+      "sq2": "1:13.554",
+      "sq3": "1:13.410",
+      "laps": 19
+    },
+    {
+      "position": 7,
+      "driver_number": 3,
+      "driver_name": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "sq1": "1:14.028",
+      "sq2": "1:14.412",
+      "sq3": "1:13.504",
+      "laps": 15
+    },
+    {
+      "position": 8,
+      "driver_number": 6,
+      "driver_name": "Isack Hadjar",
+      "team": "Red Bull Racing",
+      "sq1": "1:14.541",
+      "sq2": "1:14.239",
+      "sq3": "1:13.605",
+      "laps": 17
+    },
+    {
+      "position": 9,
+      "driver_number": 41,
+      "driver_name": "Arvid Lindblad",
+      "team": "Racing Bulls",
+      "sq1": "1:14.517",
+      "sq2": "1:14.140",
+      "sq3": "1:13.737",
+      "laps": 19
+    },
+    {
+      "position": 10,
+      "driver_number": 55,
+      "driver_name": "Carlos Sainz",
+      "team": "Williams",
+      "sq1": "1:15.500",
+      "sq2": "1:14.547",
+      "sq3": "1:14.536",
+      "laps": 24
+    },
+    {
+      "position": 11,
+      "driver_number": 27,
+      "driver_name": "Nico Hulkenberg",
+      "team": "Audi",
+      "sq1": "1:15.673",
+      "sq2": "1:14.595",
+      "sq3": "",
+      "laps": 14
+    },
+    {
+      "position": 12,
+      "driver_number": 5,
+      "driver_name": "Gabriel Bortoleto",
+      "team": "Audi",
+      "sq1": "1:15.801",
+      "sq2": "1:14.627",
+      "sq3": "",
+      "laps": 14
+    },
+    {
+      "position": 13,
+      "driver_number": 43,
+      "driver_name": "Franco Colapinto",
+      "team": "Alpine",
+      "sq1": "1:15.484",
+      "sq2": "1:14.702",
+      "sq3": "",
+      "laps": 16
+    },
+    {
+      "position": 14,
+      "driver_number": 31,
+      "driver_name": "Esteban Ocon",
+      "team": "Haas F1 Team",
+      "sq1": "1:15.760",
+      "sq2": "1:14.928",
+      "sq3": "",
+      "laps": 17
+    },
+    {
+      "position": 15,
+      "driver_number": 87,
+      "driver_name": "Oliver Bearman",
+      "team": "Haas F1 Team",
+      "sq1": "1:15.872",
+      "sq2": "1:15.197",
+      "sq3": "",
+      "laps": 17
+    },
+    {
+      "position": 16,
+      "driver_number": 14,
+      "driver_name": "Fernando Alonso",
+      "team": "Aston Martin",
+      "sq1": "1:15.760",
+      "sq2": "",
+      "sq3": "",
+      "laps": 7
+    },
+    {
+      "position": 17,
+      "driver_number": 11,
+      "driver_name": "Sergio Perez",
+      "team": "Cadillac",
+      "sq1": "1:16.002",
+      "sq2": "",
+      "sq3": "",
+      "laps": 8
+    },
+    {
+      "position": 18,
+      "driver_number": 18,
+      "driver_name": "Lance Stroll",
+      "team": "Aston Martin",
+      "sq1": "1:16.354",
+      "sq2": "",
+      "sq3": "",
+      "laps": 9
+    },
+    {
+      "position": 19,
+      "driver_number": 10,
+      "driver_name": "Pierre Gasly",
+      "team": "Alpine",
+      "sq1": "1:16.642",
+      "sq2": "",
+      "sq3": "",
+      "laps": 8
+    },
+    {
+      "position": 20,
+      "driver_number": 77,
+      "driver_name": "Valtteri Bottas",
+      "team": "Cadillac",
+      "sq1": "1:16.866",
+      "sq2": "",
+      "sq3": "",
+      "laps": 8
+    }
+  ]
+}
