@@ -349,6 +349,33 @@ def build_v2_api():
     print(f"  • Sessions saved:   FP1, FP2, FP3, Qualy, Sprint, Race all preserved in results/")
     print(f"\n🎉 Taras F1 API v2 successfully built in: {output_dir}")
 
+    # Optional Auto-Commit & Push to GitHub
+    if "--push" in sys.argv:
+        print("\n[GitHub] Auto-committing and pushing to GitHub...")
+        git_commit_and_push(os.path.abspath(os.path.join(BASE_DIR, "..")))
+
+
+def git_commit_and_push(repo_dir):
+    import subprocess
+    try:
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=repo_dir, check=False)
+        subprocess.run(["git", "add", "v2/", "tarasF1DataV2/"], cwd=repo_dir, check=True)
+        
+        diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo_dir)
+        if diff.returncode != 0:
+            commit_msg = f"Auto-update Taras F1 API v2 data — {now}"
+            subprocess.run(["git", "commit", "-m", commit_msg], cwd=repo_dir, check=True)
+            push_res = subprocess.run(["git", "push", "origin", "main"], cwd=repo_dir, capture_output=True, text=True)
+            if push_res.returncode == 0:
+                print("  ✓ Successfully committed and pushed updates to GitHub!")
+            else:
+                print(f"  ⚠️ Git push output: {push_res.stderr or push_res.stdout}")
+        else:
+            print("  ℹ️ No changes detected, working tree clean.")
+    except Exception as e:
+        print(f"  ⚠️ Git auto-push note: {e}")
+
 
 if __name__ == "__main__":
     build_v2_api()
