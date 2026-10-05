@@ -21,7 +21,8 @@ if sys.platform == "win32":
 
 from collectors.espn_standings import fetch_espn_raw_data, parse_standings, load_drivers_lookup
 from collectors.f1_encyclopedia import load_driver_encyclopedia, load_team_encyclopedia
-from collectors.f1_sessions import load_all_known_sessions
+from collectors.f1_sessions import load_all_known_sessions, get_latest_weekend_event
+
 
 
 def build_v2_api():
@@ -247,23 +248,18 @@ def build_v2_api():
 
     # 7. Collect Weekend Sessions
     events = load_all_known_sessions()
-    weekend = events.get("round_16", {})
+    weekend = get_latest_weekend_event(events)
 
     # 8. Build OVERVIEW Dataset (Home dashboard in 1 request)
     leader_driver = unified_drivers[0] if unified_drivers else {}
     leader_team = unified_teams[0] if unified_teams else {}
 
-    # Find next race and latest race from calendar
-    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    completed_races = [r for r in unified_calendar if r.get("winner")]
-    latest_completed = completed_races[-1] if completed_races else None
+    # Find completed races with a Sunday race podium
+    completed_events = [ev for ev in events.values() if ev.get("sessions", {}).get("race") and len(ev.get("sessions", {}).get("race")) > 0]
+    completed_events.sort(key=lambda e: e.get("round", 0))
+    last_finished_race_event = completed_events[-1] if completed_events else weekend
 
-    # Next race is the first race without a winner or after today
-    upcoming_races = [r for r in unified_calendar if not r.get("winner")]
-    next_race = upcoming_races[0] if upcoming_races else (unified_calendar[-1] if unified_calendar else None)
-
-    # Determine podium from weekend race results if available
-    race_results = weekend.get("sessions", {}).get("race", [])
+    race_results = (last_finished_race_event.get("sessions", {}).get("race") or []) if last_finished_race_event else []
     podium = []
     if race_results:
         for p in race_results[:3]:
@@ -274,9 +270,20 @@ def build_v2_api():
                 "team": p.get("team")
             })
 
+    # Find next race and latest race from calendar
+    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    calendar_completed = [r for r in unified_calendar if r.get("winner")]
+    latest_calendar_completed = calendar_completed[-1] if calendar_completed else None
+
+    # Next race is the first race without a winner or after today
+    upcoming_races = [r for r in unified_calendar if not r.get("winner")]
+    next_race = upcoming_races[0] if upcoming_races else (unified_calendar[-1] if unified_calendar else None)
+
+    is_live = weekend.get("status") == "in_progress"
+
     overview_obj = {
         "season": 2026,
-        "round_current": latest_completed.get("round", 16) if latest_completed else 16,
+        "round_current": weekend.get("round", 16),
         "round_total": len(unified_calendar),
         "championship_leader": {
             "driver": {
@@ -296,6 +303,15 @@ def build_v2_api():
                 "logo": leader_team.get("images", {}).get("logo")
             }
         },
+        "active_weekend": {
+            "round": weekend.get("round"),
+            "race_name": weekend.get("race_name"),
+            "circuit_name": weekend.get("circuit_name"),
+            "country": weekend.get("country"),
+            "status": weekend.get("status"),
+            "completed_sessions": weekend.get("completed_sessions", []),
+            "upcoming_sessions": weekend.get("upcoming_sessions", [])
+        } if is_live else None,
         "next_event": {
             "round": next_race.get("round") if next_race else None,
             "race_name": next_race.get("name") if next_race else "",
@@ -304,10 +320,10 @@ def build_v2_api():
             "schedule": next_race.get("schedule") if next_race else {}
         },
         "latest_race": {
-            "round": latest_completed.get("round") if latest_completed else 16,
-            "race_name": latest_completed.get("name") if latest_completed else weekend.get("race_name", ""),
-            "circuit_name": latest_completed.get("circuit", {}).get("name") if latest_completed else weekend.get("circuit_name", ""),
-            "winner": latest_completed.get("winner") if latest_completed else None,
+            "round": last_finished_race_event.get("round", 16),
+            "race_name": last_finished_race_event.get("race_name", ""),
+            "circuit_name": last_finished_race_event.get("circuit_name", ""),
+            "winner": race_results[0].get("driver_name") if race_results else (latest_calendar_completed.get("winner") if latest_calendar_completed else None),
             "podium": podium
         }
     }
@@ -321,9 +337,17 @@ def build_v2_api():
         "standings.json": standings_data,
         "calendar.json": unified_calendar,
         os.path.join("results", "latest.json"): weekend,
-        os.path.join("results", "round_16.json"): events.get("round_16", {}),
-        os.path.join("results", "round_14.json"): events.get("round_14", {})
     }
+
+    # Dynamically write each detected round (e.g. round_16.json, round_14.json, etc.)
+    for ev_key, ev_data in events.items():
+        endpoints[os.path.join("results", f"{ev_key}.json")] = ev_data
+
+    # Ensure round_16 and round_14 always exist for backwards compatibility
+    if "round_16" not in events:
+        endpoints[os.path.join("results", "round_16.json")] = weekend
+    if "round_14" not in events and "round_12" in events:
+        endpoints[os.path.join("results", "round_14.json")] = events["round_12"]
 
     for rel_path, content in endpoints.items():
         dest = os.path.join(output_dir, rel_path)
@@ -377,5 +401,53 @@ def git_commit_and_push(repo_dir):
         print(f"  ⚠️ Git auto-push note: {e}")
 
 
+def run_session_scraper(session_name):
+    """
+    Runs individual session scrapers (fp1, fp2, fp3, qualy, sprint-quly, sprint-race, race).
+    """
+    scraper_map = {
+        "fp1": ("practice1", "code", "fp1.py"),
+        "fp2": ("practice2", "code", "fp2.py"),
+        "fp3": ("practice3", "code", "fp3.py"),
+        "qualy": ("qualifying", "code", "qualifying_scraper.py"),
+        "qualifying": ("qualifying", "code", "qualifying_scraper.py"),
+        "sprint-quly": ("sprint-quly", "code", "sprintquly.py"),
+        "sprint_quly": ("sprint-quly", "code", "sprintquly.py"),
+        "sprint-race": ("sprint-race", "code", "sprintrace.py"),
+        "sprint_race": ("sprint-race", "code", "sprintrace.py"),
+        "race": ("race-result", "code", "raceResult.py"),
+    }
+    target = scraper_map.get(session_name.lower())
+    if not target:
+        print(f"⚠️ Unknown session '{session_name}'. Valid options: {list(scraper_map.keys())}")
+        return False
+
+    candidates = [
+        os.path.abspath(os.path.join(BASE_DIR, "..", *target)),
+        os.path.abspath(os.path.join(BASE_DIR, "..", "..", *target)),
+        os.path.abspath(os.path.join(BASE_DIR, "..", "tarasF1Data", *target)),
+    ]
+    script_path = next((p for p in candidates if os.path.exists(p)), None)
+    if not script_path:
+        print(f"⚠️ Scraper script for '{session_name}' not found at: {candidates[0]}")
+        return False
+
+    print(f"\n[Scraper] Executing {session_name} scraper ({script_path})...")
+    import subprocess
+    res = subprocess.run([sys.executable, script_path], cwd=os.path.dirname(script_path))
+    if res.returncode == 0:
+        print(f"  ✓ {session_name} scraper executed successfully.")
+        return True
+    else:
+        print(f"  ⚠️ {session_name} scraper exited with code {res.returncode}")
+        return False
+
+
 if __name__ == "__main__":
+    for i, arg in enumerate(sys.argv):
+        if arg in ("--session", "-s") and i + 1 < len(sys.argv):
+            sess = sys.argv[i + 1]
+            run_session_scraper(sess)
+
     build_v2_api()
+
