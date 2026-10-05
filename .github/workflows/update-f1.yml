@@ -1,4 +1,4 @@
-name: Update F1 Standings
+name: Update F1 Data
 
 on:
   schedule:
@@ -34,3 +34,18 @@ jobs:
         
       - name: Run Constructor Standings Script
         run: python peerracepointcar.py
+
+      - name: Install race scraper dependency
+        run: python -m pip install requests
+
+      - name: Run Race Calendar Script
+        run: python f1Info/code/scrape_races.py
+
+      - name: Build Taras F1 API v2
+        run: python tarasF1DataV2/build.py
+
+      - name: Commit and Push V2 API Updates
+        run: |
+          git add v2/ tarasF1DataV2/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update Taras F1 API v2 endpoints" && git push origin main)
+

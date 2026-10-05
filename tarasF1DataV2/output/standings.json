@@ -1,0 +1,7194 @@
+{
+  "season": 2026,
+  "drivers": [
+    {
+      "rank": 1,
+      "driver_id": "kimi-antonelli",
+      "driver_number": 12,
+      "name": "Kimi Antonelli",
+      "short_name": "K. Antonelli",
+      "code": "ANT",
+      "team_name": "Mercedes",
+      "nationality": "Italy",
+      "points": 320,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 29,
+          "display_value": "29"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 28,
+          "display_value": "28"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 31,
+          "display_value": "31"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 23,
+          "display_value": "23"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "driver_id": "george-russell",
+      "driver_number": 63,
+      "name": "George Russell",
+      "short_name": "G. Russell",
+      "code": "RUS",
+      "team_name": "Mercedes",
+      "nationality": "Britain",
+      "points": 236,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 26,
+          "display_value": "26"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 17,
+          "display_value": "17"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 23,
+          "display_value": "23"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 23,
+          "display_value": "23"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "driver_id": "lewis-hamilton",
+      "driver_number": 44,
+      "name": "Lewis Hamilton",
+      "short_name": "L. Hamilton",
+      "code": "HAM",
+      "team_name": "Ferrari",
+      "nationality": "Britain",
+      "points": 214,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 21,
+          "display_value": "21"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 21,
+          "display_value": "21"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 22,
+          "display_value": "22"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 14,
+          "display_value": "14"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "driver_id": "charles-leclerc",
+      "driver_number": 16,
+      "name": "Charles Leclerc",
+      "short_name": "C. Leclerc",
+      "code": "LEC",
+      "team_name": "Ferrari",
+      "nationality": "Monaco",
+      "points": 191,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 19,
+          "display_value": "19"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 16,
+          "display_value": "16"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 29,
+          "display_value": "29"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 17,
+          "display_value": "17"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "driver_id": "lando-norris",
+      "driver_number": 1,
+      "name": "Lando Norris",
+      "short_name": "L. Norris",
+      "code": "NOR",
+      "team_name": "McLaren",
+      "nationality": "Britain",
+      "points": 188,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 5,
+          "display_value": "5"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 26,
+          "display_value": "26"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 7,
+          "display_value": "7"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 31,
+          "display_value": "31"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "driver_id": "max-verstappen",
+      "driver_number": 3,
+      "name": "Max Verstappen",
+      "short_name": "M. Verstappen",
+      "code": "VER",
+      "team_name": "Red Bull Racing",
+      "nationality": "Netherlands",
+      "points": 188,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 14,
+          "display_value": "14"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 17,
+          "display_value": "17"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 3,
+          "display_value": "3"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 3,
+          "display_value": "3"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "driver_id": "oscar-piastri",
+      "driver_number": 81,
+      "name": "Oscar Piastri",
+      "short_name": "O. Piastri",
+      "code": "PIA",
+      "team_name": "McLaren",
+      "nationality": "Australia",
+      "points": 128,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 3,
+          "display_value": "3"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 22,
+          "display_value": "22"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 5,
+          "display_value": "5"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "driver_id": "isack-hadjar",
+      "driver_number": 6,
+      "name": "Isack Hadjar",
+      "short_name": "I. Hadjar",
+      "code": "HAD",
+      "team_name": "Red Bull Racing",
+      "nationality": "France",
+      "points": 96,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "driver_id": "liam-lawson",
+      "driver_number": 30,
+      "name": "Liam Lawson",
+      "short_name": "L. Lawson",
+      "code": "LAW",
+      "team_name": "Racing Bulls",
+      "nationality": "New Zealand",
+      "points": 65,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 9,
+          "display_value": "9"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "driver_id": "pierre-gasly",
+      "driver_number": 10,
+      "name": "Pierre Gasly",
+      "short_name": "P. Gasly",
+      "code": "GAS",
+      "team_name": "Alpine",
+      "nationality": "France",
+      "points": 41,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "driver_id": "arvid-lindblad",
+      "driver_number": 41,
+      "name": "Arvid Lindblad",
+      "short_name": "A. Lindblad",
+      "code": "LIN",
+      "team_name": "Racing Bulls",
+      "nationality": "Britain",
+      "points": 38,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "driver_id": "franco-colapinto",
+      "driver_number": 43,
+      "name": "Franco Colapinto",
+      "short_name": "F. Colapinto",
+      "code": "COL",
+      "team_name": "Alpine",
+      "nationality": "Argentina",
+      "points": 27,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "driver_id": "oliver-bearman",
+      "driver_number": 87,
+      "name": "Oliver Bearman",
+      "short_name": "O. Bearman",
+      "code": "BEA",
+      "team_name": "Haas F1 Team",
+      "nationality": "Britain",
+      "points": 20,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 11,
+          "display_value": "11"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "driver_id": "gabriel-bortoleto",
+      "driver_number": 5,
+      "name": "Gabriel Bortoleto",
+      "short_name": "G. Bortoleto",
+      "code": "BOR",
+      "team_name": "Audi",
+      "nationality": "Brazil",
+      "points": 10,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "driver_id": "nico-hulkenberg",
+      "driver_number": 27,
+      "name": "Nico Hülkenberg",
+      "short_name": "N. Hülkenberg",
+      "code": "HUL",
+      "team_name": "Audi",
+      "nationality": "Germany",
+      "points": 7,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "driver_id": "esteban-ocon",
+      "driver_number": 31,
+      "name": "Esteban Ocon",
+      "short_name": "E. Ocon",
+      "code": "OCO",
+      "team_name": "Haas F1 Team",
+      "nationality": "France",
+      "points": 7,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "driver_id": "fernando-alonso",
+      "driver_number": 14,
+      "name": "Fernando Alonso",
+      "short_name": "F. Alonso",
+      "code": "ALO",
+      "team_name": "Aston Martin",
+      "nationality": "Spain",
+      "points": 7,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "driver_id": "carlos-sainz",
+      "driver_number": 55,
+      "name": "Carlos Sainz",
+      "short_name": "C. Sainz",
+      "code": "SAI",
+      "team_name": "Williams",
+      "nationality": "Spain",
+      "points": 7,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "driver_id": "alexander-albon",
+      "driver_number": 23,
+      "name": "Alexander Albon",
+      "short_name": "A. Albon",
+      "code": "ALB",
+      "team_name": "Williams",
+      "nationality": "Thailand",
+      "points": 5,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "driver_id": "yuki-tsunoda",
+      "driver_number": 22,
+      "name": "Yuki Tsunoda",
+      "short_name": "Y. Tsunoda",
+      "code": "TSU",
+      "team_name": "Racing Bulls",
+      "nationality": "Japan",
+      "points": 1,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "driver_id": "lance-stroll",
+      "driver_number": 18,
+      "name": "Lance Stroll",
+      "short_name": "L. Stroll",
+      "code": "STR",
+      "team_name": "Aston Martin",
+      "nationality": "Canada",
+      "points": 0,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "driver_id": "valtteri-bottas",
+      "driver_number": 77,
+      "name": "Valtteri Bottas",
+      "short_name": "V. Bottas",
+      "code": "BOT",
+      "team_name": "Cadillac",
+      "nationality": "Finland",
+      "points": 0,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "driver_id": "sergio-perez",
+      "driver_number": 11,
+      "name": "Sergio Pérez",
+      "short_name": "S. Pérez",
+      "code": "PER",
+      "team_name": "Cadillac",
+      "nationality": "Mexico",
+      "points": 0,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "rank": 1,
+      "team_id": "mercedes",
+      "team_name": "Mercedes",
+      "points": 556,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 43,
+          "display_value": "43"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 55,
+          "display_value": "55"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 37,
+          "display_value": "37"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 39,
+          "display_value": "39"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 40,
+          "display_value": "40"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 31,
+          "display_value": "31"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 21,
+          "display_value": "21"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 46,
+          "display_value": "46"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 43,
+          "display_value": "43"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 35,
+          "display_value": "35"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 35,
+          "display_value": "35"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "team_id": "ferrari",
+      "team_name": "Ferrari",
+      "points": 405,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 27,
+          "display_value": "27"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 40,
+          "display_value": "40"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 23,
+          "display_value": "23"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 37,
+          "display_value": "37"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 14,
+          "display_value": "14"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 51,
+          "display_value": "51"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 30,
+          "display_value": "30"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 22,
+          "display_value": "22"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 31,
+          "display_value": "31"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 20,
+          "display_value": "20"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 27,
+          "display_value": "27"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "team_id": "mclaren",
+      "team_name": "McLaren",
+      "points": 316,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 28,
+          "display_value": "28"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 20,
+          "display_value": "20"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 16,
+          "display_value": "16"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 25,
+          "display_value": "25"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 43,
+          "display_value": "43"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 22,
+          "display_value": "22"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 19,
+          "display_value": "19"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 10,
+          "display_value": "10"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "team_id": "redbullracing",
+      "team_name": "Red Bull Racing",
+      "points": 298,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 27,
+          "display_value": "27"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 20,
+          "display_value": "20"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 26,
+          "display_value": "26"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 13,
+          "display_value": "13"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 23,
+          "display_value": "23"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 26,
+          "display_value": "26"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 9,
+          "display_value": "9"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 26,
+          "display_value": "26"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 33,
+          "display_value": "33"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 35,
+          "display_value": "35"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "team_id": "racingbulls",
+      "team_name": "Racing Bulls",
+      "points": 90,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 7,
+          "display_value": "7"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 18,
+          "display_value": "18"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 3,
+          "display_value": "3"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 15,
+          "display_value": "15"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 5,
+          "display_value": "5"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 5,
+          "display_value": "5"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 7,
+          "display_value": "7"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "team_id": "alpine",
+      "team_name": "Alpine",
+      "points": 68,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 9,
+          "display_value": "9"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 12,
+          "display_value": "12"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 7,
+          "display_value": "7"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 3,
+          "display_value": "3"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 8,
+          "display_value": "8"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "team_id": "haasf1team",
+      "team_name": "Haas F1 Team",
+      "points": 27,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 11,
+          "display_value": "11"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 6,
+          "display_value": "6"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "team_id": "audi",
+      "team_name": "Audi",
+      "points": 17,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "team_id": "williams",
+      "team_name": "Williams",
+      "points": 12,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "team_id": "astonmartin",
+      "team_name": "Aston Martin",
+      "points": 7,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 1,
+          "display_value": "1"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 2,
+          "display_value": "2"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 4,
+          "display_value": "4"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "team_id": "cadillac",
+      "team_name": "Cadillac",
+      "points": 0,
+      "races": [
+        {
+          "round": 1,
+          "race_code": "AUS",
+          "race_name": "Qatar Airways Australian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 2,
+          "race_code": "CHN",
+          "race_name": "Heineken Chinese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 3,
+          "race_code": "JPN",
+          "race_name": "Aramco Japanese Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 4,
+          "race_code": "BRN",
+          "race_name": "Gulf Air Bahrain Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 5,
+          "race_code": "SAU",
+          "race_name": "STC Saudi Arabian Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 6,
+          "race_code": "MIA",
+          "race_name": "Crypto.com Miami Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 7,
+          "race_code": "CAN",
+          "race_name": "Lenovo Canadian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 8,
+          "race_code": "MCO",
+          "race_name": "Monaco Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 9,
+          "race_code": "BAR",
+          "race_name": "MSC Cruises Barcelona-Catalunya Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 10,
+          "race_code": "AUT",
+          "race_name": "Lenovo Austrian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 11,
+          "race_code": "GBR",
+          "race_name": "Pirelli British Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 12,
+          "race_code": "BEL",
+          "race_name": "Moët & Chandon Belgian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 13,
+          "race_code": "HUN",
+          "race_name": "AWS Hungarian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 14,
+          "race_code": "NLD",
+          "race_name": "Heineken Dutch Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 15,
+          "race_code": "ITA",
+          "race_name": "Pirelli Italian Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 16,
+          "race_code": "ESP",
+          "race_name": "Tag Heuer Spanish Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 17,
+          "race_code": "AZE",
+          "race_name": "Qatar Airways Azerbaijan Grand Prix",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 18,
+          "race_code": "MYS",
+          "race_name": "Gulf Air Bahrain Grand Prix in Malaysia",
+          "played": true,
+          "points": 0,
+          "display_value": "-"
+        },
+        {
+          "round": 19,
+          "race_code": "SGP",
+          "race_name": "Singapore Airlines Singapore Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 20,
+          "race_code": "USA",
+          "race_name": "MSC Cruises United States Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 21,
+          "race_code": "MEX",
+          "race_name": "Mexico City Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 22,
+          "race_code": "BRA",
+          "race_name": "MSC Cruises São Paulo Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 23,
+          "race_code": "LAS",
+          "race_name": "Heineken Las Vegas Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 24,
+          "race_code": "QAT",
+          "race_name": "Qatar Airways Qatar Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        },
+        {
+          "round": 25,
+          "race_code": "UAE",
+          "race_name": "Etihad Airways Abu Dhabi Grand Prix",
+          "played": false,
+          "points": 0,
+          "display_value": ""
+        }
+      ]
+    }
+  ]
+}

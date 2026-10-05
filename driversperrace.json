@@ -3614,11 +3614,11 @@
     },
     {
       "rank": 20,
-      "driver_number": null,
+      "driver_number": 22,
       "name": "Yuki Tsunoda",
       "shortName": "Y. Tsunoda",
       "abbreviation": "TSU",
-      "team_name": "",
+      "team_name": "Racing Bulls",
       "nationality": "Japan",
       "championshipPts": {
         "value": 1,

@@ -1,0 +1,66 @@
+name: Send Notification
+
+on:
+  workflow_dispatch:
+    # No inputs needed — the workflow reads notification.json
+    # from the Taras repo directly.
+
+jobs:
+  push-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch and push notification.json
+        env:
+          # PAT_TOKEN = Personal Access Token (classic) with 'repo' scope
+          # stored in tarasF1Data repo → Settings → Secrets → Actions
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          python -c "
+          import base64, json, os, requests
+
+          TOKEN   = os.environ['GITHUB_TOKEN']
+          OWNER   = 'yashajagiya'
+          REPO    = 'Taras'
+          PATH    = 'notification/notification.json'
+          BRANCH  = 'main'
+          API_URL = f'https://api.github.com/repos/{OWNER}/{REPO}/contents/{PATH}'
+          headers = {'Authorization': f'Bearer {TOKEN}', 'Accept': 'application/vnd.github.v3+json'}
+
+          # 1. Download the current notification.json from Taras repo
+          r = requests.get(API_URL, headers=headers, params={'ref': BRANCH})
+          assert r.status_code == 200, f'Failed to fetch: {r.status_code} {r.text}'
+
+          file_info = r.json()
+          sha       = file_info['sha']
+          content   = base64.b64decode(file_info['content']).decode('utf-8')
+          payload   = json.loads(content)
+
+          print(f'Current notification.json:')
+          print(f'  ID:      {payload[\"id\"]}')
+          print(f'  Title:   {payload[\"title\"]}')
+          print(f'  Message: {payload[\"message\"]}')
+
+          # 2. Re-commit (bump the deploy timestamp so GitHub Pages redeploys)
+          encoded = base64.b64encode(json.dumps(payload, indent=2).encode()).decode()
+
+          body = {
+              'message': f\"Broadcast notification ID {payload['id']}\",
+              'content': encoded,
+              'sha':     sha,
+              'branch':  BRANCH
+          }
+
+          resp = requests.put(API_URL, headers=headers, json=body)
+          print(f'Status: {resp.status_code}')
+          assert resp.status_code in (200, 201), resp.text
+          print('✅ notification.json re-deployed on GitHub Pages')
+          "

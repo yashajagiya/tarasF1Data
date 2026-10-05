@@ -1,0 +1,85 @@
+{
+  "season": 2026,
+  "round_current": 16,
+  "round_total": 23,
+  "championship_leader": {
+    "driver": {
+      "id": "kimi-antonelli",
+      "number": 12,
+      "name": "Kimi Antonelli",
+      "team": "Mercedes",
+      "color_hex": "#27F4D2",
+      "points": 320,
+      "image": "https://media.formula1.com/image/upload/c_fill,w_720/q_auto/v1740000001/common/f1/2026/mercedes/andant01/2026mercedesandant01right.webp"
+    },
+    "team": {
+      "id": "mercedes",
+      "name": "Mercedes",
+      "color_hex": "#27F4D2",
+      "points": 556,
+      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/mercedes/2025mercedeslogowhite.webp"
+    }
+  },
+  "next_event": {
+    "round": 17,
+    "race_name": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
+    "circuit_name": "Marina Bay Street Circuit",
+    "country": "Singapore",
+    "schedule": {
+      "race": {
+        "date": "2026-10-11",
+        "time": "12:00:00Z"
+      },
+      "qualy": {
+        "date": "2026-10-10",
+        "time": "13:00:00Z"
+      },
+      "fp1": {
+        "date": "2026-10-09",
+        "time": "09:30:00Z"
+      },
+      "fp2": {
+        "date": "2026-10-09",
+        "time": "13:00:00Z"
+      },
+      "fp3": {
+        "date": "2026-10-10",
+        "time": "09:30:00Z"
+      },
+      "qualifying": {
+        "date": "2026-10-10",
+        "time": "13:00:00Z"
+      }
+    }
+  },
+  "latest_race": {
+    "round": 16,
+    "race_name": "Formula 1 Gulf Air Bahrain Grand Prix in Malaysia 2026",
+    "circuit_name": "Sepang International Circuit",
+    "winner": {
+      "drivernumber": 3,
+      "fullName": "Max Verstappen",
+      "teamWinner": "Red Bull Racing"
+    },
+    "podium": [
+      {
+        "position": 1,
+        "driver_number": 3,
+        "name": "Max Verstappen",
+        "team": "Red Bull Racing"
+      },
+      {
+        "position": 2,
+        "driver_number": 12,
+        "name": "Kimi Antonelli",
+        "team": "Mercedes"
+      },
+      {
+        "position": 3,
+        "driver_number": 44,
+        "name": "Lewis Hamilton",
+        "team": "Ferrari"
+      }
+    ]
+  }
+}

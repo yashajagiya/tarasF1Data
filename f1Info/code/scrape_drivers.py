@@ -46,6 +46,7 @@ DRIVER_SLUGS = [
     "lance-stroll",
     "sergio-perez",
     "valtteri-bottas",
+    "yuki-tsunoda",
 ]
 
 KNOWN_ACRONYMS = {
@@ -71,6 +72,7 @@ KNOWN_ACRONYMS = {
     "lance-stroll": "STR",
     "sergio-perez": "PER",
     "valtteri-bottas": "BOT",
+    "yuki-tsunoda": "TSU",
 }
 
 BASE_URL = "https://www.formula1.com/en/drivers/"

@@ -26,7 +26,7 @@ KNOWN_ACRONYMS = {
     "LAW": "liam lawson", "OCO": "esteban ocon", "LIN": "arvid lindblad",
     "COL": "franco colapinto", "HAM": "lewis hamilton", "SAI": "carlos sainz",
     "RUS": "george russell", "BOT": "valtteri bottas", "PIA": "oscar piastri",
-    "BEA": "oliver bearman",
+    "BEA": "oliver bearman", "TSU": "yuki tsunoda",
 }
 
 # Path to the cloned GitHub repo (assuming script is in the repo root)
