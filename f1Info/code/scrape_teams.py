@@ -50,6 +50,88 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
+# Canonical 2026 High-Resolution Assets for All 11 Teams (White logos & car cutouts)
+OFFICIAL_TEAM_ASSETS = {
+    "mercedes": {
+        "team_name": "Mercedes",
+        "team_color": "0xFF27F4D2",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/mercedes/2026mercedeslogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.png",
+    },
+    "ferrari": {
+        "team_name": "Ferrari",
+        "team_color": "0xFFE8002D",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/ferrari/2026ferrarilogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.png",
+    },
+    "mclaren": {
+        "team_name": "McLaren",
+        "team_color": "0xFFFF8000",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/mclaren/2026mclarenlogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.png",
+    },
+    "red-bull-racing": {
+        "team_name": "Red Bull",
+        "team_color": "0xFF3671C6",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/redbullracing/2026redbullracinglogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.png",
+    },
+    "alpine": {
+        "team_name": "Alpine",
+        "team_color": "0xFF00A1E8",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/alpine/2026alpinelogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.png",
+    },
+    "racing-bulls": {
+        "team_name": "Racing Bulls",
+        "team_color": "0xFF6692FF",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/racingbulls/2026racingbullslogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.png",
+    },
+    "haas": {
+        "team_name": "Haas",
+        "team_color": "0xFFDEE1E2",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/haasf1team/2026haasf1teamlogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.png",
+    },
+    "williams": {
+        "team_name": "Williams",
+        "team_color": "0xFF1868DB",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/williams/2026williamslogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/williams/2026williamscarright.png",
+    },
+    "audi": {
+        "team_name": "Audi",
+        "team_color": "0xFFFF2D00",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/audi/2026audilogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.png",
+    },
+    "aston-martin": {
+        "team_name": "Aston Martin",
+        "team_color": "0xFF229971",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/astonmartin/2026astonmartinlogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/astonmartin/2026astonmartincarright.png",
+    },
+    "cadillac": {
+        "team_name": "Cadillac",
+        "team_color": "0xFFAAAAAD",
+        "team_logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/cadillac/2026cadillaclogowhite.png",
+        "team_car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/cadillac/2026cadillaccarright.png",
+    },
+}
+
+
+def get_official_team_asset(slug: str, team_name: str = "") -> dict:
+    """Return official team assets (car render, white logo, color) instead of scraping from the website."""
+    if slug in OFFICIAL_TEAM_ASSETS:
+        return OFFICIAL_TEAM_ASSETS[slug]
+
+    norm = (team_name or "").lower().replace(" ", "").replace("-", "")
+    for s, asset in OFFICIAL_TEAM_ASSETS.items():
+        if asset["team_name"].lower().replace(" ", "").replace("-", "") in norm or s.replace("-", "") in norm:
+            return asset
+    return None
+
 
 def parse_team_page(html: str, slug: str) -> dict:
     """Parse a single team detail page and return structured data."""
@@ -106,28 +188,36 @@ def parse_team_page(html: str, slug: str) -> dict:
     if ac_found:
         data["hero"]["accessible_color"] = ac_found
 
-    # ── Team Car Image ────────────────────────────────────────────
-    car_img = soup.find("img", src=lambda s: s and "carright" in s.lower())
-    if car_img:
-        data["hero"]["team_car"] = car_img.get("src", "")
+    # ── Team Car & Logo Images (Official 2026 High-Res Assets) ─────
+    # Instead of pulling low-res / fallback assets from website, always use official links for V2 API
+    asset = get_official_team_asset(slug, data["hero"].get("name", ""))
+    if asset:
+        data["hero"]["team_car"] = asset["team_car"]
+        data["hero"]["team_logo"] = asset["team_logo"]
+        if asset.get("team_color"):
+            data["hero"]["team_color"] = asset["team_color"]
     else:
-        team_name = data["hero"].get("name", "")
-        car_img = soup.find("img", alt=lambda a: a and team_name.lower() in a.lower() and "logo" not in a.lower())
-        if car_img and "formula1.com" in car_img.get("src", ""):
+        # Fallback to website HTML if team is unrecognized
+        car_img = soup.find("img", src=lambda s: s and "carright" in s.lower())
+        if car_img:
             data["hero"]["team_car"] = car_img.get("src", "")
+        else:
+            team_name = data["hero"].get("name", "")
+            car_img = soup.find("img", alt=lambda a: a and team_name.lower() in a.lower() and "logo" not in a.lower())
+            if car_img and "formula1.com" in car_img.get("src", ""):
+                data["hero"]["team_car"] = car_img.get("src", "")
 
-    # ── Team Logo Image ───────────────────────────────────────────
-    logo_img = soup.find("img", src=lambda s: s and ("logowhite" in s.lower() or "logolight" in s.lower()))
-    if not logo_img:
-        logo_img = soup.find("img", alt=lambda a: a and ("logowhite" in a.lower() or "logolight" in a.lower()))
-    if not logo_img:
-        for img in soup.find_all("img", src=True):
-            src = img.get("src", "").lower()
-            if "/logo/" in src or ("logo" in src and "f1" in src):
-                logo_img = img
-                break
-    if logo_img:
-        data["hero"]["team_logo"] = logo_img.get("src", "")
+        logo_img = soup.find("img", src=lambda s: s and ("logowhite" in s.lower() or "logolight" in s.lower()))
+        if not logo_img:
+            logo_img = soup.find("img", alt=lambda a: a and ("logowhite" in a.lower() or "logolight" in a.lower()))
+        if not logo_img:
+            for img in soup.find_all("img", src=True):
+                src = img.get("src", "").lower()
+                if "/logo/" in src or ("logo" in src and "f1" in src):
+                    logo_img = img
+                    break
+        if logo_img:
+            data["hero"]["team_logo"] = logo_img.get("src", "")
 
     # ── Biography ─────────────────────────────────────────────────
     profile_sec = soup.find(id="profile")
@@ -332,6 +422,19 @@ def main():
 
     print()
     print(f"Done! Saved {len(teams)} teams to {out_path}")
+
+    # Synchronize to V2 master teams_registry.json
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    v2_registry_candidates = [
+        os.path.abspath(os.path.join(script_dir, '..', '..', '..', 'tarasF1DataV2', 'data', 'teams_registry.json')),
+        os.path.abspath(os.path.join(script_dir, '..', '..', 'tarasF1DataV2', 'data', 'teams_registry.json')),
+        os.path.abspath(os.path.join(script_dir, '..', '..', '..', 'tarasF1Data', 'tarasF1DataV2', 'data', 'teams_registry.json')),
+    ]
+    for v2_path in v2_registry_candidates:
+        if os.path.exists(os.path.dirname(v2_path)):
+            with open(v2_path, "w", encoding="utf-8") as f:
+                json.dump(teams, f, indent=2, ensure_ascii=False)
+            print(f"Synced team data to V2 master registry: {v2_path}")
 
     # GitHub Upload & sync
     push_f1info_to_git(out_path, info_type="teams")
