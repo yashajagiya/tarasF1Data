@@ -16,8 +16,8 @@
       "accessible_color": "#067e6a"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/mercedes/2026mercedescarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/mercedes/2025mercedeslogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mercedes/2026mercedescarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/mercedes/2026mercedeslogowhite.png"
     },
     "drivers": [
       "kimi-antonelli",
@@ -276,8 +276,8 @@
       "accessible_color": "#5c0012"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/ferrari/2026ferraricarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/ferrari/2025ferrarilogolight.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/ferrari/2026ferraricarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/ferrari/2026ferrarilogowhite.png"
     },
     "drivers": [
       "lewis-hamilton",
@@ -536,8 +536,8 @@
       "accessible_color": "#804000"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/mclaren/2026mclarencarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/mclaren/2025mclarenlogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/mclaren/2026mclarencarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/mclaren/2026mclarenlogowhite.png"
     },
     "drivers": [
       "lando-norris",
@@ -796,8 +796,8 @@
       "accessible_color": "#142948"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/redbullracing/2025redbullracinglogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/redbullracing/2026redbullracingcarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/redbullracing/2026redbullracinglogowhite.png"
     },
     "drivers": [
       "max-verstappen",
@@ -1056,8 +1056,8 @@
       "accessible_color": "#0038c2"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/racingbulls/2025racingbullslogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/racingbulls/2026racingbullscarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/racingbulls/2026racingbullslogowhite.png"
     },
     "drivers": [
       "liam-lawson",
@@ -1317,8 +1317,8 @@
       "accessible_color": "#004e70"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/alpine/2026alpinecarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/alpine/2025alpinelogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/alpine/2026alpinecarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/alpine/2026alpinelogowhite.png"
     },
     "drivers": [
       "pierre-gasly",
@@ -1577,8 +1577,8 @@
       "accessible_color": "#667175"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/haas/2026haascarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/haas/2025haaslogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/haasf1team/2026haasf1teamcarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/haasf1team/2026haasf1teamlogowhite.png"
     },
     "drivers": [
       "oliver-bearman",
@@ -1837,8 +1837,8 @@
       "accessible_color": "#751500"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/audi/2026audicarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2026/audi/2026audilogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/audi/2026audicarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/audi/2026audilogowhite.png"
     },
     "drivers": [
       "gabriel-bortoleto",
@@ -2097,8 +2097,8 @@
       "accessible_color": "#082145"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/williams/2026williamscarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/williams/2025williamslogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/williams/2026williamscarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/williams/2026williamslogowhite.png"
     },
     "drivers": [
       "carlos-sainz",
@@ -2357,8 +2357,8 @@
       "accessible_color": "#0f4331"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/astonmartin/2026astonmartincarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2025/astonmartin/2025astonmartinlogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/astonmartin/2026astonmartincarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/astonmartin/2026astonmartinlogowhite.png"
     },
     "drivers": [
       "fernando-alonso",
@@ -2617,8 +2617,8 @@
       "accessible_color": "#58585b"
     },
     "images": {
-      "car": "https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/common/f1/2026/cadillac/2026cadillaccarright.webp",
-      "logo": "https://media.formula1.com/image/upload/c_fit,h_64/q_auto/v1740000001/common/f1/2026/cadillac/2026cadillaclogowhite.webp"
+      "car": "https://media.formula1.com/image/upload/c_fit,w_2400,h_1200/q_auto:best/d_common:f1:2026:fallback:car:2026fallbackcarright.webp/v1740000001/common/f1/2026/cadillac/2026cadillaccarright.png",
+      "logo": "https://media.formula1.com/image/upload/c_fit,w_1024/e_sharpen:100/q_auto:best/v1740000001/common/f1/2026/cadillac/2026cadillaclogowhite.png"
     },
     "drivers": [
       "valtteri-bottas",

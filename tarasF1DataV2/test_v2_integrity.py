@@ -58,9 +58,11 @@ def run_integrity_tests():
     for t in teams:
         assert t["images"]["car"], f"Missing car image for {t['name']}"
         assert t["images"]["logo"], f"Missing logo for {t['name']}"
+        assert t["images"]["car"].endswith(".png") and "w_2400" in t["images"]["car"], f"Car image not official 2026 high-res PNG for {t['name']}"
+        assert t["images"]["logo"].endswith(".png") and "w_1024" in t["images"]["logo"], f"Logo image not official 2026 high-res PNG for {t['name']}"
         assert t["power_unit"], f"Missing power unit for {t['name']}"
         assert t["team_chief"], f"Missing team chief for {t['name']}"
-    print("  [PASS] 3. teams.json integrity verified (All 11 constructors, car renders, logos, specs)")
+    print("  [PASS] 3. teams.json integrity verified (All 11 constructors, official high-res 2026 car renders, white logos, specs)")
 
     # 4. Test Standings
     standings_path = os.path.join(OUTPUT_DIR, "standings.json")
