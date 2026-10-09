@@ -1,10 +1,10 @@
 {
     "season":  2026,
-    "is_live":  false,
+    "is_live":  true,
     "session":  "Live Session",
     "track_status":  "GREEN",
-    "web_url":  "http://192.168.1.87:8080",
-    "ws_timing_url":  "ws://192.168.1.87:8080/timing",
+    "web_url":  "https://alliance-odds-referenced-during.trycloudflare.com",
+    "ws_timing_url":  "wss://alliance-odds-referenced-during.trycloudflare.com/timing",
     "local_ws_url":  "ws://192.168.1.87:8080/timing",
-    "updated_at":  "2026-10-10T00:32:17Z"
+    "updated_at":  "2026-10-10T00:32:24Z"
 }
