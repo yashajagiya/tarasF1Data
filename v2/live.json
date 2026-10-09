@@ -1,10 +1,10 @@
 {
     "season":  2026,
-    "is_live":  true,
+    "is_live":  false,
     "session":  "Live Session",
     "track_status":  "GREEN",
-    "web_url":  "https://kits-webshots-midlands-supplier.trycloudflare.com",
-    "ws_timing_url":  "wss://kits-webshots-midlands-supplier.trycloudflare.com/timing",
+    "web_url":  "http://192.168.1.87:8080",
+    "ws_timing_url":  "ws://192.168.1.87:8080/timing",
     "local_ws_url":  "ws://192.168.1.87:8080/timing",
-    "updated_at":  "2026-10-09T18:10:16Z"
+    "updated_at":  "2026-10-09T18:11:32Z"
 }
