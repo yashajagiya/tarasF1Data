@@ -298,7 +298,7 @@
     },
     {
         "id": "1296/singapore",
-        "raceName": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
+        "raceName": "Formula 1 Singapore Airlines Singapore Grand Prix 2026",
         "f1siteracename": "Singapore",
         "circuit": {
             "circuitId": "marina_bay",
@@ -315,19 +315,19 @@
                 "date": "2026-10-09"
             },
             "fp2": {
-                "date": "2026-10-09"
+                "date": null
             },
             "fp3": {
-                "date": "2026-10-10"
+                "date": null
             },
             "sprintQualy": {
-                "date": null
+                "date": "2026-10-09"
             },
             "sprintRace": {
-                "date": null
+                "date": "2026-10-10"
             },
             "sprint-grid": {
-                "date": null
+                "date": "2026-10-10"
             },
             "fastest-laps": {
                 "date": "2026-10-11"

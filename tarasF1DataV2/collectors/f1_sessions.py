@@ -299,7 +299,7 @@ def load_all_known_sessions(repo_dir=None):
         # Build clean sessions dictionary: populated if run, strictly None if unrun
         sessions_dict = {
             "practice_1": s_data.get("practice_1"),
-            "practice_2": s_data.get("practice_2"),
+            "practice_2": s_data.get("practice_2") if not has_sprint else None,
             "practice_3": s_data.get("practice_3") if not has_sprint else None,
             "qualifying": s_data.get("qualifying"),
             "sprint_qualifying": s_data.get("sprint_qualifying") if has_sprint else None,

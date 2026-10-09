@@ -467,15 +467,29 @@ def build_v2_api():
         size_kb = round(os.path.getsize(dest) / 1024, 1)
         print(f"  ✓ {rel_path:<25} ({size_kb:>5} KB)")
 
-    # Auto-sync to public v2 directory for GitHub Pages
-    v2_public_dir = os.path.abspath(os.path.join(BASE_DIR, "..", "v2"))
-    try:
-        import shutil
-        os.makedirs(v2_public_dir, exist_ok=True)
-        shutil.copytree(output_dir, v2_public_dir, dirs_exist_ok=True)
-        print(f"  ✓ Synchronized to public v2 directory for GitHub Pages")
-    except Exception as e:
-        print(f"  ⚠️ v2 sync note: {e}")
+    # Auto-sync to public v2 directories for GitHub Pages
+    import shutil
+    sync_targets = [
+        os.path.abspath(os.path.join(BASE_DIR, "..", "v2")),
+        os.path.abspath(os.path.join(BASE_DIR, "..", "tarasF1Data", "v2")),
+    ]
+    for target in sync_targets:
+        parent = os.path.dirname(target)
+        if os.path.exists(parent):
+            try:
+                os.makedirs(target, exist_ok=True)
+                shutil.copytree(output_dir, target, dirs_exist_ok=True)
+                print(f"  ✓ Synchronized to public v2 directory: {target}")
+            except Exception as e:
+                print(f"  ⚠️ v2 sync note ({target}): {e}")
+
+    # Also sync tarasF1DataV2 inside tarasF1Data if it exists
+    nested_v2_data = os.path.abspath(os.path.join(BASE_DIR, "..", "tarasF1Data", "tarasF1DataV2"))
+    if os.path.exists(os.path.dirname(nested_v2_data)):
+        try:
+            shutil.copytree(BASE_DIR, nested_v2_data, dirs_exist_ok=True)
+        except Exception:
+            pass
 
     print("\n[5/5] Verification & Integrity Check:")
     print(f"  • Drivers included: {len(unified_drivers)} (all 23 verified, Tsunoda #22 included)")
@@ -492,24 +506,31 @@ def build_v2_api():
 
 def git_commit_and_push(repo_dir):
     import subprocess
-    try:
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=repo_dir, check=False)
-        subprocess.run(["git", "add", "v1/", "v2/", "tarasF1DataV2/", "extract_rounds.py"], cwd=repo_dir, check=True)
-        
-        diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=repo_dir)
-        if diff.returncode != 0:
-            commit_msg = f"Auto-update Taras F1 API v2 data — {now}"
-            subprocess.run(["git", "commit", "-m", commit_msg], cwd=repo_dir, check=True)
-            push_res = subprocess.run(["git", "push", "origin", "main"], cwd=repo_dir, capture_output=True, text=True)
-            if push_res.returncode == 0:
-                print("  ✓ Successfully committed and pushed updates to GitHub!")
+    target_repos = [repo_dir]
+    nested = os.path.join(repo_dir, "tarasF1Data")
+    if os.path.isdir(nested) and os.path.isdir(os.path.join(nested, ".git")):
+        target_repos.append(nested)
+
+    for r_dir in target_repos:
+        try:
+            now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(f"\n[Git] Syncing repository at: {r_dir}...")
+            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], cwd=r_dir, check=False)
+            subprocess.run(["git", "add", "."], cwd=r_dir, check=True)
+            
+            diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=r_dir)
+            if diff.returncode != 0:
+                commit_msg = f"Auto-update Taras F1 API v2 data — {now}"
+                subprocess.run(["git", "commit", "-m", commit_msg], cwd=r_dir, check=True)
+                push_res = subprocess.run(["git", "push", "origin", "main"], cwd=r_dir, capture_output=True, text=True)
+                if push_res.returncode == 0:
+                    print(f"  ✓ Successfully committed and pushed updates to {r_dir}!")
+                else:
+                    print(f"  ⚠️ Git push output: {push_res.stderr or push_res.stdout}")
             else:
-                print(f"  ⚠️ Git push output: {push_res.stderr or push_res.stdout}")
-        else:
-            print("  ℹ️ No changes detected, working tree clean.")
-    except Exception as e:
-        print(f"  ⚠️ Git auto-push note: {e}")
+                print(f"  ℹ️ No changes detected in {r_dir}, working tree clean.")
+        except Exception as e:
+            print(f"  ⚠️ Git auto-push note for {r_dir}: {e}")
 
 
 def run_session_scraper(session_name):

@@ -332,43 +332,67 @@ def extract_single_round(round_num, cal_race, lookup_by_num, verbose=True):
     if has_sprint:
         sq_cols, _, _, _ = scrape_f1_session_table(f"{base_url}/sprint-qualifying", "Sprint Qualy")
         if sq_cols:
-            sessions["sprint_qualifying"] = parse_qualifying_session(sq_cols, is_sprint=True, lookup_by_num=lookup_by_num)
-            if verbose:
-                print(f"   ✓ Sprint Qualifying: {len(sessions['sprint_qualifying'])} drivers")
+            parsed_sq = parse_qualifying_session(sq_cols, is_sprint=True, lookup_by_num=lookup_by_num)
+            if parsed_sq:
+                sessions["sprint_qualifying"] = parsed_sq
+                if verbose:
+                    print(f"   ✓ Sprint Qualifying: {len(parsed_sq)} drivers")
+            elif verbose:
+                print(f"   ○ Sprint Qualifying: Upcoming (session not yet run)")
 
         sr_cols, _, _, _ = scrape_f1_session_table(f"{base_url}/sprint-results", "Sprint Race")
         if sr_cols:
-            sessions["sprint_race"] = parse_race_session(sr_cols, lookup_by_num)
-            if verbose:
-                print(f"   ✓ Sprint Race:       {len(sessions['sprint_race'])} drivers")
+            parsed_sr = parse_race_session(sr_cols, lookup_by_num)
+            if parsed_sr:
+                sessions["sprint_race"] = parsed_sr
+                if verbose:
+                    print(f"   ✓ Sprint Race:       {len(parsed_sr)} drivers")
+            elif verbose:
+                print(f"   ○ Sprint Race:       Upcoming (session not yet run)")
     else:
         # FP2 & FP3 (if conventional weekend)
         fp2_cols, _, _, _ = scrape_f1_session_table(f"{base_url}/practice/2", "FP2")
         if fp2_cols:
-            sessions["practice_2"] = parse_practice_session(fp2_cols, lookup_by_num)
-            if verbose:
-                print(f"   ✓ FP2:               {len(sessions['practice_2'])} drivers")
+            parsed_fp2 = parse_practice_session(fp2_cols, lookup_by_num)
+            if parsed_fp2:
+                sessions["practice_2"] = parsed_fp2
+                if verbose:
+                    print(f"   ✓ FP2:               {len(parsed_fp2)} drivers")
+            elif verbose:
+                print(f"   ○ FP2:               Upcoming (session not yet run)")
 
         fp3_cols, _, _, _ = scrape_f1_session_table(f"{base_url}/practice/3", "FP3")
         if fp3_cols:
-            sessions["practice_3"] = parse_practice_session(fp3_cols, lookup_by_num)
-            if verbose:
-                print(f"   ✓ FP3:               {len(sessions['practice_3'])} drivers")
+            parsed_fp3 = parse_practice_session(fp3_cols, lookup_by_num)
+            if parsed_fp3:
+                sessions["practice_3"] = parsed_fp3
+                if verbose:
+                    print(f"   ✓ FP3:               {len(parsed_fp3)} drivers")
+            elif verbose:
+                print(f"   ○ FP3:               Upcoming (session not yet run)")
 
     # 3. Qualifying
     q_cols, _, _, _ = scrape_f1_session_table(f"{base_url}/qualifying", "Qualifying")
     if q_cols:
-        sessions["qualifying"] = parse_qualifying_session(q_cols, is_sprint=False, lookup_by_num=lookup_by_num)
-        if verbose:
-            print(f"   ✓ Qualifying:        {len(sessions['qualifying'])} drivers")
+        parsed_q = parse_qualifying_session(q_cols, is_sprint=False, lookup_by_num=lookup_by_num)
+        if parsed_q:
+            sessions["qualifying"] = parsed_q
+            if verbose:
+                print(f"   ✓ Qualifying:        {len(parsed_q)} drivers")
+        elif verbose:
+            print(f"   ○ Qualifying:        Upcoming (session not yet run)")
 
     # 4. Sunday Grand Prix Race Result
     r_cols, r_title, r_date, r_circ = scrape_f1_session_table(f"{base_url}/race-result", "Race Result")
     if r_cols:
-        sessions["race"] = parse_race_session(r_cols, lookup_by_num)
-        if verbose:
-            winner = sessions["race"][0]["driver_name"] if sessions["race"] else "Unknown"
-            print(f"   ✓ Grand Prix Race:   {len(sessions['race'])} drivers (Winner: {winner})")
+        parsed_r = parse_race_session(r_cols, lookup_by_num)
+        if parsed_r:
+            sessions["race"] = parsed_r
+            if verbose:
+                winner = parsed_r[0]["driver_name"] if parsed_r else "Unknown"
+                print(f"   ✓ Grand Prix Race:   {len(parsed_r)} drivers (Winner: {winner})")
+        elif verbose:
+            print(f"   ○ Grand Prix Race:   Upcoming (session not yet run)")
     if r_date and not date_range_detected:
         date_range_detected = r_date
     if r_circ and not circuit_detected:
@@ -491,21 +515,47 @@ def export_round_to_legacy_directories(round_payload):
         rows = s.get(s_key)
         if rows is None:
             continue
-        dest_dir = os.path.join(ROOT_REPO_DIR, folder)
-        if os.path.exists(dest_dir):
-            payload = {
-                "country": country,
-                "session": s_key.upper().replace("_", " "),
-                "raceName": f"{r_name} - {s_key.upper()}".upper(),
-                "date": d_range,
-                "circuitName": c_name,
-                "circuitId": c_id,
-                "results": rows,
-            }
-            target_path = os.path.join(dest_dir, out_file)
-            with open(target_path, "w", encoding="utf-8") as f:
-                json.dump(payload, f, indent=4, ensure_ascii=False)
-            print(f"   ✓ Updated {folder}/{out_file} ({len(rows)} entries)")
+        dest_dirs = [
+            os.path.join(ROOT_REPO_DIR, "v1", folder),
+            os.path.join(ROOT_REPO_DIR, folder),
+        ]
+        for dest_dir in dest_dirs:
+            if os.path.exists(dest_dir):
+                payload = {
+                    "country": country,
+                    "session": s_key.upper().replace("_", " "),
+                    "raceName": f"{r_name} - {s_key.upper()}".upper(),
+                    "date": d_range,
+                    "circuitName": c_name,
+                    "circuitId": c_id,
+                    "results": rows,
+                }
+                target_path = os.path.join(dest_dir, out_file)
+                with open(target_path, "w", encoding="utf-8") as f:
+                    json.dump(payload, f, indent=4, ensure_ascii=False)
+                print(f"   ✓ Updated {dest_dir}/{out_file} ({len(rows)} entries)")
+
+
+def extract_round_data(round_num: int, verbose: bool = True, export_legacy: bool = False):
+    """
+    Extracts all weekend sessions for a round and saves them into data/sessions/round_{round_num}.json
+    and public v2/results/round_{round_num}.json.
+    """
+    cal_races = load_calendar_master()
+    cal_by_round = {r.get("round"): r for r in cal_races if r.get("round")}
+    lookup_by_num, _ = load_drivers_lookup()
+    cal_race = cal_by_round.get(round_num, {})
+    payload = extract_single_round(round_num, cal_race, lookup_by_num, verbose=verbose)
+    if payload:
+        save_round_payload(payload, save_individual_files=True)
+        if export_legacy:
+            export_round_to_legacy_directories(payload)
+    return payload
+
+
+def extract_all_rounds(force: bool = False, verbose: bool = True):
+    """Extracts all rounds (historical and current)."""
+    return extract_past_rounds(list(range(1, 18)), force=force, verbose=verbose)
 
 
 def extract_past_rounds(rounds_to_extract, force=False, save_individual=True, verbose=True):

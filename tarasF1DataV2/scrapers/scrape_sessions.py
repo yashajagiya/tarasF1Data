@@ -16,8 +16,8 @@ from extract_rounds import extract_round_data, extract_all_rounds, load_calendar
 
 
 def scrape_weekend_session(round_num: int, verbose: bool = True):
-    """Scrape and save a complete weekend event by round number into data/sessions/"""
-    return extract_round_data(round_num, verbose=verbose, export_legacy=False)
+    """Scrape and save a complete weekend event by round number into data/sessions/ and export to v1/."""
+    return extract_round_data(round_num, verbose=verbose, export_legacy=True)
 
 
 def scrape_current_weekend(verbose: bool = True):

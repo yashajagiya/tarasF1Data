@@ -926,9 +926,9 @@
   {
     "round": 17,
     "id": "singapore_2026",
-    "name": "Formula 1 Singapore Airlanes Singapore Grand Prix 2026",
-    "has_sprint": false,
-    "weekend_format": "conventional",
+    "name": "Formula 1 Singapore Airlines Singapore Grand Prix 2026",
+    "has_sprint": true,
+    "weekend_format": "sprint",
     "laps": 62,
     "circuit": {
       "id": "marina_bay",
@@ -936,13 +936,13 @@
       "gp_name": "Singapore Airlines Singapore GP",
       "country": "Singapore",
       "city": "Singapore",
-      "length": "4940km",
-      "lap_record": "1:35:867",
+      "length": "4.927km",
+      "lap_record": "1:33.808",
       "corners": 19,
       "first_participation_year": 2008,
       "fastest_lap_driver": "hamilton",
-      "fastest_lap_team": "mercedes",
-      "fastest_lap_year": 2023,
+      "fastest_lap_team": "ferrari",
+      "fastest_lap_year": 2025,
       "track_image": "https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026tracksingaporedetailed.webp"
     },
     "schedule": {
@@ -956,15 +956,27 @@
       },
       "fp1": {
         "date": "2026-10-09",
-        "time": "09:30:00Z"
+        "time": "08:30:00Z"
       },
-      "fp2": {
+      "sprintQualy": {
         "date": "2026-10-09",
-        "time": "13:00:00Z"
+        "time": "12:30:00Z"
       },
-      "fp3": {
+      "sprintRace": {
         "date": "2026-10-10",
-        "time": "09:30:00Z"
+        "time": "09:00:00Z"
+      },
+      "sprint_qualifying": {
+        "date": "2026-10-09",
+        "time": "12:30:00Z"
+      },
+      "sprint_qualy": {
+        "date": "2026-10-09",
+        "time": "12:30:00Z"
+      },
+      "sprint_race": {
+        "date": "2026-10-10",
+        "time": "09:00:00Z"
       },
       "qualifying": {
         "date": "2026-10-10",
