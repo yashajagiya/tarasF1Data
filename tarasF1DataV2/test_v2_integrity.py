@@ -128,7 +128,9 @@ def run_integrity_tests():
         assert r17_res["has_sprint"] is True, "Round 17 must have has_sprint=True!"
         assert r17_res["weekend_format"] == "sprint", "Round 17 must have weekend_format='sprint'!"
         assert len(r17_res["sessions"]["practice_1"]) >= 20, "Round 17 FP1 results missing drivers!"
-        print("  [PASS] 8. results/round_17.json integrity verified (Singapore Sprint Weekend, FP1 results intact)")
+        if "sprint_qualifying" in r17_res.get("completed_sessions", []):
+            assert len(r17_res["sessions"]["sprint_qualifying"]) >= 20, "Round 17 Sprint Qualy results missing drivers!"
+        print("  [PASS] 8. results/round_17.json integrity verified (Singapore Sprint Weekend, FP1 + Sprint Qualy intact)")
 
     print("\n" + "=" * 70)
     print("  ✅ ALL INTEGRITY TESTS PASSED: 100% DATA RETENTION CONFIRMED!")

@@ -518,6 +518,8 @@ def export_round_to_legacy_directories(round_payload):
         dest_dirs = [
             os.path.join(ROOT_REPO_DIR, "v1", folder),
             os.path.join(ROOT_REPO_DIR, folder),
+            os.path.join(ROOT_REPO_DIR, "tarasF1Data", "v1", folder),
+            os.path.join(ROOT_REPO_DIR, "tarasF1Data", folder),
         ]
         for dest_dir in dest_dirs:
             if os.path.exists(dest_dir):

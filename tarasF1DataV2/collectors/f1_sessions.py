@@ -23,12 +23,12 @@ def clean_practice(results):
         return []
     rows = []
     for r in results:
-        num = r.get("number", r.get("driverNumber", ""))
+        num = r.get("driver_number", r.get("number", r.get("driverNumber", "")))
         pos = r.get("position", "")
-        driver = r.get("driver", r.get("driverName", ""))
-        short = r.get("shortName", "")
+        driver = r.get("driver_name", r.get("driver", r.get("driverName", "")))
+        short = r.get("driver_code", r.get("shortName", ""))
         team = r.get("team", "")
-        time_gap = r.get("timeOrGap", "")
+        time_gap = r.get("time_or_gap", r.get("timeOrGap", ""))
         laps = r.get("laps", "")
 
         rows.append({
@@ -48,9 +48,9 @@ def clean_qualifying(results):
         return []
     rows = []
     for r in results:
-        num = r.get("driverNumber", r.get("number", ""))
+        num = r.get("driver_number", r.get("driverNumber", r.get("number", "")))
         pos = r.get("position", "")
-        driver = r.get("driverName", r.get("driver", ""))
+        driver = r.get("driver_name", r.get("driverName", r.get("driver", "")))
         team = r.get("team", "")
         q1 = r.get("q1", r.get("sq1", ""))
         q2 = r.get("q2", r.get("sq2", ""))
@@ -76,9 +76,9 @@ def clean_sprint_qualifying(results):
         return []
     rows = []
     for r in results:
-        num = r.get("driverNumber", r.get("number", ""))
+        num = r.get("driver_number", r.get("driverNumber", r.get("number", "")))
         pos = r.get("position", "")
-        driver = r.get("driverName", r.get("driver", ""))
+        driver = r.get("driver_name", r.get("driverName", r.get("driver", "")))
         team = r.get("team", "")
         sq1 = r.get("sq1", r.get("q1", ""))
         sq2 = r.get("sq2", r.get("q2", ""))
@@ -103,12 +103,12 @@ def clean_race(results):
         return []
     rows = []
     for r in results:
-        num = r.get("driverNumber", r.get("number", ""))
+        num = r.get("driver_number", r.get("driverNumber", r.get("number", "")))
         pos = r.get("position", "")
-        driver = r.get("driverName", r.get("driver", ""))
+        driver = r.get("driver_name", r.get("driverName", r.get("driver", "")))
         team = r.get("team", "")
         laps = r.get("laps", "")
-        time_ret = r.get("timeOrRetired", "")
+        time_ret = r.get("time_or_retired", r.get("timeOrRetired", ""))
         pts = r.get("points", "")
 
         rows.append({

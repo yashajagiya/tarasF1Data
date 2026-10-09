@@ -27,10 +27,10 @@
     "country": "Singapore",
     "status": "in_progress",
     "completed_sessions": [
-      "practice_1"
+      "practice_1",
+      "sprint_qualifying"
     ],
     "upcoming_sessions": [
-      "sprint_qualifying",
       "sprint_race",
       "qualifying",
       "race"
