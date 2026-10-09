@@ -1,0 +1,10 @@
+{
+    "season":  2026,
+    "is_live":  true,
+    "session":  "Live Session",
+    "track_status":  "GREEN",
+    "web_url":  "https://generation-timothy-ambient-totally.trycloudflare.com",
+    "ws_timing_url":  "wss://generation-timothy-ambient-totally.trycloudflare.com/timing",
+    "local_ws_url":  "ws://192.168.1.87:8080/timing",
+    "updated_at":  "2026-10-09T17:23:14Z"
+}
