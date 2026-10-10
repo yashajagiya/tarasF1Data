@@ -2,16 +2,16 @@
   "season": 2026,
   "race": "Singapore Grand Prix",
   "grand_prix": "FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2026",
-  "session": "Sprint",
+  "session": "Qualifying",
   "track_status": "GREEN",
   "is_live": true,
   "driver_count": 22,
-  "leader": "VER",
+  "leader": "LAW",
   "web_url": "https://allows-scientific-integration-fruit.trycloudflare.com",
   "ws_timing_url": "wss://allows-scientific-integration-fruit.trycloudflare.com/timing",
   "local_ws_url": "ws://192.168.1.87:8080/timing",
   "ws_timeline_url": "wss://allows-scientific-integration-fruit.trycloudflare.com/timeline",
   "timeline_rest_url": "https://allows-scientific-integration-fruit.trycloudflare.com/api/timeline",
   "local_ws_timeline_url": "ws://192.168.1.87:8080/timeline",
-  "updated_at": "2026-10-10T11:55:07.800000800Z"
+  "updated_at": "2026-10-10T13:34:44.933684700Z"
 }
