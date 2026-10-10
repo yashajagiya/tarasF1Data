@@ -6,12 +6,12 @@
   "track_status": "GREEN",
   "is_live": true,
   "driver_count": 22,
-  "leader": "ANT",
+  "leader": "HUL",
   "web_url": "https://bra-slide-formatting-tuition.trycloudflare.com",
   "ws_timing_url": "wss://bra-slide-formatting-tuition.trycloudflare.com/timing",
   "local_ws_url": "ws://192.168.1.87:8080/timing",
   "ws_timeline_url": "wss://bra-slide-formatting-tuition.trycloudflare.com/timeline",
   "timeline_rest_url": "https://bra-slide-formatting-tuition.trycloudflare.com/api/timeline",
   "local_ws_timeline_url": "ws://192.168.1.87:8080/timeline",
-  "updated_at": "2026-10-10T13:57:01.775266700Z"
+  "updated_at": "2026-10-10T13:57:07.449853Z"
 }
